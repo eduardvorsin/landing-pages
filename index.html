@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+	*,
+	*::after,
+	*::before {
+
+
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: "Open Sans";
+		line-height: 1.5;
+	}
+
+	.main-title {
+		font-size: 32px;
+	}
+
+	.title {
+		font-size: 26px;
+		font-style: italic;
+		font-weight: 400;
+	}
+
+	.project__link {
+		transition: color 0.1s linear;
+		color: #000000;
+
+	}
+
+	.project__link:hover {
+		transition: color 0.1s linear;
+		color: rgb(182, 150, 109);
+	}
+</style>
+
+<body>
+	<h1 class="main-title">Портфолио</h1>
+	<h2 class="title">Лендинги</h2>
+	<p>Все лендинги в данном портфолио выполненны кроссбраузерно(кроме браузера IE), адаптивно.<br>При проверке на
+		GooglePageSpeed попадают в зёленую зону как на мобильных устройствах так и на пк.</p>
+	<ul class="projects__list">
+		<li class="projects__list">
+			<a href="DesignAgency/index.html" class="project__link">Design Agency(тестовый проект)</a>
+		</li>
+		<li class="projects__list">
+			<a href="Bodyfit/index.html" class="project__link">Bodyfit(тестовый проект)</a>
+		</li>
+		<li class="projects__list">
+			<a href="Coder/index.html" class="project__link">Coder(тестовый проект)</a>
+		</li>
+		<li class="projects__list">
+			<a href="Fashion/index.html" class="project__link">Fashion(тестовый проект)</a>
+		</li>
+	</ul>
+	<h2 class="title">HTML письма</h2>
+	<p>HTML письма сверстанны адаптивно, нормально отображаются во всех современных почтовиках(Apple Mail, Mail.ru,
+		Yandex, Gmail, Yahoo, Outlook, Rambler и т.д.).<br>При верстке писем использовался фреймворк MJML</p>
+	<ul class="projects__list">
+		<li class="projects__list">
+			<a href="Retro/index.html" class="project__link">Retro(тестовый проект)</a>
+		</li>
+		<li class="projects__list">
+			<a href="valentines day/index.html" class="project__link">Valentine's Day(тестовый проект)</a>
+		</li>
+		<li class="projects__list">
+			<a href="Boutique/index.html" class="project__link">Boutique(тестовый проект)</a>
+		</li>
+	</ul>
+</body>
+
+</html>
