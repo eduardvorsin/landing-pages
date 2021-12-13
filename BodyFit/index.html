@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Landing page">
+	<title>Document</title>
+	<style>:root{--primary-font:"Roboto",sans-serif;--secondary-font:"Open Sans",sans-serif;--primary-color:0,84%,64%;--secondary-color-01:210,32%,28%;--secondary-color-02:216,18%,16%;--territary-color-01:0,0%,100%;--territary-color-02:0,0%,87%}body{overflow-x:hidden;background-color:#fff;background-color:hsl(var(--territary-color-01));color:#f05656;color:hsl(var(--primary-color));font-family:Roboto,sans-serif;font-family:var(--primary-font);font-weight:400;line-height:1.5;word-break:break-word;text-rendering:optimizeSpeed}.page{display:flex;min-height:100%;flex-direction:column}.main{flex:1 1 auto}@font-face{font-family:"Open Sans";font-style:normal;font-weight:300;font-display:swap;src:url(../../fonts/OpenSans-Light.woff) format("woff"),url(../../fonts/OpenSans-Light.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Open Sans";font-style:normal;font-weight:400;font-display:swap;src:url(../../fonts/OpenSans-Regular.woff) format("woff"),url(../../fonts/OpenSans-Regular.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Open Sans";font-style:normal;font-weight:700;font-display:swap;src:url(../../fonts/OpenSans-Bold.woff) format("woff"),url(../../fonts/OpenSans-Bold.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(../../fonts/Roboto-Light.woff) format("woff"),url(../../fonts/Roboto-Light.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(../../fonts/Roboto-Regular.woff) format("woff"),url(../../fonts/Roboto-Regular.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:500;font-display:swap;src:url(../../fonts/Roboto-Roboto-Medium.woff) format("woff"),url(../../fonts/Roboto-Roboto-Medium.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}*,::after,::before{margin:0;padding:0;box-sizing:border-box}:focus{outline:0}ul{padding:0}body,h1,li,ul{margin:0}ul{list-style:none}a{color:inherit;text-decoration:none}img{max-width:100%}img{display:block}button{font:inherit}body,html{height:100%}.wrapper{width:100%;max-width:1200px;margin:0 auto;padding:0 15px}.btn{display:inline-block;min-width:120px;padding:11px calc(15px + 15*((100vw - 320px)/ 1320));border:0;color:#fff;color:hsl(var(--territary-color-01));font-family:"Open Sans",sans-serif;font-family:var(--secondary-font);font-size:15px;font-weight:700;line-height:1;letter-spacing:.5px;text-transform:uppercase}.btn--2,.burger-menu span,.burger-menu::after,.burger-menu::before{background-color:#f05656;background-color:hsl(var(--primary-color))}.title{margin-bottom:calc(20px + 20*((100vw - 320px)/ 1320));color:#31475e;color:hsl(var(--secondary-color-01));font-family:"Open Sans",sans-serif;font-family:var(--secondary-font);font-size:calc(22px + 8*((100vw - 320px)/1320));line-height:1.25;text-transform:uppercase;text-align:center}.scroll-top-btn{display:flex;width:50px;height:50px;align-items:center;justify-content:center;border:2px solid #fff;border:2px solid hsl(var(--territary-color-01));border-radius:50%;visibility:hidden;background-color:#fff;background-color:hsl(var(--territary-color-01));outline:0;position:fixed;right:20px;bottom:20px;z-index:15;opacity:0}.scroll-top-btn__icon{width:30px;height:30px;fill:#212730;fill:hsl(var(--secondary-color-02))}.burger-menu{display:flex;width:35px;height:35px;padding:5px;align-items:center;-ms-grid-row-align:center;align-self:center;border:0;background-color:transparent;position:relative;z-index:30}.burger-menu span,.burger-menu::after,.burger-menu::before{width:25px;height:3px}.burger-menu::after,.burger-menu::before{content:"";position:absolute}.burger-menu::before{transform:translateY(-10px)}.burger-menu::after{transform:translateY(10px)}.burger-menu span{transform:translateX(0)}.header{width:100%;border-bottom:1px solid 0,84%,64%;border-bottom:1px solid var(--primary-color);background-color:var(--secondary-color);position:fixed;z-index:50}.header::before{content:"";width:100%;height:100%;background-color:rgba(33,39,48,.5);background-color:hsla(var(--secondary-color-02),.5);position:absolute;z-index:20}.header__inner{display:-ms-grid;display:grid;padding:calc(5px + 10*((100vw - 320px)/ 1320)) 0;-ms-grid-columns:calc(120px + 40*((100vw - 320px)/ 1320)) 1fr;grid-template-columns:calc(120px + 40*((100vw - 320px)/ 1320)) 1fr;-ms-grid-rows:1fr;grid-template-rows:1fr;grid-gap:30px;gap:30px;justify-items:end;align-items:center}.header__logo{position:relative;z-index:50}.logo{width:100%;max-width:160px}.logo img{-o-object-fit:cover;object-fit:cover}.nav{display:flex;width:100%;height:100%;padding-top:calc(60px + 40*((100vw - 320px)/ 1320));flex-direction:column;justify-content:center;-webkit-clip-path:circle(22px at calc(100% - 33px) 23px);clip-path:circle(22px at calc(100% - 33px) 23px);background-color:#31475e;background-color:hsl(var(--secondary-color-01));position:fixed;top:0;right:0;bottom:0;z-index:20}.nav__list{display:-ms-grid;display:grid;height:100%;grid-gap:20px;gap:20px;justify-items:center}.nav__link{color:#f05656;color:hsl(var(--primary-color));font-size:26px;font-weight:500;line-height:.6px}.hero{min-height:100vh}.hero::before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:5}.hero::before{background:linear-gradient(60deg,rgba(33,39,48,.7) 55%,rgba(33,39,48,.35) 45%);background:linear-gradient(60deg,hsla(var(--secondary-color-02),.7) 55%,hsla(var(--secondary-color-02),.35) 45%)}.hero__inner{display:flex;height:100vh;min-height:calc(330px + 70*((100vw - 320px)/ 1320));padding-top:calc(40px + 40*((100vw - 320px)/ 1320));align-items:center}.hero-slider{width:100%;height:100vh;position:absolute;top:0;left:0;z-index:-1}.hero-item__image{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center top;object-position:center top}.hero-content{display:flex;width:100%;max-width:calc(600px + 30*((100vw - 320px)/ 1320));padding:0 calc(15px + 15*((100vw - 320px)/ 1320));flex-direction:column;justify-content:center;color:#fff;color:hsl(var(--territary-color-01));position:relative;z-index:5}.hero-content__title{margin-bottom:calc(10px + 10*((100vw - 320px)/ 1320));color:hsl(var(--territary-color));font-size:calc(26px + 18*((100vw - 320px)/1320));line-height:1.25;letter-spacing:1.2px;text-transform:uppercase;text-align:left}.hero-content__title span{color:#f05656;color:hsl(var(--primary-color))}.hero-content__text{margin-bottom:calc(25px + 25*((100vw - 320px)/ 1320));font-size:18px}.hero-content__btn{align-self:flex-start;text-transform:uppercase}.shop-slider__pagination.swiper-pagination{bottom:0}@media (min-width:769px){.burger-menu{display:none}.nav__list{-ms-grid-columns:(-webkit-min-content)[7];-ms-grid-columns:(min-content)[7];grid-template-columns:repeat(7,-webkit-min-content);grid-template-columns:repeat(7,min-content);grid-gap:5px calc(5px + 15*((100vw - 320px)/ 1320));gap:5px calc(5px + 15*((100vw - 320px)/ 1320))}.nav,.nav__link{position:relative}.nav__link{display:inline-block;padding:4px;font-size:16px;white-space:nowrap}.nav__link::after{content:"";width:100%;height:3px;background-color:#f05656;background-color:hsl(var(--primary-color));position:absolute;left:0;bottom:-8px;z-index:5;transform:scaleX(0);transform-origin:left}.nav{width:auto;height:auto;padding-top:0;overflow-y:visible;-webkit-clip-path:none;clip-path:none;background-color:transparent;z-index:20}.shop-slider__pagination{display:none}}@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;-webkit-animation-duration:NaNs!important;animation-duration:NaNs!important;-webkit-animation-iteration-count:1!important;animation-iteration-count:1!important}}</style>
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" type="text/css" href="css/style.min.css" media="print" onload="this.media='all'">
+</head>
+
+<body>
+	<div class="page">
+		<header class="header">
+			<div class="wrapper">
+				<div class="header__inner">
+					<a href="#" class="logo header__logo">
+						<img src="images/icons/logo.svg" alt="bodyfit logo" class="header__logo-img">
+					</a>
+					<nav class="nav header__nav">
+						<ul class="nav__list">
+							<li class="nav__item" style="--delay:0.1s">
+								<a href="#" class="nav__link">Home</a>
+							</li>
+							<li class="nav__item" style="--delay:0.2s">
+								<a href="#" class="nav__link">Features</a>
+							</li>
+							<li class="nav__item" style="--delay:0.3s">
+								<a href="#" class="nav__link">Portfolio</a>
+							</li>
+							<li class="nav__item" style="--delay:0.4s">
+								<a href="#" class="nav__link">Reviews</a>
+							</li>
+							<li class="nav__item" style="--delay:0.5s">
+								<a href="#" class="nav__link">Shop</a>
+							</li>
+							<li class="nav__item" style="--delay:0.6s">
+								<a href="#" class="nav__link">Blog</a>
+							</li>
+							<li class="nav__item" style="--delay:0.7s">
+								<a href="#" class="nav__link">Contacts</a>
+							</li>
+						</ul>
+					</nav>
+					<button class="burger-menu" aria-label="navigation menu button" aria-expanded="false">
+						<span class="burger-menu__item"></span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="hero">
+				<div class="hero__inner">
+					<div class="hero__slider hero-slider swiper">
+						<div class="hero-slider__wrapper swiper-wrapper">
+							<div class="hero-slider__item hero-item swiper-slide">
+								<img class="swiper-lazy hero-item__image"
+									data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312873/bodyfit2/webp/main-slider-item01_2x_ci5jds.webp 2x"
+									data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312873/bodyfit2/webp/main-slider-item01_1x_djva04.webp"
+									alt="bodybuilder posing">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="hero-slider__item hero-item swiper-slide">
+								<img class="swiper-lazy hero-item__image"
+									data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312872/bodyfit2/webp/main-slider-item02_2x_q4pmj2.webp 2x"
+									data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312872/bodyfit2/webp/main-slider-item02_1x_pqx3qk.webp"
+									alt="bodybuilder posing with dumbbells">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="hero-slider__item hero-item swiper-slide">
+								<img class="swiper-lazy hero-item__image"
+									data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312872/bodyfit2/webp/main-slider-item03_2x_rlnrhq.webp 2x"
+									data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312873/bodyfit2/webp/main-slider-item03_1x_gskjw3.webp"
+									alt="a man is engaged in the simulator">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+					</div>
+					<div class="hero__content hero-content">
+						<h1 class="hero-content__title title">Welcome to body<span>fit</span></h1>
+						<div class="hero-content__text">Working from home meant we could vary snack and coffee breaks, change
+							our desks or view, drink on the job, even spend the day in pajamas,
+							and often meet to gossip or share ideas.</div>
+						<a href="#" class="btn hero-content__btn btn--2">
+							learn more
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="benefits">
+				<div class="benefits__wrapper wrapper">
+					<div class="benefits__inner">
+						<h2 class="benefits__title title visually-hidden">Our benefits</h2>
+						<div class="benefits__row">
+							<div class="benefits__item loading">
+								<picture>
+									<source
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312871/bodyfit2/webp/benefits-image01_1x_gztl2u.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312871/bodyfit2/webp/benefits-image01_2x_al3zbm.webp 2x"
+										srcset="images/1x1.png" type="image/webp">
+									<img class="benefits-item__img"
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312842/bodyfit2/jpg/benefits-image01_2x_h6verm.jpg 2x"
+										srcset="images/1x1.png"
+										data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312840/bodyfit2/jpg/benefits-image01_1x_okqzcd.jpg"
+										src="images/1x1.png" alt="The girl is engaged with a weight">
+								</picture>
+							</div>
+							<div class="benefits__item loading">
+								<picture>
+									<source
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312871/bodyfit2/webp/benefits-image02_1x_vwqupb.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312872/bodyfit2/webp/benefits-image02_2x_ee8vs7.webp 2x"
+										srcset="images/1x1.png" type="image/webp">
+									<img class="benefits-item__img"
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312839/bodyfit2/jpg/benefits-image02_2x_h8qmx1.jpg 2x"
+										srcset="images/1x1.png"
+										data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312841/bodyfit2/jpg/benefits-image02_1x_ulx3j1.jpg"
+										src="images/1x1.png" alt="a man is engaged with dumbbells">
+								</picture>
+							</div>
+							<div class="benefits__item loading">
+								<picture>
+									<source
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312870/bodyfit2/webp/benefits-image03_1x_lc1g8c.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312870/bodyfit2/webp/benefits-image03_2x_tcjojr.webp 2x"
+										srcset="images/1x1.png" type="image/webp">
+									<img class="benefits-item__img"
+										data-srcset="images/https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312839/bodyfit2/jpg/benefits-image03_2x_iwqd06.jpg 2x"
+										srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312839/bodyfit2/jpg/benefits-image03_1x_hbltg3.jpg"
+										src="images/1x1.png" alt="the girl is engaged on a treadmill">
+								</picture>
+							</div>
+						</div>
+						<div class="benefits__content benefits-content">
+							<h3 class="benefits-content__title title">Optimized Your Body </h3>
+							<h4 class="benefits-content__subtitle subtitle">Start Your Trainig Today </h4>
+							<a href="#" class="benefits-content__btn btn btn--2">start now</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<div class="wrapper">
+					<div class="services__inner">
+						<h2 class="services__title title">Strategies for Improving your Body</h2>
+						<div class="services__row">
+							<div class="services__column">
+								<div class="services__item services-item">
+									<svg class="services-item__icon">
+										<use xlink:href="images/icons/sprite.svg#services-icon01"></use>
+									</svg>
+									<h3 class="services-item__title">Fitness</h3>
+									<div class="services-item__text">
+										<p>
+											Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="services__column">
+								<div class="services__item services-item">
+									<svg class="services-item__icon">
+										<use xlink:href="images/icons/sprite.svg#services-icon02"></use>
+									</svg>
+									<h3 class="services-item__title">Diet</h3>
+									<div class="services-item__text">
+										<p>
+											Commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+											fugiat nulla pariatur.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="services__column">
+								<div class="services__item services-item">
+									<svg class="services-item__icon">
+										<use xlink:href="images/icons/sprite.svg#services-icon03"></use>
+									</svg>
+									<h3 class="services-item__title">Habbits</h3>
+									<div class="services-item__text">
+										<p>
+											Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+											Duis
+											aute irure.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="team">
+				<div class="team__wrapper wrapper">
+					<div class="team__inner">
+						<h2 class="team__title title">Our Team</h2>
+						<div class="team__row">
+							<div class="team__column">
+								<div class="team__item team-item">
+									<div class="team-item__image loading">
+										<picture>
+											<source
+												data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312871/bodyfit2/webp/team-image01_1x_fbwhd6.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312873/bodyfit2/webp/team-image01_2x_rmpqe4.webp 2x"
+												srcset="images/1x1.png" type="image/webp">
+											<img
+												data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312840/bodyfit2/jpg/team-image01_2x_dkmjdd.jpg 2x"
+												srcset="images/1x1.png"
+												data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312839/bodyfit2/jpg/team-image01_1x_vm4qnr.jpg"
+												src="images/1x1.png" alt="a man makes a bar on dumbbells">
+										</picture>
+										<div class="team-item__overlay team-item-overlay">
+											<div class="team-item-overlay__text">10 years of experience</div>
+										</div>
+									</div>
+
+									<div class="team-item__text">
+										<h3 class="team-item__name">Patrick Brantley</h3>
+										<h4 class="team-item__profession">Personal Trainer</h4>
+									</div>
+								</div>
+							</div>
+							<div class="team__column">
+								<div class="team__item team-item">
+									<div class="team-item__image loading">
+										<picture>
+											<source
+												data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312871/bodyfit2/webp/team-image02_1x_r64ylu.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312872/bodyfit2/webp/team-image02_2x_pnh1e2.webp 2x"
+												srcset="images/1x1.png" type="image/webp">
+											<img
+												data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312840/bodyfit2/jpg/team-image02_2x_gnca92.jpg 2x"
+												srcset="images/1x1.png"
+												data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312839/bodyfit2/jpg/team-image02_1x_ysvur6.jpg"
+												src="images/1x1.png" alt="a man shows his abs">
+										</picture>
+										<div class="team-item__overlay team-item-overlay">
+											<div class="team-item-overlay__text">3 years of experience</div>
+										</div>
+									</div>
+
+									<div class="team-item__text">
+										<h3 class="team-item__name">Sam Jefferson</h3>
+										<h4 class="team-item__profession">Trainer Instructor</h4>
+									</div>
+								</div>
+							</div>
+							<div class="team__column">
+								<div class="team__item team-item">
+									<div class="team-item__image loading">
+										<picture>
+											<source
+												data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312871/bodyfit2/webp/team-image03_1x_l2pvik.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312871/bodyfit2/webp/schedule-item03_2x_efrozu.webp 2x"
+												srcset="images/1x1.png" type="image/webp">
+											<img
+												data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312839/bodyfit2/jpg/team-image03_2x_o7shrt.jpg 2x"
+												srcset="images/1x1.png"
+												data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312839/bodyfit2/jpg/team-image03_1x_bnkxu6.jpg"
+												src="images/1x1.png" alt="a girl does exercises on a gym mat">
+										</picture>
+										<div class="team-item__overlay team-item-overlay">
+											<div class="team-item-overlay__text">5 years of experience</div>
+										</div>
+									</div>
+									<div class="team-item__text">
+										<h3 class="team-item__name">Reanna Prescot</h3>
+										<h4 class="team-item__profession">Fitness trainer</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="schedule">
+				<div class="schedule__inner">
+					<h2 class="schedule__title title">Our schedule</h2>
+					<div class="schedule__slider schedule-slider swiper">
+						<div class="schedule-slider__wrapper swiper-wrapper">
+							<div class="schedule-slider__item schedule-item swiper-slide loading">
+								<picture>
+									<source
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312870/bodyfit2/webp/schedule-item01_1x_tzpmdt.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312871/bodyfit2/webp/schedule-item01_2x_imujta.webp 2x"
+										srcset="images/1x1.png" type="image/webp">
+									<img class="schedule-item__image"
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312841/bodyfit2/jpg/schedule-item01_2x_aqbnjw.jpg 2x"
+										srcset="images/1x1.png"
+										data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312839/bodyfit2/jpg/schedule-item01_1x_qywjx0.jpg"
+										src="images/1x1.png" alt="the girl is boxing">
+								</picture>
+								<div class="schedule-item__overlay schedule-item-overlay">
+									<div class="schedule-item-overlay__text">
+										<h3 class="schedule-item-overlay__description">boxing for girls</h3>
+										<time class="schedule-item-overlay__date">10:30 AM - 11:30 AM </time>
+									</div>
+								</div>
+							</div>
+							<div class="schedule-slider__item schedule-item swiper-slide loading">
+
+								<picture>
+									<source
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312870/bodyfit2/webp/schedule-item02_1x_gbrtbo.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312872/bodyfit2/webp/schedule-item02_2x_tp00ou.webp 2x"
+										srcset="images/1x1.png" type="image/webp">
+									<img class="schedule-item__image"
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312841/bodyfit2/jpg/schedule-item02_2x_lyobbe.jpg 2x"
+										srcset="images/1x1.png"
+										data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312839/bodyfit2/jpg/schedule-item02_1x_rzxtvp.jpg"
+										src="images/1x1.png" alt="a girl does yoga">
+								</picture>
+
+								<div class="schedule-item__overlay schedule-item-overlay">
+									<div class="schedule-item-overlay__text">
+										<h3 class="schedule-item-overlay__description">boxing for girls</h3>
+										<time class="schedule-item-overlay__date">10:30 AM - 11:30 AM </time>
+									</div>
+								</div>
+							</div>
+							<div class="schedule-slider__item schedule-item swiper-slide loading">
+								<picture>
+									<source
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312870/bodyfit2/webp/schedule-item03_1x_cqj3zu.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312871/bodyfit2/webp/schedule-item03_2x_efrozu.webp 2x"
+										srcset="images/1x1.png" type="image/webp">
+									<img class="schedule-item__image"
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312840/bodyfit2/jpg/schedule-item03_2x_dhiovi.jpg 2x"
+										srcset="images/1x1.png"
+										data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312839/bodyfit2/jpg/schedule-item03_1x_n3xlup.jpg"
+										src="images/1x1.png" alt="the girl is standing in the bar">
+								</picture>
+								<div class="schedule-item__overlay schedule-item-overlay">
+									<div class="schedule-item-overlay__text">
+										<h3 class="schedule-item-overlay__description">boxing for girls</h3>
+										<time class="schedule-item-overlay__date">10:30 AM - 11:30 AM </time>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="schedule-slider__pagination swiper-pagination"></div>
+						<div class="schedule-slider__arrow swiper-button-prev"></div>
+						<div class="schedule-slider__arrow swiper-button-next"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="class">
+				<div class="class__item class-item class-item--men">
+					<div class="class-item__content class-item__content--men">
+						<div class="class-item__title">Men class</div>
+						<div class="class-item__text">
+							Lorem ipsum dolor sit amet, consectetur adi sollicitudin.
+							Suspendisse pulvinar, velit nec pharetra interdum,
+							ante tellus ornare mi, et mollis
+							tellus neque vitae elit</div>
+						<a href="#" class="class-item__btn btn btn--2">Start now</a>
+					</div>
+				</div>
+				<div class="class__item class-item class-item--women">
+					<div class="class-item__content class-item__content--women">
+						<div class="class-item__title">Women class</div>
+						<div class="class-item__text">
+							Lorem ipsum dolor sit amet, consectetur adi sollicitudin.
+							Suspendisse pulvinar, velit nec pharetra interdum,
+							ante tellus ornare mi, et mollis
+							tellus neque vitae elit</div>
+						<a href="#" class="class-item__btn btn btn--1">Start now</a>
+					</div>
+				</div>
+				<div class="class__circle class-circle">
+					<div class="class-circle__inner">
+						<div class="class-circle__text">
+							<span>Our</span> classes
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="shop">
+				<div class="shop__inner">
+					<h2 class="shop__title title visually-hidden">Shop</h2>
+					<div class="shop__slider shop-slider swiper">
+						<div class="shop-slider__wrapper swiper-wrapper">
+							<div class="shop-slider__slide shop-item swiper-slide">
+								<div class="shop-item__image loading">
+									<picture>
+										<source
+											data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312870/bodyfit2/webp/shop-item01_1x_h7svxb.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312870/bodyfit2/webp/shop-item01_2x_eexkhd.webp 2x"
+											srcset="images/1x1.png" type="image/webp">
+										<img data-srcset="images/shop-item01@2x.png 2x" srcset="images/1x1.png"
+											data-src="images/shop-item01@1x.png" src="images/1x1.png" alt="exsercise bike">
+									</picture>
+									<div class="shop-item__overlay shop-item-overlay">
+										<a href="#" class="shop-item-overlay__btn btn btn--2">quick view</a>
+									</div>
+								</div>
+								<div class="shop-item__content">
+									<div class="shop-item__description">Roger Black Gold Magnetic Exercise Bike. </div>
+									<a href="#" class="shop-item__btn btn btn--1">view more</a>
+								</div>
+							</div>
+
+							<div class="shop-slider__slide shop-item swiper-slide">
+								<div class="shop-item__image loading">
+									<picture>
+										<source
+											data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312870/bodyfit2/webp/shop-item02_1x_tvrkli.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312870/bodyfit2/webp/shop-item02_2x_bt1sxf.webp 2x"
+											srcset="images/1x1.png" type="image/webp">
+										<img data-srcset="images/shop-item02@2x.png 2x" srcset="images/1x1.png"
+											data-src="images/shop-item02@1x.png" src="images/1x1.png" alt="dumbbells">
+									</picture>
+									<div class="shop-item__overlay shop-item-overlay">
+										<a href="#" class="shop-item-overlay__btn btn btn--2">quick view</a>
+									</div>
+								</div>
+								<div class="shop-item__content">
+									<div class="shop-item__description">Roger Black Gold Magnetic Exercise Bike. </div>
+									<a href="#" class="shop-item__btn btn btn--1">view more</a>
+								</div>
+							</div>
+
+							<div class="shop-slider__slide shop-item swiper-slide">
+								<div class="shop-item__image loading">
+									<picture>
+										<source
+											data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312870/bodyfit2/webp/shop-item03_1x_vxqwvj.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312869/bodyfit2/webp/shop-item03_2x_duimyb.webp 2x"
+											srcset="images/1x1.png" type="image/webp">
+										<img data-srcset="images/shop-item03@2x.png 2x" srcset="images/1x1.png"
+											data-src="images/shop-item03@1x.png" src="images/1x1.png" alt="removable dumbbells">
+									</picture>
+									<div class="shop-item__overlay shop-item-overlay">
+										<a href="#" class="shop-item-overlay__btn btn btn--2">quick view</a>
+									</div>
+								</div>
+								<div class="shop-item__content">
+									<div class="shop-item__description">Roger Black Gold Magnetic Exercise Bike. </div>
+									<a href="#" class="shop-item__btn btn btn--1">view more</a>
+								</div>
+							</div>
+
+							<div class="shop-slider__slide shop-item swiper-slide">
+								<div class="shop-item__image loading">
+									<picture>
+										<source
+											data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312869/bodyfit2/webp/shop-item04_1x_vfk6r1.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312869/bodyfit2/webp/shop-item04_2x_mnntol.webp 2x"
+											srcset="images/1x1.png" type="image/webp">
+										<img data-srcset="images/shop-item04@2x.png 2x" srcset="images/1x1.png"
+											data-src="images/shop-item04@1x.png" src="images/1x1.png" alt="Rowing simulator">
+									</picture>
+									<div class="shop-item__overlay shop-item-overlay">
+										<a href="#" class="shop-item-overlay__btn btn btn--2">quick view</a>
+									</div>
+								</div>
+								<div class="shop-item__content">
+									<div class="shop-item__description">Roger Black Gold Magnetic Exercise Bike. </div>
+									<a href="#" class="shop-item__btn btn btn--1">view more</a>
+								</div>
+							</div>
+
+							<div class="shop-slider__slide shop-item swiper-slide">
+								<div class="shop-item__image loading">
+									<picture>
+										<source
+											data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312869/bodyfit2/webp/shop-item05_1x_nlejod.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312869/bodyfit2/webp/shop-item05_2x_p8hsjc.webp 2x"
+											srcset="images/1x1.png" type="image/webp">
+										<img data-srcset="images/shop-item05@2x.png 2x" srcset="images/1x1.png"
+											data-src="images/shop-item05@1x.png" src="images/1x1.png" alt="Expander">
+									</picture>
+									<div class="shop-item__overlay shop-item-overlay">
+										<a href="#" class="shop-item-overlay__btn btn btn--2">quick view</a>
+									</div>
+								</div>
+								<div class="shop-item__content">
+									<div class="shop-item__description">Roger Black Gold Magnetic Exercise Bike. </div>
+									<a href="#" class="shop-item__btn btn btn--1">view more</a>
+								</div>
+							</div>
+
+							<div class="shop-slider__slide shop-item swiper-slide">
+								<div class="shop-item__image loading">
+									<picture>
+										<source
+											data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312869/bodyfit2/webp/shop-item06_1x_s7fdfp.webp 1x, https://res.cloudinary.com/dfm2xzqp5/image/upload/v1639312871/bodyfit2/webp/shop-item06_2x_vcsn5j.webp 2x"
+											srcset="images/1x1.png" type="image/webp">
+										<img data-srcset="images/shop-item06@2x.png 2x" srcset="images/1x1.png"
+											data-src="images/shop-item06@1x.png" src="images/1x1.png" alt="Kettlebell">
+									</picture>
+									<div class="shop-item__overlay shop-item-overlay">
+										<a href="#" class="shop-item-overlay__btn btn btn--2">quick view</a>
+									</div>
+								</div>
+								<div class="shop-item__content">
+									<div class="shop-item__description">Roger Black Gold Magnetic Exercise Bike. </div>
+									<a href="#" class="shop-item__btn btn btn--1">view more</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="shop-slider__pagination swiper-pagination"></div>
+					<div class="shop-slider__arrow swiper-button-prev"></div>
+					<div class="shop-slider__arrow swiper-button-next"></div>
+				</div>
+			</section>
+
+			<div class="statistics">
+				<div class="wrapper">
+					<div class="statistics__inner">
+						<div class="statistics__row">
+							<div class="statistics__item">
+								<div class="statistics__circle">
+									<svg class="statistics__icon">
+										<use xlink:href="images/icons/sprite.svg#tiles"></use>
+									</svg>
+									<div class="statistics__counter">93</div>
+									<div class="statistics__title">CLASSES</div>
+								</div>
+							</div>
+							<div class="statistics__item">
+								<div class="statistics__circle">
+									<svg class="statistics__icon">
+										<use xlink:href="images/icons/sprite.svg#cup"></use>
+									</svg>
+									<div class="statistics__counter">93</div>
+									<div class="statistics__title">CLASSES</div>
+								</div>
+							</div>
+							<div class="statistics__item">
+								<div class="statistics__circle">
+									<svg class="statistics__icon">
+										<use xlink:href="images/icons/sprite.svg#human"></use>
+									</svg>
+									<div class="statistics__counter">93</div>
+									<div class="statistics__title">CLASSES</div>
+								</div>
+							</div>
+							<div class="statistics__item">
+								<div class="statistics__circle">
+									<svg class="statistics__icon">
+										<use xlink:href="images/icons/sprite.svg#people"></use>
+									</svg>
+									<div class="statistics__counter">93</div>
+									<div class="statistics__title">CLASSES</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<section class="follow">
+				<div class="wrapper">
+					<div class="follow__inner">
+						<div class="follow__content">
+							<h2 class="follow__title title">Latest tweets</h2>
+							<div class="follow__text">
+								<p class="follow__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua.
+								</p>
+							</div>
+							<a href="#" class="follow__btn btn btn--2">Follow us</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="social">
+				<div class="wrapper">
+					<h2 class="social__title visually-hidden">We are in social networks</h2>
+					<div class="social__inner">
+						<ul class="social__list">
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="social__icon">
+										<use xlink:href="images/icons/sprite.svg#facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="social__icon">
+										<use xlink:href="images/icons/sprite.svg#twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="social__icon">
+										<use xlink:href="images/icons/sprite.svg#pinterest"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="social__icon">
+										<use xlink:href="images/icons/sprite.svg#dribble"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="social__icon">
+										<use xlink:href="images/icons/sprite.svg#instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="social__icon">
+										<use xlink:href="images/icons/sprite.svg#youtube"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="wrapper">
+				<div class="footer__inner">
+					<div class="footer__row">
+						<div class="footer__column">
+							<div class="footer__item footer-item footer__about footer-about">
+								<a href="#" class="footer-about__logo" aria-label="body-fit logo">
+									<img src="images/icons/footer-logo.svg" alt="footer logo">
+								</a>
+								<div class="footer-about__text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+										labore
+										et
+										dolore magna aliqua. Ut enim ad minim veniam,
+									</p>
+									<p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+										dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+								</div>
+							</div>
+						</div>
+						<div class="footer__column">
+							<div class="footer__item footer-item footer__contacts footer-contacts">
+								<h3 class="footer-item__title footer-contacts__title">Contacts</h3>
+								<div class="footer-contacts__text">
+									<p>Operating Hours: Monday to Friday 10:00 to 11.30. Saturdays 12:00 to 01:00. Sundays 03:00 to 04.30.
+										Closed on public holidays.</p>
+								</div>
+								<ul class="footer-contacts__list">
+									<li class="footer-contacts__item footer-contacts__item--plane">
+										<h4 class="footer-contacts__list-title  ">Adress:</h4>
+										<address class="footer-contacts__list-text">42/16, GM Chowdhury Road,
+											Shipyard 9201, Khulna.
+										</address>
+									</li>
+									<li class="footer-contacts__item footer-contacts__item--phone">
+										<h4 class="footer-contacts__list-title ">Phone:</h4>
+										<a href="#" class="footer-contacts__link">+8801918 691 601</a>
+									</li>
+									<li class="footer-contacts__item icon-email footer-contacts__item--email">
+										<h4 class="footer-contacts__list-title ">Email:</h4>
+										<a href="#" class="footer-contacts__link">mls@live.com</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__column">
+							<div class="footer__item footer-item footer__subscribe footer-subscribe">
+								<h3 class="footer-item__title footer-subscribe__title">Newsletter subscribe</h3>
+								<div class="footer-subscribe__text">
+									<p>
+										Lorem ipsum dolor sit amet, consectetur
+										adipisicing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore.</p>
+								</div>
+								<form class="footer-subscribe__form footer-form" action="#">
+									<fieldset class="footer-form__inner">
+										<legend class="footer-form__description visually-hidden">Subscribe form</legend>
+										<input type="text" class="footer-form__input" placeholder="Name (required)">
+										<input type="text" class="footer-form__input" placeholder="E-mail (required)">
+										<button type="submit" class="footer-form__btn btn btn--1">Send</button>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright">
+				<p>Copyright © 2015 Designed by Mustafa</p>
+			</div>
+		</footer>
+	</div>
+
+	<button class="scroll-top-btn" aria-label="scroll to top button">
+		<svg class="scroll-top-btn__icon">
+			<use xlink:href="images/icons/sprite.svg#arrow-up"></use>
+		</svg>
+	</button>
+
+	<link rel="preload" href="fonts/Roboto-Light.woff" as="font" crossorigin>
+	<link rel="preload" href="fonts/Roboto-Regular.woff" as="font" crossorigin>
+	<link rel="preload" href="fonts/Roboto-Medium.woff" as="font" crossorigin>
+	<link rel="preload" href="fonts/OpenSans-Light.woff" as="font" crossorigin>
+	<link rel="preload" href="fonts/OpenSans-Regular.woff" as="font" crossorigin>
+	<link rel="preload" href="fonts/OpenSans-Bold.woff" as="font" crossorigin>
+
+	<script src="js/focus-visible.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script defer src="js/main.min.js"></script>
+
+<noscript><link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"></noscript>
+
+
+<noscript><link rel="stylesheet" type="text/css" href="css/style.min.css"></noscript>
+
+</body>
+
+</html>
