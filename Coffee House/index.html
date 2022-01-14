@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Landing page">
+	<title>Document</title>
+	<style>@charset "UTF-8";@font-face{font-family:"Open Sans";font-display:swap;src:url(../../fonts/OpenSans-Light.woff) format("woff"),url(../../fonts/OpenSans-Light.woff2) format("woff2");font-weight:300;font-style:normal;unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Open Sans";font-display:swap;src:url(../../fonts/OpenSans-Regular.woff) format("woff"),url(../../fonts/OpenSans-Regular.woff2) format("woff2");font-weight:400;font-style:normal;unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Open Sans";font-display:swap;src:url(../../fonts/OpenSans-Medium.woff) format("woff"),url(../../fonts/OpenSans-Medium.woff2) format("woff2");font-weight:500;font-style:normal;unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Open Sans";font-display:swap;src:url(../../fonts/OpenSans-SemiBold.woff) format("woff"),url(../../fonts/OpenSans-SemiBold.woff2) format("woff2");font-weight:600;font-style:normal;unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Open Sans";font-display:swap;src:url(../../fonts/OpenSans-Bold.woff) format("woff"),url(../../fonts/OpenSans-Bold.woff2) format("woff2");font-weight:700;font-style:normal;unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Open Sans";font-display:swap;src:url(../../fonts/OpenSans-Light.woff) format("woff"),url(../../fonts/OpenSans-Light.woff2) format("woff2");font-weight:300;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Open Sans";font-display:swap;src:url(../../fonts/OpenSans-Regular.woff) format("woff"),url(../../fonts/OpenSans-Regular.woff2) format("woff2");font-weight:400;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Open Sans";font-display:swap;src:url(../../fonts/OpenSans-Medium.woff) format("woff"),url(../../fonts/OpenSans-Medium.woff2) format("woff2");font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Open Sans";font-display:swap;src:url(../../fonts/OpenSans-SemiBold.woff) format("woff"),url(../../fonts/OpenSans-SemiBold.woff2) format("woff2");font-weight:600;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Open Sans";font-display:swap;src:url(../../fonts/OpenSans-Bold.woff) format("woff"),url(../../fonts/OpenSans-Bold.woff2) format("woff2");font-weight:700;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}:root{--primary-font:"Open Sans",sans-serif;--primary-color-01:35,76%,58%;--primary-color-02:35,76%,48%;--secondary-color-01:190,90%,4%;--secondary-color-02:190,0%,10%;--secondary-color-03:0,0%,44%;--tertiary-color-01:0,0%,100%;--tertiary-color-02:0,0%,90%;--tertiary-color-03:0,0%,44%}*,::after,::before{padding:0;margin:0;box-sizing:border-box}body,html{height:100%}ul{padding:0;list-style:none}body,h1,li,p,ul{margin:0}a{color:inherit;text-decoration:none}img,svg{max-width:100%;display:block}button{font:inherit}.wrapper{width:100%;max-width:1230px;margin:0 auto;padding:0 15px}body,html{background-color:#011013;background-color:hsl(var(--secondary-color-01))}body{text-rendering:optimizeSpeed;word-break:break-word;line-height:1.5;font-weight:400;font-family:"Open Sans",sans-serif;font-family:var(--primary-font);color:#e5a143;color:hsl(var(--primary-color-01))}.page,body{overflow-x:hidden}.page{display:flex;flex-direction:column;min-height:100%}.main{flex:1 1 auto}.btn{background-color:#e5a143;background-color:hsl(var(--primary-color-01))}.btn{display:inline-block;color:#fff;color:hsl(var(--tertiary-color-01))}.btn{border:0;min-width:150px;padding:13px 20px;font-size:1rem;font-weight:500;border-radius:6px;text-transform:uppercase;text-align:center}.title{font-weight:700;line-height:1.25}.title{font-size:1.875rem;letter-spacing:-.0666666667em}.text,.title{color:#fff;color:hsl(var(--tertiary-color-01))}.text{font-size:1rem;font-weight:400}.logo{max-width:180px;width:100%}.logo img{-o-object-fit:cover;object-fit:cover}.burger-menu{display:flex;width:35px;height:35px;padding:5px;-ms-grid-row-align:center;align-self:center;align-items:center;border:0;background-color:transparent;position:relative;z-index:30}.burger-menu span,.burger-menu::after,.burger-menu::before{width:25px;height:3px;background-color:#fff;background-color:hsl(var(--tertiary-color-01));border-radius:20px}.burger-menu span{transform:translateX(0)}.burger-menu::after,.burger-menu::before{content:"";position:absolute}.burger-menu::before{transform:translateY(-10px)}.burger-menu::after{transform:translateY(10px)}.preloader{position:fixed;width:100%;height:100%;display:flex;flex-direction:column;flex-wrap:wrap;z-index:60}.preloader__item{width:100%;height:25%;background-color:#d78a1d;background-color:hsl(var(--primary-color-02))}.preloader__img{width:100%;-o-object-fit:cover;object-fit:cover}.preloader__img{display:block;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);max-width:calc(200px + 200*((100vw - 320px)/ 1320));filter:invert(1)}.hero{height:100vh;background:url(https://res.cloudinary.com/dfm2xzqp5/image/upload/w_960/v1642077685/Coffee%20House/hero-bg_x0039r.webp) 80% 0/cover no-repeat}.hero__inner{min-height:calc(350px + 50*((100vw - 320px)/ 1320));padding-top:calc(50px + 25*((100vw - 320px)/ 1320));height:100vh;display:flex;flex-direction:column}.hero__title{font-size:2rem;margin-bottom:calc(15px + 5*((100vw - 320px)/ 1320))}.hero__text{font-size:1.125rem;font-weight:500;color:#707070;color:hsl(var(--tertiary-color-03));margin-bottom:calc(20px + 15*((100vw - 320px)/ 1320))}.hero__btn{align-self:flex-start}.header::before{width:100%;height:100%;position:absolute}.header{position:fixed;width:100%;border-bottom:1px solid var(--primary-color);background-color:var(--secondary-color);z-index:50}.header::before{content:"";z-index:20;background-color:rgba(215,138,29,.6);background-color:hsla(var(--primary-color-02),.6)}.header__inner{padding:calc(5px + 10*((100vw - 320px)/ 1320)) 0;display:-ms-grid;display:grid;-ms-grid-columns:calc(120px + 60*((100vw - 320px)/ 1320)) 1fr -webkit-min-content;-ms-grid-columns:calc(120px + 60*((100vw - 320px)/ 1320)) 1fr min-content;grid-template-columns:calc(120px + 60*((100vw - 320px)/ 1320)) 1fr -webkit-min-content;grid-template-columns:calc(120px + 60*((100vw - 320px)/ 1320)) 1fr min-content;-ms-grid-rows:1fr;grid-template-rows:1fr;grid-gap:calc(15px + 15*((100vw - 320px)/ 1320));gap:calc(15px + 15*((100vw - 320px)/ 1320));align-items:center;justify-items:end}.header-column,.header__logo{position:relative;z-index:50}.header-column{z-index:20}.header-column__list{display:-ms-grid;display:grid;-ms-grid-columns:(26px)[2];grid-template-columns:repeat(2,26px);-ms-grid-rows:1fr;grid-template-rows:1fr;grid-gap:calc(15px + 20*((100vw - 320px)/ 1320));gap:calc(15px + 20*((100vw - 320px)/ 1320))}.header-column__icon{fill:#fff;fill:hsl(var(--tertiary-color-01));width:26px;height:26px}.nav{display:flex;justify-content:center;flex-direction:column;padding-top:calc(60px + 40*((100vw - 320px)/ 1320));width:100%;height:100%;overflow-y:auto;background-color:#011013;background-color:hsl(var(--secondary-color-01));position:fixed;top:0;right:-100%;bottom:0;z-index:10}.nav__list{display:-ms-grid;display:grid;grid-gap:20px;gap:20px;height:100%;justify-items:center;align-items:center}.nav__link{font-size:1.625rem;color:#fff;color:hsl(var(--tertiary-color-01))}@media (min-width:426px) and (-webkit-min-device-pixel-ratio:2),(min-width:426px) and (min-resolution:192dpi),(min-width:426px) and (min-resolution:2dppx){.hero{background:url(https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1280/v1642077685/Coffee%20House/hero-bg_x0039r.webp) 80% 0/cover no-repeat}}@media (min-width:426px){.hero__title{font-size:2.625rem}}@media (min-width:577px){.title{font-size:2.5rem;letter-spacing:-.05em}.text{font-size:1.25rem}.hero__title{font-size:3.375rem}}@media (min-width:577px) and (-webkit-min-device-pixel-ratio:2),(min-width:577px) and (min-resolution:192dpi),(min-width:577px) and (min-resolution:2dppx){.hero{background:url(https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1920/v1642077685/Coffee%20House/hero-bg_x0039r.webp) 80% 0/cover no-repeat}}@media (min-width:769px){.title{font-size:3.125rem;letter-spacing:-.04em}.burger-menu{display:none}.hero{background:url(https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1280/v1642077685/Coffee%20House/hero-bg_x0039r.webp) 80% 0/cover no-repeat}.hero__title{font-size:4.125rem}.hero__text{font-size:1.3125rem}.header__inner{justify-items:center}.nav{width:auto;height:auto;overflow-y:visible;background-color:transparent;padding-top:0;position:relative;right:0;z-index:20}.nav__list{-ms-grid-columns:(-webkit-min-content)[7];-ms-grid-columns:(min-content)[7];grid-template-columns:repeat(7,-webkit-min-content);grid-template-columns:repeat(7,min-content);grid-gap:5px calc(5px + 15*((100vw - 320px)/ 1320));gap:5px calc(5px + 15*((100vw - 320px)/ 1320))}.nav__link{display:inline-block;white-space:nowrap;padding:4px;font-size:1rem;position:relative}.nav__link::after{content:"";width:100%;height:3px;background-color:#e5a143;background-color:hsl(var(--primary-color-01));position:absolute;bottom:0;left:0;z-index:5;transform:scaleX(0);transform-origin:center}}@media (min-width:769px) and (-webkit-min-device-pixel-ratio:2),(min-width:769px) and (min-resolution:192dpi),(min-width:769px) and (min-resolution:2dppx){.hero{background:url(https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1920/v1642077685/Coffee%20House/hero-bg_x0039r.webp) 80% 0/cover no-repeat}}@media (min-width:993px){.hero{background:url(https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1280/v1642077685/Coffee%20House/hero-bg_x0039r.webp) 80% 0/cover no-repeat}.hero__title{font-size:4.875rem}}@media (min-width:993px) and (-webkit-min-device-pixel-ratio:2),(min-width:993px) and (min-resolution:192dpi),(min-width:993px) and (min-resolution:2dppx){.hero{background:url(https://res.cloudinary.com/dfm2xzqp5/image/upload/w_2560/v1642077685/Coffee%20House/hero-bg_x0039r.webp) 80% 0/cover no-repeat}}@media (min-width:1201px){.title{font-size:3.75rem;letter-spacing:-.0333333333em}.text{font-size:1.375rem}.hero{background:url(https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1920/v1642077685/Coffee%20House/hero-bg_x0039r.webp) 80% 0/cover no-repeat}.hero__title{font-size:5.625rem}.hero__text{font-size:1.4375rem}}@media (min-width:1201px) and (-webkit-min-device-pixel-ratio:2),(min-width:1201px) and (min-resolution:192dpi),(min-width:1201px) and (min-resolution:2dppx){.hero{background:url(https://res.cloudinary.com/dfm2xzqp5/image/upload/w_3840/v1642077685/Coffee%20House/hero-bg_x0039r.webp) 80% 0/cover no-repeat}}@media (prefers-reduced-motion:reduce){*,::after,::before{-webkit-animation-duration:NaNs!important;animation-duration:NaNs!important;-webkit-animation-iteration-count:1!important;animation-iteration-count:1!important;scroll-behavior:auto!important}.preloader{z-index:-1;opacity:0;visibility:hidden}}@media (min-height:426px){.hero__inner{justify-content:center}}</style>
+	<link rel="stylesheet" href="css/style.min.css" media="print" onload="this.media='all'">
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="preloader__item"></div>
+		<div class="preloader__item"></div>
+		<div class="preloader__item"></div>
+		<div class="preloader__item"></div>
+		<img class="preloader__img" src="images/icons/logo.svg" alt="Кофе хаус логотип">
+	</div>
+	<div class="page">
+		<header class="header">
+			<div class="wrapper header__wrapper">
+				<div class="header__inner">
+					<a href="#" class="logo header__logo">
+						<img src="images/icons/logo.svg" alt="Кофе хаус логотип">
+					</a>
+					<nav class="nav header__nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link">Кофе</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Ростер</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Оборудование</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">О нас</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__column header-column">
+						<ul class="header-column__list">
+							<li class="header-column__item">
+								<a href="#" class="header-column__link" aria-label="search link">
+									<svg class="header-column__icon">
+										<use xlink:href="images/icons/sprite.svg#search"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="header-column__item">
+								<a href="#" class="header-column__link" aria-label="shop link">
+									<svg class="header-column__icon">
+										<use xlink:href="images/icons/sprite.svg#shopping-bag"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<button class="burger-menu" aria-label="navigation menu button" aria-expanded="false">
+						<span class="burger-menu__item"></span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="hero">
+				<div class="wrapper hero__wrapper">
+					<div class="hero__inner">
+						<h1 class="hero__title title">
+							Идеальное Кофе <br> Начинается Здесь
+						</h1>
+						<div class="hero__text text">
+							<p>
+								280 видов кофе из лучших ростеров страны.
+							</p>
+							<p>
+								Давайте найдем ваш идеальный вкус.
+							</p>
+						</div>
+						<a href="#" class="hero__btn btn">ПОСМОТРЕТЬ</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="about">
+				<div class="wrapper">
+					<div class="about__inner about__inner--first">
+						<div class="about__img loading">
+
+							<img loading="lazy"
+								data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_740/v1642077685/Coffee%20House/about01_rjz3lw.webp 740w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1480/v1642077685/Coffee%20House/about01_rjz3lw.webp 1480w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_2220/v1642077685/Coffee%20House/about01_rjz3lw.webp 2200w"
+								data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_740/v1642077685/Coffee%20House/about01_rjz3lw.webp"
+								srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+								sizes="(min-width: 1231px) 570px, (min-width: 768px) calc(50vw - 4.5vw - 30px), calc(100vw - 30px)"
+								decoding="async" alt="кофе пропускается через фильтр и заваривается">
+
+						</div>
+						<div class="about__content">
+							<p class="suptitle about__subtitle">Лучшее</p>
+							<h2 class="title about__title">Кофе</h2>
+							<div class="text about__text">Всем известно, что кофе лучше всего покупать в зёрнах, чтобы размолоть в
+								кофемолке и сразу сварить любимый напиток в турке. Этот способ позволяет сохранить его вкус и аромат,
+								которые кофе очень быстро теряет после помола.</div>
+							<a href="#" class="link about__link">Магазин</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about">
+				<div class="wrapper">
+					<div class="about__inner about__inner--second">
+						<div class="about__content">
+							<p class="suptitle about__subtitle">Мастер</p>
+							<h2 class="title about__title">Основы</h2>
+							<div class="text about__text">Отличная передача, фильтрованная вода и правильное приготовление могут
+								иметь значение. Пришло время превратить ваш хороший кофе, в отличный кофе.</div>
+							<a href="#" class="link about__link">Читать</a>
+						</div>
+						<div class="about__img loading">
+
+							<img loading="lazy"
+								data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_740/v1642077685/Coffee%20House/about02_hq1nie.webp 740w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1480/v1642077685/Coffee%20House/about02_hq1nie.webp 1480w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_2220/v1642077685/Coffee%20House/about02_hq1nie.webp 2200w"
+								data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_740/v1642077685/Coffee%20House/about02_hq1nie.webp"
+								srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+								sizes="(min-width: 1231px) 570px, (min-width: 768px) calc(50vw - 4.5vw - 30px), calc(100vw - 30px)"
+								decoding="async" alt="бариста молет кофейные зерна">
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="product">
+				<div class="wrapper product__wrapper">
+					<div class="product__inner">
+						<h2 class="product title title visually-hidden">Our products</h2>
+						<div class="product__row">
+							<div class="product__column">
+								<div class="product__item product-item">
+									<p class="product-item__suptitle">Crahic</p>
+									<h3 class="product-item__title">Paper Bag</h3>
+									<div class="product-item__text">Ностальгическое, среднее сочетание с
+										«new-school» баланс.</div>
+									<p class="product-item__price">₽ 388 / 100 гр.</p>
+									<div class="product-item__img">
+
+										<img loading="lazy"
+											data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_175/v1642077685/Coffee%20House/product01_kalonc.webp 175w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_350/v1642077685/Coffee%20House/product01_kalonc.webp 350w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_525/v1642077685/Coffee%20House/product01_kalonc.webp 2200w"
+											data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_175/v1642077685/Coffee%20House/product01_kalonc.webp"
+											srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+											src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" sizes="175px"
+											decoding="async" alt="пачка кофе 'Paper Bag'">
+
+									</div>
+								</div>
+							</div>
+							<div class="product__column">
+								<div class="product__item product-item">
+									<p class="product-item__suptitle">Essential</p>
+									<h3 class="product-item__title">Paper Pouch</h3>
+									<div class="product-item__text">Высокое качество достигается благодаря
+										использованию качественных кофейных зерен.</div>
+									<p class="product-item__price">₽ 840 / 110 гр.</p>
+									<div class="product-item__img">
+
+
+										<img loading="lazy"
+											data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_175/v1642077685/Coffee%20House/product02_kla56j.webp 175w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_350/v1642077685/Coffee%20House/product02_kla56j.webp 350w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_525/v1642077685/Coffee%20House/product02_kla56j.webp 2200w"
+											data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_175/v1642077685/Coffee%20House/product02_kla56j.webp"
+											srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+											src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" sizes="175px"
+											decoding="async" alt="пачка кофе 'Paper Pouch'">
+
+									</div>
+								</div>
+							</div>
+							<div class="product__column">
+								<div class="product__item product-item">
+									<p class="product-item__suptitle">Marcony</p>
+									<h3 class="product-item__title">Dolmar Pounch</h3>
+									<div class="product-item__text">Кофе с минимальным содержанием кофеина.
+										Подходит тем кто следит за здоровьем.</div>
+									<p class="product-item__price">₽ 980 / 100 гр.</p>
+									<div class="product-item__img">
+										<img loading="lazy"
+											data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_175/v1642077685/Coffee%20House/product03_kcjxkj.webp 175w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_350/v1642077685/Coffee%20House/product03_kcjxkj.webp 350w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_525/v1642077685/Coffee%20House/product03_kcjxkj.webp 2200w"
+											data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_175/v1642077685/Coffee%20House/product03_kcjxkj.webp"
+											srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+											src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" sizes="175px"
+											decoding="async" alt="пачка кофе 'Dolmar Pouch'">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<div class="wrapper">
+					<div class="services__inner">
+						<h2 class="title services__title visually-hidden">Our Services</h2>
+						<div class="services__row">
+							<div class="services__column">
+								<div class="services__item services-item loading">
+									<video controls preload="none" class="services-item__video"
+										poster="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_460/v1642077685/Coffee%20House/services01_sjfclb.webp">
+										<source
+											data-src="https://res.cloudinary.com/dfm2xzqp5/video/upload/v1642139284/Coffee%20House/services-video01_yszjab.webm"
+											src="" type="video/webm">
+										<source
+											data-src="https://res.cloudinary.com/dfm2xzqp5/video/upload/v1642139282/Coffee%20House/services-video01_lyb3lw.mp4"
+											src="" type="video/mp4">
+									</video>
+									<button class="services-item__play _play" aria-label="play video button">
+										<svg class="services-item__icon">
+											<use xlink:href="images/icons/sprite.svg#play"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="services__column">
+								<div class="services__item services-item loading">
+									<video controls loading="lazy" class="services-item__video"
+										poster="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_460/v1642077685/Coffee%20House/services02_og2oqh.webp">
+										<source
+											data-src="https://res.cloudinary.com/dfm2xzqp5/video/upload/v1642139282/Coffee%20House/services-video02_vvzj7r.webm"
+											src="" type="video/webm">
+										<source
+											data-src="https://res.cloudinary.com/dfm2xzqp5/video/upload/v1642139280/Coffee%20House/services-video02_y4xgvd.mp4"
+											src="" type="video/mp4">
+									</video>
+									<button class="services-item__play _play" aria-label="play video button">
+										<svg class="services-item__icon">
+											<use xlink:href="images/icons/sprite.svg#play"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="services__column">
+								<div class="services__item services-item loading">
+									<video controls loading="lazy" class="services-item__video"
+										poster="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_460/v1642077685/Coffee%20House/services03_l3d2iz.webp">
+										<source
+											data-src="https://res.cloudinary.com/dfm2xzqp5/video/upload/v1642139290/Coffee%20House/services-video03_vkk0uu.webm"
+											src="" type="video/webm">
+										<source
+											data-src="https://res.cloudinary.com/dfm2xzqp5/video/upload/v1642139287/Coffee%20House/services-video03_hi0qhp.mp4"
+											src="" type="video/mp4">
+									</video>
+									<button class="services-item__play _play" aria-label="play video button">
+										<svg class="services-item__icon">
+											<use xlink:href="images/icons/sprite.svg#play"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="contacts">
+				<div class="contacts__wrapper wrapper">
+					<div class="contacts__inner">
+						<h2 class="title contacts__title">Связаться с нами</h2>
+						<form action="#" class="contacts__form contacts-form">
+							<fieldset class="contacts-form__inner">
+								<legend class="contacts-form__description visually-hidden">Форма для обратной связи</legend>
+								<input type="text" class="contacts-form__input input" placeholder="Напишите ваш email">
+								<button type="submit" class="contacts-form__btn" aria-label="contacts submit button">
+									<svg class="contacts-form__icon">
+										<use xlink:href="images/icons/sprite.svg#plane"></use>
+									</svg>
+								</button>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="wrapper footer__wrapper">
+				<div class="footer__inner">
+					<a href="#" class="logo footer__logo">
+						<img src="images/icons/logo.svg" alt="coffee shop logo">
+					</a>
+					<div class="footer__copyright">Все права защищены. ©CoffeeShop 2018.</div>
+					<ul class="footer__social footer-social">
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link" aria-label="facebook link">
+								<svg class="footer-social__icon">
+									<use xlink:href="images/icons/sprite.svg#facebook"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link" aria-label="twitter link">
+								<svg class="footer-social__icon">
+									<use xlink:href="images/icons/sprite.svg#twitter"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link" aria-label="pinterest link">
+								<svg class="footer-social__icon">
+									<use xlink:href="images/icons/sprite.svg#youtube"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link">
+								<svg class="footer-social__icon">
+									<use xlink:href="images/icons/sprite.svg#pinterest"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link" aria-label="instagram link">
+								<svg class="footer-social__icon">
+									<use xlink:href="images/icons/sprite.svg#instagram"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<link href="fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
+	<link href="fonts/OpenSans-Light.woff" as="font" type="font/woff" crossorigin>
+	<link href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link href="fonts/OpenSans-Regular.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/OpenSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/OpenSans-Medium.woff" as="font" type="font/woff" crossorigin>
+	<link href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+	<link href="fonts/OpenSans-SemiBold.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/OpenSans-Bold.woff" as="font" type="font/woff" crossorigin>
+
+	<script src="js/gsap.min.js"></script>
+	<script src="js/ScrollTrigger.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+<noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
+
+</body>
+
+</html>
