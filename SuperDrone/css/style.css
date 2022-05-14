@@ -1163,8 +1163,8 @@ body {
 }
 .header._fixed {
   position: fixed;
-  -webkit-animation: slide-in-top-80 0.3s ease both;
-          animation: slide-in-top-80 0.3s ease both;
+  -webkit-animation: slide-in-top-80 0.3s ease backwards;
+          animation: slide-in-top-80 0.3s ease backwards;
 }
 .header__wrapper {
   display: -ms-grid;
