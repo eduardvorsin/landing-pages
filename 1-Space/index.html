@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="1-space landing page">
+	<link rel="preload" href="fonts/CeraPro-Regular-latin.woff2" as="font" type="font/woff2" crossorigin="">
+	<link rel="preload" href="fonts/Axiforma-Bold-latin.woff2" as="font" type="font/woff2" crossorigin="">
+	<style>
+		@charset "UTF-8";
+
+		@font-face {
+			font-family: CeraPro;
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(fonts/CeraPro-Regular-latin.woff2) format("woff2"), url(fonts/CeraPro-Regular-latin.woff) format("woff");
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+		}
+
+		@font-face {
+			font-family: CeraPro;
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(fonts/CeraPro-Regular-latin-ext.woff2) format("woff2"), url(fonts/CeraPro-Regular-latin-ext.woff) format("woff");
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+		}
+
+		@font-face {
+			font-family: CeraPro;
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap;
+			src: url(fonts/CeraPro-Medium-latin.woff2) format("woff2"), url(fonts/CeraPro-Medium-latin.woff) format("woff");
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+		}
+
+		@font-face {
+			font-family: CeraPro;
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap;
+			src: url(fonts/CeraPro-Medium-latin-ext.woff2) format("woff2"), url(fonts/CeraPro-Medium-latin-ext.woff) format("woff");
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+		}
+
+		@font-face {
+			font-family: Axiforma;
+			font-style: normal;
+			font-weight: 600;
+			font-display: swap;
+			src: url(fonts/Axiforma-SemiBold-latin.woff2) format("woff2"), url(fonts/Axiforma-SemiBold-latin.woff) format("woff");
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+		}
+
+		@font-face {
+			font-family: Axiforma;
+			font-style: normal;
+			font-weight: 600;
+			font-display: swap;
+			src: url(fonts/Axiforma-SemiBold-latin-ext.woff2) format("woff2"), url(fonts/Axiforma-SemiBold-latin-ext.woff) format("woff");
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+		}
+
+		@font-face {
+			font-family: Axiforma;
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(fonts/Axiforma-Bold-latin.woff2) format("woff2"), url(fonts/Axiforma-Bold-latin.woff) format("woff");
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+		}
+
+		@font-face {
+			font-family: Axiforma;
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(fonts/Axiforma-Bold-latin-ext.woff2) format("woff2"), url(fonts/Axiforma-Bold-latin-ext.woff) format("woff");
+			unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+		}
+
+		:root {
+			--primary-font: "CeraPro", sans-serif;
+			--secondary-font: "Axiforma", sans-serif;
+			--hero-gradient-color-01: 42, 100%, 97%;
+			--hero-gradient-color-02: 194, 89%, 96%;
+			--primary-color-01: 13, 98%, 59%;
+			--primary-color-02: 13, 98%, 73%;
+			--primary-color-03: 13, 98%, 79%;
+			--secondary-color-01: 0, 0%, 0%;
+			--tertiary-color-01: 0, 0%, 100%;
+			--invalid-color: 0, 67%, 68%;
+			--border-radius-01: 5px;
+			--border-radius-02: 7px;
+			--border-radius-circle: 50%;
+			--border-radius-arc: 44% 44% 0% 0%;
+			--line-height-01: 1.5;
+			--line-height-02: 1.3;
+			--line-height-03: 1.25;
+			--line-height-04: 1;
+			--easing: ease
+		}
+
+		*,
+		::after,
+		::before {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box
+		}
+
+		html {
+			font-size: 100%
+		}
+
+		body,
+		html {
+			height: 100%
+		}
+
+		ul {
+			padding: 0;
+			list-style: none
+		}
+
+		body,
+		h1,
+		h2,
+		li,
+		p,
+		ul {
+			margin: 0
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none
+		}
+
+		img {
+			display: block;
+			max-width: 100%
+		}
+
+		button,
+		input {
+			font: inherit
+		}
+
+		body {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			overflow-x: hidden;
+			background-color: #fff;
+			background-color: hsl(var(--tertiary-color-01));
+			color: #000;
+			color: hsl(var(--secondary-color-01));
+			font-family: CeraPro, sans-serif;
+			font-family: var(--primary-font);
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			line-height: var(--line-height-01);
+			word-break: break-word;
+			text-rendering: optimizeSpeed
+		}
+
+		.visually-hidden {
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+			padding: 0;
+			border: 0;
+			overflow: hidden;
+			clip: rect(0 0 0 0);
+			position: absolute
+		}
+
+		.container {
+			width: 100%;
+			max-width: 1230px;
+			margin: 0 auto;
+			padding: 0 15px
+		}
+
+		.title {
+			color: #000;
+			color: hsl(var(--secondary-color-01));
+			font-family: Axiforma, sans-serif;
+			font-family: var(--secondary-font)
+		}
+
+		.title--section {
+			font-size: 1.75rem;
+			font-weight: 600;
+			line-height: 1.3;
+			line-height: var(--line-height-02)
+		}
+
+		.btn {
+			line-height: 1.25;
+			line-height: var(--line-height-03)
+		}
+
+		.btn {
+			display: -webkit-inline-box;
+			display: -ms-inline-flexbox;
+			display: inline-flex;
+			min-width: 78px;
+			max-width: 250px;
+			padding: 10px 20px;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			border: 2px solid #fd5c30;
+			border: 2px solid hsl(var(--primary-color-01));
+			border-radius: 5px;
+			border-radius: var(--border-radius-01);
+			font-weight: 500
+		}
+
+		.btn--primary {
+			background-color: #fd5c30;
+			background-color: hsl(var(--primary-color-01));
+			color: #fff;
+			color: hsl(var(--tertiary-color-01))
+		}
+
+		.logo {
+			display: block;
+			font-size: 0
+		}
+
+		.logo__img {
+			-o-object-fit: contain;
+			object-fit: contain
+		}
+
+		.input {
+			padding: 15px 15px 15px 25px;
+			border-color: #000;
+			border-color: hsl(var(--secondary-color-01));
+			border-style: solid;
+			border-radius: 5px;
+			border-radius: var(--border-radius-01);
+			border-width: 2px;
+			color: #fd5c30;
+			color: hsl(var(--primary-color-01));
+			font-size: 1.125rem;
+			line-height: 1;
+			line-height: var(--line-height-04)
+		}
+
+		.input--location {
+			background: url(../../images/map-pin.svg) 5px 50%/14px 18px no-repeat;
+			position: relative
+		}
+
+		.burger-menu {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			width: 35px;
+			height: 35px;
+			padding: 5px;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-ms-flex-item-align: center;
+			-ms-grid-row-align: center;
+			align-self: center;
+			border: 0;
+			background-color: transparent;
+			font-size: 0;
+			position: relative
+		}
+
+		.burger-menu span,
+		.burger-menu::after,
+		.burger-menu::before {
+			width: 25px;
+			height: 3px;
+			border-radius: 20px;
+			background-color: #000;
+			background-color: hsl(var(--secondary-color-01))
+		}
+
+		.burger-menu::after,
+		.burger-menu::before {
+			content: "";
+			position: absolute
+		}
+
+		.burger-menu::before {
+			-webkit-transform: translateY(-10px);
+			-ms-transform: translateY(-10px);
+			transform: translateY(-10px)
+		}
+
+		.burger-menu::after {
+			-webkit-transform: translateY(10px);
+			-ms-transform: translateY(10px);
+			transform: translateY(10px)
+		}
+
+		.burger-menu span {
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
+			transform: translateX(0)
+		}
+
+		.skip-link {
+			padding: 2px 11px;
+			background-color: #000;
+			background-color: hsl(var(--secondary-color-01));
+			color: #fff;
+			color: hsl(var(--tertiary-color-01));
+			font-size: 1rem;
+			line-height: 1;
+			position: absolute;
+			top: 0;
+			left: 20%;
+			z-index: 60;
+			-webkit-transform: translate3d(0, -150%, 0);
+			transform: translate3d(0, -150%, 0)
+		}
+
+		.services {
+			padding: 20px 0
+		}
+
+		.hero {
+			padding: 65px 0;
+			overflow: hidden;
+			background: #fffaf0 -o-linear-gradient(330deg, #fffaf0 5%, #ecfafe 100%);
+			background: #fffaf0 linear-gradient(120deg, #fffaf0 5%, #ecfafe 100%);
+			background: hsl(var(--hero-gradient-color-01)) -o-linear-gradient(330deg, hsl(var(--hero-gradient-color-01)) 5%, hsl(var(--hero-gradient-color-02)) 100%);
+			background: hsl(var(--hero-gradient-color-01)) linear-gradient(120deg, hsl(var(--hero-gradient-color-01)) 5%, hsl(var(--hero-gradient-color-02)) 100%)
+		}
+
+		.hero__container {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			position: relative;
+			z-index: 1
+		}
+
+		.hero__content,
+		.hero__img-box {
+			-webkit-box-flex: 0;
+			-ms-flex: 0 1 100%;
+			flex: 0 1 100%
+		}
+
+		.hero__content {
+			margin-bottom: 30px
+		}
+
+		.hero__img-box {
+			padding-bottom: 60%;
+			position: relative
+		}
+
+		.hero__img {
+			width: 100%;
+			height: 100%;
+			-o-object-fit: cover;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0
+		}
+
+		.hero-content__title {
+			margin-bottom: 20px
+		}
+
+		.hero-content__title::before {
+			content: "";
+			display: block;
+			width: 80px;
+			height: 16px;
+			margin-bottom: 13px;
+			background: url(../../images/hero-title-decor.svg) 0 0/contain no-repeat
+		}
+
+		.hero-form {
+			display: block;
+			margin-bottom: 25px
+		}
+
+		.hero-form__fieldset {
+			border: 0
+		}
+
+		.hero-form-group {
+			display: -ms-grid;
+			display: grid;
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+			-ms-grid-rows: -webkit-min-content;
+			-ms-grid-rows: min-content;
+			grid-template-rows: -webkit-min-content;
+			grid-template-rows: min-content;
+			grid-auto-rows: -webkit-min-content;
+			grid-auto-rows: min-content;
+			gap: 20px;
+			justify-items: start
+		}
+
+		.hero-form-group>:first-child,
+		.hero-subscribers>:first-child {
+			-ms-grid-row: 1;
+			-ms-grid-column: 1
+		}
+
+		.hero-form-group__input {
+			width: 100%
+		}
+
+		.hero-subscribers {
+			display: -ms-grid;
+			display: grid;
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+			-ms-grid-rows: 1fr;
+			grid-template-rows: 1fr;
+			grid-auto-rows: 1fr;
+			gap: 12px;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center
+		}
+
+		.hero-subscribers__row {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			max-width: 185px
+		}
+
+		.hero-subscribers__thumb {
+			width: 36px;
+			-webkit-box-flex: 0;
+			-ms-flex: 0 0 36px;
+			flex: 0 0 36px;
+			border: 2px solid #fff;
+			border: 2px solid hsl(var(--tertiary-color-01));
+			border-radius: 50%;
+			border-radius: var(--border-radius-circle);
+			-webkit-transform: translateX(calc(var(--order)*-30%));
+			-ms-transform: translateX(calc(var(--order)*-30%));
+			transform: translateX(calc(var(--order)*-30%))
+		}
+
+		.hero-subscribers__thumb:last-child {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			background-color: #fd5c30;
+			background-color: hsl(var(--primary-color-01));
+			color: #fff;
+			color: hsl(var(--tertiary-color-01));
+			font-size: .8125rem;
+			white-space: no-wrap
+		}
+
+		.header {
+			width: 100%;
+			position: fixed;
+			z-index: 50
+		}
+
+		.header::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background: #fe9477 -webkit-gradient(linear, left top, left bottom, from(rgba(217, 217, 217, .6)), to(rgba(217, 217, 217, 0)));
+			background: #fe9477 -o-linear-gradient(top, rgba(217, 217, 217, .6) 0, rgba(217, 217, 217, 0) 100%);
+			background: #fe9477 linear-gradient(180deg, rgba(217, 217, 217, .6) 0, rgba(217, 217, 217, 0) 100%);
+			background: hsla(var(--primary-color-02), 1) -webkit-gradient(linear, left top, left bottom, from(rgba(217, 217, 217, .6)), to(rgba(217, 217, 217, 0)));
+			background: hsla(var(--primary-color-02), 1) -o-linear-gradient(top, rgba(217, 217, 217, .6) 0, rgba(217, 217, 217, 0) 100%);
+			background: hsla(var(--primary-color-02), 1) linear-gradient(180deg, rgba(217, 217, 217, .6) 0, rgba(217, 217, 217, 0) 100%);
+			position: absolute;
+			z-index: 20
+		}
+
+		.header__container {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			padding: 5px 15px;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between
+		}
+
+		.header__logo {
+			position: relative;
+			z-index: 50
+		}
+
+		.header__burger-menu {
+			z-index: 30
+		}
+
+		.nav {
+			display: -ms-grid;
+			display: grid;
+			width: 100%;
+			height: 100%;
+			padding-top: 80px;
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+			-ms-grid-rows: -webkit-min-content;
+			-ms-grid-rows: min-content;
+			grid-template-rows: -webkit-min-content;
+			grid-template-rows: min-content;
+			grid-auto-rows: -webkit-min-content;
+			grid-auto-rows: min-content;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-ms-flex-line-pack: center;
+			align-content: center;
+			overflow-y: auto;
+			background-color: #feac95;
+			background-color: hsl(var(--primary-color-03));
+			position: fixed;
+			top: 0;
+			right: -100%;
+			bottom: 0;
+			z-index: 10
+		}
+
+		.nav>:first-child {
+			-ms-grid-row: 1;
+			-ms-grid-column: 1
+		}
+
+		.nav__logo {
+			display: none
+		}
+
+		.nav__list {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			text-align: center
+		}
+
+		.nav__item {
+			margin-bottom: 20px
+		}
+
+		.nav__link {
+			font-size: 26px
+		}
+
+		.main-content {
+			-webkit-box-flex: 1;
+			-ms-flex-positive: 1;
+			flex-grow: 1
+		}
+
+		@media (min-width:26.625em) {
+			.hero-form-group {
+				-ms-grid-columns: minmax(200px, 1fr) -webkit-max-content;
+				-ms-grid-columns: minmax(200px, 1fr) max-content;
+				grid-template-columns: minmax(200px, 1fr) -webkit-max-content;
+				grid-template-columns: minmax(200px, 1fr) max-content
+			}
+		}
+
+		@media (min-width:36.0625em) {
+			.title--section {
+				font-size: 2.125rem
+			}
+
+			.services {
+				padding: 30px 0
+			}
+
+			.hero-content__title {
+				margin-bottom: 30px
+			}
+		}
+
+		@media (min-width:48.0625em) {
+			.title--section {
+				font-size: 2.5rem
+			}
+
+			.btn {
+				padding: 14px 30px
+			}
+
+			.input {
+				padding: 25px
+			}
+
+			.burger-menu {
+				display: none
+			}
+
+			.services {
+				padding: 45px 0
+			}
+
+			.hero {
+				padding: 85px 0
+			}
+
+			.hero__container {
+				-ms-flex-wrap: nowrap;
+				flex-wrap: nowrap
+			}
+
+			.hero__content {
+				margin-right: 30px;
+				margin-bottom: 0;
+				-webkit-box-flex: 0;
+				-ms-flex: 0 1 calc(60% - 30px);
+				flex: 0 1 calc(60% - 30px)
+			}
+
+			.hero__img-box {
+				padding-bottom: 57.5%;
+				-webkit-box-flex: 0;
+				-ms-flex: 0 1 40%;
+				flex: 0 1 40%
+			}
+
+			.hero__img {
+				border-radius: 44% 44% 0 0;
+				border-radius: var(--border-radius-arc)
+			}
+
+			.hero-content__title {
+				max-width: 500px;
+				margin-bottom: 40px
+			}
+
+			.header__container {
+				display: block;
+				padding: 15px
+			}
+
+			.header__logo {
+				display: none
+			}
+
+			.nav {
+				padding-top: 0;
+				-ms-grid-columns: 1fr 15px -webkit-max-content 15px 1fr;
+				-ms-grid-columns: 1fr 15px max-content 15px 1fr;
+				grid-template-columns: 1fr -webkit-max-content 1fr;
+				grid-template-columns: 1fr max-content 1fr;
+				-ms-grid-rows: 1fr;
+				grid-template-rows: 1fr;
+				gap: 15px;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				overflow: visible;
+				background-color: transparent;
+				position: relative;
+				right: 0;
+				z-index: 20
+			}
+
+			.nav>:first-child {
+				-ms-grid-row: 1;
+				-ms-grid-column: 1
+			}
+
+			.nav>:nth-child(2) {
+				-ms-grid-row: 1;
+				-ms-grid-column: 3
+			}
+
+			.nav>:nth-child(3) {
+				-ms-grid-row: 1;
+				-ms-grid-column: 5
+			}
+
+			.nav__logo {
+				display: block
+			}
+
+			.nav__list {
+				margin: 0 5px;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: row;
+				flex-direction: row;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				-webkit-box-pack: start;
+				-ms-flex-pack: start;
+				justify-content: flex-start
+			}
+
+			.nav__list:first-of-type {
+				-ms-grid-column-align: start;
+				justify-self: start
+			}
+
+			.nav__list:last-of-type {
+				-ms-grid-column-align: end;
+				justify-self: end
+			}
+
+			.nav__item {
+				margin-bottom: 0;
+				padding: 0 5px
+			}
+
+			.nav__link {
+				display: inline-block;
+				padding: 4px;
+				font-size: 16px;
+				outline-offset: -2px;
+				position: relative
+			}
+
+			.nav__link::after {
+				content: "";
+				width: 100%;
+				height: 3px;
+				background-color: #fd5c30;
+				background-color: hsl(var(--primary-color-01));
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: 5;
+				-webkit-transform: scale(0);
+				-ms-transform: scale(0);
+				transform: scale(0)
+			}
+		}
+
+		@media (min-width:62.0625em) {
+			.title--section {
+				font-size: 2.875rem
+			}
+
+			.btn {
+				padding: 18px 40px
+			}
+
+			.services {
+				padding: 60px 0
+			}
+
+			.hero__container::before {
+				content: "Co Working";
+				color: rgba(0, 0, 0, .15);
+				color: hsla(var(--secondary-color-01), .15);
+				font-size: 3.75rem;
+				font-weight: 500;
+				line-height: 1;
+				line-height: var(--line-height-04);
+				position: absolute;
+				right: -60px;
+				bottom: 0;
+				z-index: -1;
+				-webkit-writing-mode: vertical-lr;
+				-ms-writing-mode: tb-lr;
+				writing-mode: vertical-lr
+			}
+
+			.hero-content__title {
+				margin-bottom: 65px
+			}
+
+			.hero-subscribers {
+				-ms-grid-columns: 185px 1fr;
+				grid-template-columns: 185px 1fr
+			}
+
+			.nav__list {
+				margin: 0 15px
+			}
+
+			.nav__item {
+				padding: 0 15px
+			}
+		}
+
+		@media (min-width:75.0625em) {
+			.hero-form-group {
+				gap: 15px 40px
+			}
+
+			.nav__list {
+				margin: 0 25px
+			}
+
+			.nav__item {
+				padding: 0 25px
+			}
+		}
+
+		@media (prefers-reduced-motion:reduce) {
+
+			*,
+			::after,
+			::before {
+				scroll-behavior: auto !important;
+				-webkit-animation-duration: NaNs !important;
+				animation-duration: NaNs !important;
+				-webkit-animation-iteration-count: 1 !important;
+				animation-iteration-count: 1 !important
+			}
+		}
+
+		:root {
+			--swiper-theme-color: #007aff
+		}
+
+		:root {
+			--swiper-navigation-size: 44px
+		}
+	</style>
+	<link rel="stylesheet" href="css/swiper-bundle.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/style.min.css" media="print" onload="this.media='all'">
+	<link rel="preload" as="image"
+		href="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1480/v1656125245/1-Space/hero01_jozsa8.webp"
+		imagesrcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_740/v1656125245/1-Space/hero01_jozsa8.webp 740w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1480/v1656125245/1-Space/hero01_jozsa8.webp 1480w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_2220/v1656125245/1-Space/hero01_jozsa8.webp 2220w"
+		imagesizes="(min-width: 1230px) 480px, (min-width: 769px) calc(43vw - 15px - 15px), calc(100vw - 30px)">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<title>1-Space</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="container header__container">
+			<a href="#main" class="skip-link">skip navigation</a>
+			<a href="#" class="header__logo logo">
+				main page
+				<img class="logo__img" src="images/logo.svg" width="104" height="36" alt="1-space logotype">
+			</a>
+			<nav class="nav header__nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#" class="nav__link">Home</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">About</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">Services</a>
+					</li>
+				</ul>
+				<a href="#" class="nav__logo logo">
+					main page
+					<img class="logo__img" src="images/logo.svg" width="104" height="36" alt="1-space logotype">
+				</a>
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#" class="nav__link">About</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">Spaces</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">Events</a>
+					</li>
+				</ul>
+			</nav>
+			<button class="header__burger-menu burger-menu" aria-expanded="false">
+				<span class="burger-menu__item">navigation menu button</span>
+			</button>
+		</div>
+	</header>
+
+	<main class="main-content" id="main">
+		<h1 class="main-content__title visually-hidden">1-space Website</h1>
+
+		<section class="hero section">
+			<div class="hero__container section__container container">
+				<div class="hero__content hero-content">
+					<h2 class="hero-content__title title title--section">
+						A new way to revolutionise your workspace to yourself
+					</h2>
+					<form class="hero__form hero-form" id="subscribe-form" action="#">
+						<fieldset class='hero-form__fieldset'>
+							<legend class="hero-form__description visually-hidden">
+								Schedule a visit form
+							</legend>
+							<div class="hero-form__group hero-form-group">
+								<label class="hero-form-group__label visually-hidden" for="city">
+									enter your city
+								</label>
+								<input class="hero-form-group__input input input--location" type="text" id="city" name="city"
+									placeholder="city" required aria-required="true">
+								<button class="hero-form-group__btn btn btn--primary">
+									Schedule visit
+								</button>
+								<div class="hero-form__errors" aria-live="assertive"></div>
+							</div>
+						</fieldset>
+					</form>
+
+					<div class="hero-content__subscribers hero-subscribers">
+						<div class="hero-subscribers__row">
+							<img class="hero-subscribers__thumb" style="--order:0"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_72/v1656125245/1-Space/thumb01_jbm4b7.webp"
+								srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_36/v1656125245/1-Space/thumb01_jbm4b7.webp 36w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_72/v1656125245/1-Space/thumb01_jbm4b7.webp 72w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_108/v1656125245/1-Space/thumb01_jbm4b7.webp 108w"
+								sizes="36px" alt="man thumbnail">
+							<img class="hero-subscribers__thumb" style="--order:1"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_72/v1656125245/1-Space/thumb02_ione8a.webp"
+								srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_36/v1656125245/1-Space/thumb02_ione8a.webp 36w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_72/v1656125245/1-Space/thumb02_ione8a.webp 72w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_108/v1656125245/1-Space/thumb02_ione8a.webp 108w"
+								sizes="36px" alt="woman thumbnail">
+							<img class="hero-subscribers__thumb" style="--order:2"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_72/v1656125245/1-Space/thumb03_rw28wf.webp"
+								srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_36/v1656125245/1-Space/thumb03_rw28wf.webp 36w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_72/v1656125245/1-Space/thumb03_rw28wf.webp 72w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_108/v1656125245/1-Space/thumb03_rw28wf.webp 108w"
+								sizes="36px" alt="man thumbnail">
+							<img class="hero-subscribers__thumb" style="--order:3"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_72/v1656125245/1-Space/thumb04_zl5lwv.webp"
+								srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_36/v1656125245/1-Space/thumb04_zl5lwv.webp 36w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_72/v1656125245/1-Space/thumb04_zl5lwv.webp 72w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_108/v1656125245/1-Space/thumb04_zl5lwv.webp 108w"
+								sizes="36px" alt="woman thumbnail">
+							<img class="hero-subscribers__thumb" style="--order:4"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_72/v1656125245/1-Space/thumb05_tahn0p.webp"
+								srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_36/v1656125245/1-Space/thumb05_tahn0p.webp 36w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_72/v1656125245/1-Space/thumb05_tahn0p.webp 72w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_108/v1656125245/1-Space/thumb05_tahn0p.webp 108w"
+								sizes="36px" alt="man thumbnail">
+							<img class="hero-subscribers__thumb" style="--order:5"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_72/v1656125245/1-Space/thumb06_or9pk8.webp"
+								srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_36/v1656125245/1-Space/thumb06_or9pk8.webp 36w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_72/v1656125245/1-Space/thumb06_or9pk8.webp 72w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_108/v1656125245/1-Space/thumb06_or9pk8.webp 108w"
+								sizes="36px" alt="woman thumbnail">
+							<div class="hero-subscribers__thumb" style="--order:6">10+</div>
+						</div>
+						<div class="hero-subscribers__text">
+							<p>16 people booked a visit in last 24 hours</p>
+						</div>
+					</div>
+				</div>
+				<div class="hero__img-box">
+					<img class="hero__img"
+						srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_740/v1656125245/1-Space/hero01_jozsa8.webp 740w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1480/v1656125245/1-Space/hero01_jozsa8.webp 1480w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_2220/v1656125245/1-Space/hero01_jozsa8.webp 2220w"
+						src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1480/v1656125245/1-Space/hero01_jozsa8.webp"
+						sizes="(min-width: 1230px) 480px, (min-width: 769px) calc(43vw - 15px - 15px), calc(100vw - 30px)"
+						alt="office">
+				</div>
+			</div>
+		</section>
+
+		<section class="services section">
+			<div class="services__container section__container container">
+				<div class="services__slider services-slider slider">
+					<div class="services-slider__inner slider__inner swiper">
+						<div class="services-slider__wrapper slider__wrapper swiper-wrapper">
+							<div class="services-slider__slide slider__slide swiper-slide">
+								<img class="services-slider__img swiper-lazy"
+									data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1656125245/1-Space/services01_lsmysb.webp 470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/services01_lsmysb.webp 940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1656125245/1-Space/services01_lsmysb.webp 1410w"
+									data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/services01_lsmysb.webp"
+									srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 470w"
+									src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+									sizes="(min-width: 1230px) 470px, (min-width: 993px) calc(50vw - 100px - 30px), (min-width: 769px) calc(50vw - 50px - 30px), (min-width: 426px) calc(50vw - 15px - 10px), calc(100vw - 30px)"
+									alt="a woman works in an office">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="services-slider__slide slider__slide swiper-slide">
+								<img class="services-slider__img swiper-lazy"
+									data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1656125245/1-Space/services02_dztpgz.webp 470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/services02_dztpgz.webp 940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1656125245/1-Space/services02_dztpgz.webp 1410w"
+									data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/services02_dztpgz.webp"
+									srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 470w"
+									src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+									sizes="(min-width: 1230px) 470px, (min-width: 993px) calc(50vw - 100px - 30px), (min-width: 769px) calc(50vw - 50px - 30px), (min-width: 426px) calc(50vw - 15px - 10px), calc(100vw - 30px)"
+									alt="a woman walks through the office">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+						<div class="services-slider__pagination slider__pagination swiper-pagination">
+						</div>
+						<button
+							class="services-slider__button-prev slider__button-prev swiper-button-prev visually-hidden"></button>
+						<button
+							class="services-slider__button-next slider__button-prev swiper-button-next visually-hidden"></button>
+					</div>
+				</div>
+				<div class="services__content services-content">
+					<p class="services-content__subtitle subtitle">Services</p>
+					<h2 class="services-content__title title title--section">
+						Solutions designed for all your needs
+					</h2>
+					<div class="services-content__text">
+						<p>
+							Coworking is an arrangement in which workers of different companies share an office space, allowing cost
+							savings and convenience through the use of common infrastructures, such as equipment, utilities, and
+							receptionist and custodial services, and in some cases refreshments and parcel acceptance services.
+						</p>
+					</div>
+					<div class="services-content__btns btns-group">
+						<button class="services__btn btns-group__btn btn btn--primary">
+							View Availability
+						</button>
+						<button class="services__btn btns-group__btn btn btn--tertiary">
+							<svg class="btn__icon">
+								<use xlink:href="images/icons/sprite.svg#play"></use>
+							</svg>
+							<span>3D Tour of Space</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="visions section">
+			<div class="visions__container section__container container">
+				<div class="visions__content">
+					<p class="visions__subtitle subtitle">
+						Visions
+					</p>
+					<h2 class="visions__title title title--section">
+						Our vision in 1-space to make something
+					</h2>
+					<div class="visions__text">
+						<p>
+							Coworking is an arrangement in which workers of different companies share an office space, allowing cost
+							savings
+							and convenience through the use of common infrastructures services.
+						</p>
+					</div>
+					<div class="visions__row visions-row">
+						<div class="visions-row__item">
+							<h3 class="visions-row__title">
+								High quality co-living spaces
+							</h3>
+							<div class="visions-row__text">
+								<p>
+									Coworking is an arrangement in which workers of different companies.
+								</p>
+							</div>
+						</div>
+						<div class="visions-row__item">
+							<h3 class="visions-row__title">
+								High quality co-living spaces
+							</h3>
+							<div class="visions-row__text">
+								<p>
+									Coworking is an arrangement in which workers of different companies.
+								</p>
+							</div>
+						</div>
+						<div class="visions-row__item">
+							<h3 class="visions-row__title">
+								High quality co-living spaces
+							</h3>
+							<div class="visions-row__text">
+								<p>
+									Coworking is an arrangement in which workers of different companies.
+								</p>
+							</div>
+						</div>
+					</div>
+					<button class="visions__btn btn btn--primary">
+						Explore More
+					</button>
+				</div>
+				<div class="visions__images visions-images">
+					<div class="visions-images__img-box lazy-loading">
+						<img class="visions-images__img"
+							data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1080/v1656125245/1-Space/visions01_pwaks6.webp"
+							data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_540/v1656125245/1-Space/visions01_pwaks6.webp 540w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1080/v1656125245/1-Space/visions01_pwaks6.webp 1080w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1620/v1656125245/1-Space/visions01_pwaks6.webp 1620w"
+							srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 540w"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+							sizes="(min-width: 1200px) 85px, (min-width: 993px) 65px, (min-width: 769px) 55px, (min-width: 426px) calc(75vw - 30px), calc(100vw - 30px)"
+							loading="lazy" alt="office work">
+					</div>
+					<div class="visions-images__img-box lazy-loading">
+						<img class="visions-images__img"
+							data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1080/v1656125245/1-Space/visions02_c1cgoe.webp"
+							data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_540/v1656125245/1-Space/visions02_c1cgoe.webp 540w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1080/v1656125245/1-Space/visions02_c1cgoe.webp 1080w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1620/v1656125245/1-Space/visions02_c1cgoe.webp 1620w"
+							srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 540w"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+							sizes="(min-width: 1200px) 255px, (min-width: 993px) 195px, (min-width: 769px) 165px, (min-width: 426px) calc(75vw - 30px), calc(100vw - 30px)"
+							loading="lazy" alt="bright multicolored office">
+					</div>
+					<div class="visions-images__img-box lazy-loading">
+						<img class="visions-images__img"
+							data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1080/v1656125245/1-Space/visions03_yozmu2.webp"
+							data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_540/v1656125245/1-Space/visions03_yozmu2.webp 540w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1080/v1656125245/1-Space/visions03_yozmu2.webp 1080w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1620/v1656125245/1-Space/visions03_yozmu2.webp 1620w"
+							srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 540w"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+							sizes="(min-width: 1200px) 204px, (min-width: 993px) 156px, (min-width: 769px) 132px, (min-width: 426px) calc(75vw - 30px), calc(100vw - 30px)"
+							loading="lazy" alt="the guys work in the office">
+					</div>
+					<div class="visions-images__img-box lazy-loading">
+						<img class="visions-images__img"
+							data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1080/v1656125245/1-Space/visions04_j8psmz.webp"
+							data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_540/v1656125245/1-Space/visions04_j8psmz.webp 540w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1080/v1656125245/1-Space/visions04_j8psmz.webp 1080w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1620/v1656125245/1-Space/visions04_j8psmz.webp 1620w"
+							srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 540w"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+							sizes="(min-width: 1200px) 306px, (min-width: 993px) 234px, (min-width: 769px) 198px, (min-width: 426px) calc(75vw - 30px), calc(100vw - 30px)"
+							loading="lazy" alt="dark office">
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="partners section">
+			<div class="partners__container section__container container">
+				<h2 class="partners__title visually-hidden">our partners</h2>
+				<ul class="partners__row partners-row">
+					<li class="partners-row__item">
+						<a class="partners-row__link lazy-loading" href="#">
+							YouTube
+							<img class="partners-row__img" data-src="images/partners01.svg" decoding="async" loading="lazy"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+								alt="YouTube logotype">
+
+						</a>
+					</li>
+					<li class="partners-row__item">
+						<a class="partners-row__link lazy-loading" href="#">
+							Netflix
+							<img class="partners-row__img" data-src="images/partners02.svg" decoding="async" loading="lazy"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+								alt="Netflix logotype">
+						</a>
+					</li>
+					<li class="partners-row__item">
+						<a class="partners-row__link lazy-loading" href="#">
+							Duolingo
+							<img class="partners-row__img" data-src="images/partners03.svg" decoding="async" loading="lazy"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+								alt="Duolingo logotype">
+						</a>
+					</li>
+					<li class="partners-row__item">
+						<a class="partners-row__link lazy-loading" href="#">
+							Google
+							<img class="partners-row__img" data-src="images/partners04.svg" decoding="async" loading="lazy"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+								alt="Google logotype">
+						</a>
+					</li>
+					<li class="partners-row__item">
+						<a class="partners-row__link lazy-loading" href="#">
+							Amazon Prime
+							<img class="partners-row__img" data-src="images/partners05.svg" decoding="async" loading="lazy"
+								src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+								alt="Amazon Prime logotype">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="solutions section">
+			<div class="solutions__container section__container container">
+				<div class="solutions__content solutions-content">
+					<p class="solutions-content__subtitle subtitle">
+						Solutions
+					</p>
+					<h2 class="solutions-content__title title title--section">
+						The 1-space all view experience technology
+					</h2>
+					<div class="solutions-content__text">
+						<p>
+							Coworking is an arrangement in which workers of different companies share an office space, allowing cost
+							savings and convenience through the use of common infrastructures, such as equipment, utilities, and
+							receptionist and custodial services, and in some cases refreshments and parcel acceptance services.
+						</p>
+					</div>
+					<button class="solutions-content__btn btn btn--primary">
+						View Availability
+					</button>
+				</div>
+				<div class="solutions__slider solutions-slider slider">
+					<div class="solutions-slider__inner slider__inner swiper">
+						<div class="solutions-slider__wrapper slider__wrapper swiper-wrapper">
+							<div class="solutions-slider__slide slider__slide swiper-slide">
+								<img class="solutions-slider__img swiper-lazy"
+									data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/solutions01_p3wyvz.webp"
+									data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1656125245/1-Space/solutions01_p3wyvz.webp 470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/solutions01_p3wyvz.webp 940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1656125245/1-Space/solutions01_p3wyvz.webp 1410w"
+									srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 470w"
+									src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+									sizes="(min-width: 1230px) 462px, (min-width: 993px) calc(50vw - 42px - 15px), (min-width: 769px) calc(50vw - 25px - 15px), (min-width: 426px) calc(50vw - 15px - 10px), calc(100vw - 30px)"
+									alt="office">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="solutions-slider__slide slider__slide swiper-slide">
+								<img class="solutions-slider__img swiper-lazy"
+									data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/solutions02_t4m2ce.webp"
+									data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1656125245/1-Space/solutions02_t4m2ce.webp 470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/solutions02_t4m2ce.webp 940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1656125245/1-Space/solutions02_t4m2ce.webp 1410w"
+									srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 470w"
+									src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+									sizes="(min-width: 1230px) 462px, (min-width: 993px) calc(50vw - 42px - 15px), (min-width: 769px) calc(50vw - 25px - 15px), (min-width: 426px) calc(50vw - 15px - 10px), calc(100vw - 30px)"
+									alt="a woman works in an office">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+						<div class="solutions-slider__pagination slider__pagination swiper-pagination">
+						</div>
+						<button
+							class="solutions-slider__button-prev slider__button-prev swiper-button-prev visually-hidden"></button>
+						<button
+							class="solutions-slider__button-next slider__button-prev swiper-button-next visually-hidden"></button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="about-us section">
+			<div class="about-us__container section__container container">
+				<p class="about-us__subtitle subtitle">
+					Why Choose Us?
+				</p>
+				<h2 class="about-us__title title title--section">
+					The benefits that will make you comfort
+				</h2>
+
+				<ul class="about-us__row about-us-row">
+					<li class="about-us-row__item about-us-item">
+						<img class="about-us-item__img" data-src="images/about-us01.svg" decoding="async" loading="lazy"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" alt="calendar icon">
+						<div class="about-us-item__content">
+							<h3 class="about-us-item__title title">
+								Community Events
+							</h3>
+							<div class="about-us-item__text">
+								<p>
+									Allowing cost savings and convenience through the use of common infrastructures.
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="about-us-row__item about-us-item">
+						<img class="about-us-item__img" data-src="images/about-us02.svg" decoding="async" loading="lazy"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" alt="dumbbells icon">
+						<div class="about-us-item__content">
+							<h3 class="about-us-item__title title">
+								Community Events
+							</h3>
+							<div class="about-us-item__text">
+								<p>Allowing cost savings and convenience through the use of common infrastructures.</p>
+							</div>
+						</div>
+					</li>
+					<li class="about-us-row__item about-us-item">
+						<img class="about-us-item__img" data-src="images/about-us03.svg" decoding="async" loading="lazy"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" alt="sphere icon">
+						<div class="about-us-item__content">
+							<h3 class="about-us-item__title title">
+								Community Events
+							</h3>
+							<div class="about-us-item__text">
+								<p>
+									Allowing cost savings and convenience through the use of common infrastructures.
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="about-us-row__item about-us-item">
+						<img class="about-us-item__img" data-src="images/about-us04.svg" decoding="async" loading="lazy"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" alt="wi-fi icon">
+						<div class="about-us-item__content">
+							<h3 class="about-us-item__title title">
+								Community Events
+							</h3>
+							<div class="about-us-item__text">
+								<p>
+									Allowing cost savings and convenience through the use of common infrastructures.
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="about-us-row__item about-us-item">
+						<img class="about-us-item__img" data-src="images/about-us05.svg" decoding="async" loading="lazy"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" alt="armchair icon">
+						<div class="about-us-item__content">
+							<h3 class="about-us-item__title title">
+								Community Events
+							</h3>
+							<div class="about-us-item__text">
+								<p>
+									Allowing cost savings and convenience through the use of common infrastructures.
+								</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="gallery section">
+			<div class="gallery__container section__container container">
+				<div class="gallery__header">
+					<p class="gallery__subtitle subtitle">
+						gallery
+					</p>
+					<h2 class="gallery__title title title--section">
+						Immersive beautiful co-working space gallery
+					</h2>
+				</div>
+
+				<div class="gallery__img-box lazy-loading">
+					<img class="gallery__img"
+						data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/gallery01_i9smpr.webp"
+						data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1656125245/1-Space/gallery01_i9smpr.webp 470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/gallery01_i9smpr.webp 940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1656125245/1-Space/gallery01_i9smpr.webp 1410w"
+						srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 470w"
+						src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+						sizes="(min-width: 1230px) 460px, (min-width: 993px) calc(40vw - 16px - 15px), (min-width: 426px) calc(50vw - 12px - 15px), calc(100vw - 30px)"
+						loading="lazy" alt="light white office">
+				</div>
+				<div class="gallery__img-box lazy-loading">
+					<img class="gallery__img"
+						data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/gallery02_gbyygs.webp"
+						data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1656125245/1-Space/gallery02_gbyygs.webp 470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/gallery02_gbyygs.webp 940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1656125245/1-Space/gallery02_gbyygs.webp 1410w"
+						srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 470w"
+						src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+						sizes="(min-width: 1230px) 215px, (min-width: 993px) calc(20vw - 16px - 15px), (min-width: 426px) calc(50vw - 12px - 15px), calc(100vw - 30px)"
+						loading="lazy" alt="people work in a modern office">
+				</div>
+				<div class="gallery__img-box lazy-loading">
+					<img class="gallery__img"
+						data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/gallery03_nyxsog.webp"
+						data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1656125245/1-Space/gallery03_nyxsog.webp 470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/gallery03_nyxsog.webp 940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1656125245/1-Space/gallery03_nyxsog.webp 1410w"
+						srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 470w"
+						src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+						sizes="(min-width: 1230px) 460px, (min-width: 993px) calc(40vw - 16px - 15px), (min-width: 426px) calc(50vw - 12px - 15px), calc(100vw - 30px)"
+						loading="lazy" alt="black office">
+				</div>
+				<div class="gallery__img-box lazy-loading">
+					<img class="gallery__img"
+						data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/gallery04_j7fgvz.webp"
+						data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1656125245/1-Space/gallery04_j7fgvz.webp 470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/gallery04_j7fgvz.webp 940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1656125245/1-Space/gallery04_j7fgvz.webp 1410w"
+						srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 470w"
+						src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+						sizes="(min-width: 1230px) 460px, (min-width: 993px) calc(40vw - 16px - 15px), (min-width: 426px) calc(50vw - 12px - 15px), calc(100vw - 30px)"
+						loading="lazy" alt="nice lighted office">
+				</div>
+				<div class="gallery__img-box lazy-loading">
+					<img class="gallery__img"
+						data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/gallery05_gxde35.webp"
+						data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1656125245/1-Space/gallery05_gxde35.webp 470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1656125245/1-Space/gallery05_gxde35.webp 940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1656125245/1-Space/gallery05_gxde35.webp 1410w"
+						srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 470w"
+						src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+						sizes="(min-width: 1230px) 215px, (min-width: 993px) calc(20vw - 16px - 15px), (min-width: 426px) calc(50vw - 12px - 15px), calc(100vw - 30px)"
+						loading="lazy" alt="light glass office">
+				</div>
+
+			</div>
+		</section>
+
+		<section class="members section">
+			<div class="members__container section__container container">
+				<div class="members__content members-content">
+					<p class="members-content__subtitle subtitle">
+						Become A Member
+					</p>
+					<h2 class="members-content__title title title--section">
+						Ready to try different work environment now?
+					</h2>
+					<div class="members-content__text">
+						<p>
+							Coworking is an arrangement in which workers of different companies share an office space, allowing cost
+							savings and convenience through the use of common infrastructures, such as equipment, utilities, and
+							receptionist and custodial services, and in some cases refreshments and parcel acceptance services.
+						</p>
+					</div>
+					<div class="members-content__btns btns-group">
+						<button class="members-btns__btn btns-group__btn btn btn--primary">
+							Sign Up Now
+						</button>
+						<button class="members-btns__btn btns-group__btn btn btn--secondary">
+							Schedule visit
+						</button>
+					</div>
+				</div>
+
+				<div class="members__img-box lazy-loading">
+					<img class="members__img"
+						data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1480/v1656125245/1-Space/members01_dahwqg.webp"
+						data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_740/v1656125245/1-Space/members01_dahwqg.webp 740w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1480/v1656125245/1-Space/members01_dahwqg.webp 1480w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_2220/v1656125245/1-Space/members01_dahwqg.webp 2220w"
+						srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png 740w"
+						src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" decoding="async"
+						sizes="(min-width: 1230px) 455px,(min-width: 993px) calc(45vw - 55px - 30px), (min-width: 769px) calc(45vw - 35px - 30px), calc(100vw - 30px)"
+						loading="lazy" alt="office">
+				</div>
+
+			</div>
+		</section>
+	</main>
+
+
+	<footer class="footer">
+		<div class="footer__container container">
+			<div class="footer__about footer__column footer-about">
+				<a href="#" class="footer-about__logo logo">
+					main page
+					<img class="logo__img" src="images/logo.svg" width="104" height="36" alt="1-space logotype">
+				</a>
+				<div class="footer-about__text">
+					<p>
+						Men cannot not live by exchanging articles, but producing them. They live by work not trade.
+					</p>
+				</div>
+			</div>
+
+			<div class="footer__links footer__column footer-links">
+				<div class="footer-links__column">
+					<h3 class="footer-links__title footer__title title">
+						Company
+					</h3>
+					<ul class="footer-links__list">
+						<li class="footer-links__item">
+							<a href="#" class="footer-links__link">
+								Global localities
+							</a>
+						</li>
+						<li class="footer-links__item">
+							<a href="#" class="footer-links__link">
+								Missions
+							</a>
+						</li>
+						<li class="footer-links__item">
+							<a href="#" class="footer-links__link">
+								Careers
+							</a>
+						</li>
+						<li class="footer-links__item">
+							<a href="#" class="footer-links__link">
+								Investors
+							</a>
+						</li>
+						<li class="footer-links__item">
+							<a href="#" class="footer-links__link">
+								Newsroom
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-links__column">
+					<h3 class="footer-links__title footer__title title">
+						Partnership
+					</h3>
+					<ul class="footer-links__list">
+						<li class="footer-links__item">
+							<a href="#" class="footer-links__link">
+								Tasks
+							</a>
+						</li>
+						<li class="footer-links__item">
+							<a href="#" class="footer-links__link">
+								Profile
+							</a>
+						</li>
+						<li class="footer-links__item">
+							<a href="#" class="footer-links__link">
+								Events
+							</a>
+						</li>
+						<li class="footer-links__item">
+							<a href="#" class="footer-links__link">
+								Services
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer__social footer__column footer-social">
+				<h3 class="footer-social__title footer__title title">
+					Follow us
+				</h3>
+				<ul class="footer-social__list">
+					<li class="footer-social__item">
+						<a href="https://www.facebook.com/" class="footer-social__link">
+							Facebook
+							<svg class="footer-social__icon">
+								<use xlink:href="images/icons/sprite.svg#social01"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="footer-social__item">
+						<a href="https://twitter.com/home?lang=ru" class="footer-social__link">
+							Twitter
+							<svg class="footer-social__icon">
+								<use xlink:href="images/icons/sprite.svg#social02"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="footer-social__item">
+						<a href="https://dribbble.com/" class="footer-social__link">
+							Dribble
+							<svg class="footer-social__icon">
+								<use xlink:href="images/icons/sprite.svg#social03"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="footer-social__item">
+						<a href="https://ru.linkedin.com/" class="footer-social__link">
+							Linkedin
+							<svg class="footer-social__icon">
+								<use xlink:href="images/icons/sprite.svg#social04"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</footer>
+
+	<script src="js/gsap.min.js"></script>
+	<script src="js/ScrollTrigger.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/just-validate.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+	<noscript>
+		<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	</noscript>
+
+
+	<noscript>
+		<link rel="stylesheet" href="css/style.min.css">
+	</noscript>
+
+</body>
+
+</html>
