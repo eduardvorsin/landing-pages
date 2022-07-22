@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="select-1" class="select-wrapper">
+    <select class="select-wrapper__native-select native-select" name="select" data-select-native>
+      <option class="native-select__option" value="value1">Значение 1</option>
+      <option class="native-select__option" value="value2">Значение 2</option>
+      <option class="native-select__option" value="value3">Значение 3</option>
+      <option class="native-select__option" value="value4">Значение 4</option>
+      <option class="native-select__option" value="value5">Значение 5</option>
+      <option class="native-select__option" value="value6">Значение 6</option>
+      <option class="native-select__option" value="value7">Значение 7</option>
+    </select>
+    <div class="select-wrapper__custom-select custom-select" data-select-custom>
+      <button class="custom-select__trigger" data-select-trigger>
+        Выберите значение
+      </button>
+      <ul class="custom-select__options" data-select-list>
+        <li class="custom-select__option" data-select-option>Значение 1</li>
+        <li class="custom-select__option" data-select-option>Значение 2</li>
+        <li class="custom-select__option" data-select-option>Значение 3</li>
+        <li class="custom-select__option" data-select-option>Значение 4</li>
+        <li class="custom-select__option" data-select-option>Значение 5</li>
+        <li class="custom-select__option" data-select-option>Значение 6</li>
+        <li class="custom-select__option" data-select-option>Значение 7</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="select-2" class="select-wrapper">
+    <select class="select-wrapper__native-select native-select" name="select" multiple data-select-native>
+      <option class="native-select__option" value="value1">Значение 1</option>
+      <option class="native-select__option" value="value2">Значение 2</option>
+      <option class="native-select__option" value="value3">Значение 3</option>
+      <option class="native-select__option" value="value4">Значение 4</option>
+      <option class="native-select__option" value="value5">Значение 5</option>
+      <option class="native-select__option" value="value6">Значение 6</option>
+      <option class="native-select__option" value="value7">Значение 7</option>
+    </select>
+
+    <div class="select-wrapper__custom-select custom-select" data-select-custom>
+      <ul class="custom-select__options" data-select-list>
+        <li class="custom-select__option" data-select-option>Значение 1</li>
+        <li class="custom-select__option" data-select-option>Значение 2</li>
+        <li class="custom-select__option" data-select-option>Значение 3</li>
+        <li class="custom-select__option" data-select-option>Значение 4</li>
+        <li class="custom-select__option" data-select-option>Значение 5</li>
+        <li class="custom-select__option" data-select-option>Значение 6</li>
+        <li class="custom-select__option" data-select-option>Значение 7</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/HybridSelect.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

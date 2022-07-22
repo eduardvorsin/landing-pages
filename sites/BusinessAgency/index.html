@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="business agency landing page">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="imagepng" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="imagepng" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#8756dc">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<style>
+		@font-face {
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(fonts/Roboto-400.woff2) format("woff2"), url(fonts/Roboto-400.woff) format("woff");
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+		}
+
+		@font-face {
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap;
+			src: url(fonts/Roboto-500.woff2) format("woff2"), url(fonts/Roboto-500.woff) format("woff");
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+		}
+
+		@font-face {
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(fonts/Roboto-700.woff2) format("woff2"), url(fonts/Roboto-700.woff) format("woff");
+			unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+		}
+
+		@font-face {
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(fonts/Roboto-400.woff2) format("woff2"), url(fonts/Roboto-400.woff) format("woff");
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+		}
+
+		@font-face {
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap;
+			src: url(fonts/Roboto-500.woff2) format("woff2"), url(fonts/Roboto-500.woff) format("woff");
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+		}
+
+		@font-face {
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(fonts/Roboto-700.woff2) format("woff2"), url(fonts/Roboto-700.woff) format("woff");
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+		}
+
+		@font-face {
+			font-family: Poppins;
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+			src: url(fonts/Poppins-400.woff2) format("woff2"), url(fonts/Poppins-400.woff) format("woff");
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+		}
+
+		@font-face {
+			font-family: Poppins;
+			font-style: normal;
+			font-weight: 500;
+			font-display: swap;
+			src: url(fonts/Poppins-500.woff2) format("woff2"), url(fonts/Poppins-500.woff) format("woff");
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+		}
+
+		@font-face {
+			font-family: Poppins;
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(fonts/Poppins-700.woff2) format("woff2"), url(fonts/Poppins-700.woff) format("woff");
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+		}
+
+		:root {
+			--max-width: 1920;
+			--primary-font: "Roboto", sans-serif;
+			--secondary-font: "Poppins", sans-serif;
+			--primary-color-01: 262, 66%, 65%;
+			--primary-color-02: 262, 89%, 76%;
+			--primary-color-03: 262, 100%, 85%;
+			--secondary-color-01: 0, 0%, 100%;
+			--secondary-color-02: 258, 100%, 98%;
+			--tertiary-color-01: 262, 13%, 33%;
+			--tertiary-color-02: 262, 10%, 56%;
+			--portfolio-color-01: 150, 93%, 94%;
+			--portfolio-color-02: 216, 93%, 83%;
+			--portfolio-color-03: 332, 100%, 89%;
+			--portfolio-color-04: 64, 100%, 90%
+		}
+
+		*,
+		::after,
+		::before {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box
+		}
+
+		html {
+			font-size: 1rem
+		}
+
+		body,
+		html {
+			height: 100%
+		}
+
+		ul {
+			padding: 0;
+			list-style: none
+		}
+
+		body,
+		h1,
+		h2,
+		li,
+		p,
+		ul {
+			margin: 0
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none
+		}
+
+		img,
+		svg {
+			display: block;
+			max-width: 100%
+		}
+
+		button {
+			font: inherit
+		}
+
+		@media (prefers-reduced-motion:reduce) {
+
+			*,
+			::after,
+			::before {
+				scroll-behavior: auto !important;
+				-webkit-animation-duration: NaNs !important;
+				animation-duration: NaNs !important;
+				-webkit-animation-iteration-count: 1 !important;
+				animation-iteration-count: 1 !important
+			}
+		}
+
+		body {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			overflow-x: hidden;
+			background-color: #b38bf8;
+			background-color: hsl(var(--primary-color-02));
+			color: #fff;
+			color: hsl(var(--secondary-color-01));
+			font-family: Roboto, sans-serif;
+			font-family: var(--primary-font);
+			font-weight: 400;
+			line-height: 1.5;
+			word-break: break-word;
+			text-rendering: optimizeSpeed
+		}
+
+		.visually-hidden {
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+			padding: 0;
+			border: 0;
+			overflow: hidden;
+			clip: rect(0 0 0 0);
+			position: absolute
+		}
+
+		.wrapper {
+			max-width: 1670px;
+			padding: 0 15px;
+			width: 100%;
+			margin: 0 auto;
+			z-index: 5
+		}
+
+		.main {
+			-webkit-box-flex: 1;
+			-ms-flex: auto 1 1;
+			flex: auto 1 1;
+			position: relative
+		}
+
+		@media (min-width:36.0625em) {
+			.main::before {
+				content: '';
+				position: absolute;
+				top: 93%;
+				left: -2.5%;
+				width: 150px;
+				height: 208px;
+				z-index: 35;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+				background: url(https://res.cloudinary.com/dfm2xzqp5/image/upload/v1643286262/business%20agency/decor06_dxffkq.webp) 0 0/contain no-repeat
+			}
+		}
+
+		@media (min-width:48.0625em) {
+			.main::before {
+				top: 90%;
+				left: -2.5%;
+				width: 200px;
+				height: 258px
+			}
+		}
+
+		@media (min-width:62.0625em) {
+			.main::before {
+				width: 300px;
+				height: 408px
+			}
+		}
+
+		.skip-link {
+			position: absolute;
+			top: 0;
+			left: 6.5%;
+			background-color: #f8f5ff;
+			background-color: hsl(var(--secondary-color-02));
+			padding: 6px 11px;
+			font-size: 1rem;
+			line-height: 1;
+			-webkit-transform: translateY(-150%);
+			-ms-transform: translateY(-150%);
+			transform: translateY(-150%);
+			z-index: 60;
+			color: #966be1;
+			color: hsl(var(--primary-color-01))
+		}
+
+		.scale-animation {
+			--scale: 0%;
+			position: relative
+		}
+
+		.scale-animation::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 30
+		}
+
+		.scale-animation--bottom::after {
+			-webkit-transform-origin: bottom;
+			-ms-transform-origin: bottom;
+			transform-origin: bottom
+		}
+
+		.scale-animation--bottom::after {
+			-webkit-transform: scaleY(var(--scale));
+			-ms-transform: scaleY(var(--scale));
+			transform: scaleY(var(--scale))
+		}
+
+		.scale-animation--left::after {
+			-webkit-transform-origin: left;
+			-ms-transform-origin: left;
+			transform-origin: left
+		}
+
+		.scale-animation--right::after {
+			-webkit-transform-origin: right;
+			-ms-transform-origin: right;
+			transform-origin: right
+		}
+
+		.scale-animation--left::after,
+		.scale-animation--right::after {
+			-webkit-transform: scaleX(var(--scale));
+			-ms-transform: scaleX(var(--scale));
+			transform: scaleX(var(--scale))
+		}
+
+		.scale-animation--primary::after {
+			background-color: #b38bf8;
+			background-color: hsl(var(--primary-color-02))
+		}
+
+		.burger-menu span,
+		.burger-menu::after,
+		.burger-menu::before {
+			background-color: #f8f5ff;
+			background-color: hsl(var(--secondary-color-02))
+		}
+
+		.logo {
+			display: block
+		}
+
+		.logo img {
+			width: 35px;
+			height: 35px;
+			-o-object-fit: cover;
+			object-fit: cover
+		}
+
+		@media (min-width:36.0625em) {
+			.logo img {
+				width: 50px;
+				height: 50px
+			}
+		}
+
+		.burger-menu {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			width: 40px;
+			height: 40px;
+			padding: 5px;
+			-ms-flex-item-align: center;
+			-ms-grid-row-align: center;
+			align-self: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			border: 0;
+			background-color: transparent;
+			position: relative;
+			z-index: 30
+		}
+
+		@media (min-width:48.0625em) {
+			.burger-menu {
+				display: none
+			}
+		}
+
+		.burger-menu span,
+		.burger-menu::after,
+		.burger-menu::before {
+			height: 3px;
+			border-radius: 20px
+		}
+
+		.burger-menu span {
+			width: 30px;
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
+			transform: translateX(0)
+		}
+
+		.burger-menu::after,
+		.burger-menu::before {
+			content: "";
+			width: 20px;
+			position: absolute
+		}
+
+		.burger-menu::before {
+			-webkit-transform: translate(25%, -10px);
+			-ms-transform: translate(25%, -10px);
+			transform: translate(25%, -10px)
+		}
+
+		.burger-menu::after {
+			-webkit-transform: translate(25%, 10px);
+			-ms-transform: translate(25%, 10px);
+			transform: translate(25%, 10px)
+		}
+
+		.btn {
+			display: inline-block;
+			min-width: calc((150/16)*1rem);
+			padding: calc((16/16)*1em) calc((40/16)*1em);
+			border: 2px solid #fff;
+			border: 2px solid hsl(var(--secondary-color-01));
+			border-radius: 40px;
+			font-family: Poppins, sans-serif;
+			font-family: var(--secondary-font);
+			font-size: 1rem;
+			font-weight: 500
+		}
+
+		.btn--primary {
+			background-color: transparent;
+			color: #fff;
+			color: hsl(var(--secondary-color-01))
+		}
+
+		.btn--secondary {
+			background-color: #fff;
+			background-color: hsl(var(--secondary-color-01));
+			color: #966be1;
+			color: hsl(var(--primary-color-01))
+		}
+
+		.title {
+			font-family: Poppins, sans-serif;
+			font-family: var(--secondary-font);
+			font-weight: 700;
+			text-align: center
+		}
+
+		.title--primary {
+			color: #fff;
+			color: hsl(var(--secondary-color-01))
+		}
+
+		.header {
+			position: fixed;
+			width: 100%;
+			border-bottom: 1px solid #cfb3ff;
+			border-bottom: 1px solid hsl(var(--primary-color-03));
+			z-index: 50
+		}
+
+		.header::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			z-index: 20;
+			position: absolute;
+			background-color: rgba(150, 107, 225, .7);
+			background-color: hsla(var(--primary-color-01), .7);
+			-webkit-backdrop-filter: blur(3px);
+			backdrop-filter: blur(3px)
+		}
+
+		.header__wrapper {
+			display: -ms-grid;
+			display: grid;
+			-ms-grid-columns: -webkit-max-content 15px 1fr 15px -webkit-max-content;
+			-ms-grid-columns: max-content 15px 1fr 15px max-content;
+			grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+			grid-template-columns: max-content 1fr max-content;
+			-ms-grid-rows: 1fr;
+			grid-template-rows: 1fr;
+			gap: 15px;
+			padding: 5px 15px;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			justify-items: end
+		}
+
+		.header__wrapper>:nth-child(1) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 1
+		}
+
+		.header__wrapper>:nth-child(2) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 3
+		}
+
+		.header__wrapper>:nth-child(3) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 5
+		}
+
+		@media (min-width:48.0625em) {
+			.header__wrapper {
+				gap: 30px;
+				padding: 15px
+			}
+		}
+
+		@media (min-width:62.0625em) {
+			.header__wrapper {
+				gap: 40px
+			}
+		}
+
+		.header__logo {
+			position: relative;
+			z-index: 50
+		}
+
+		.header__btn {
+			padding: 8px 15px;
+			min-width: 130px;
+			z-index: 20
+		}
+
+		@media (min-width:48.0625em) {
+			.header__btn {
+				min-width: 150px;
+				padding: 16px 40px
+			}
+		}
+
+		.nav {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			padding-top: 80px;
+			width: 100%;
+			height: 100%;
+			overflow-y: auto;
+			background-color: #b38bf8;
+			background-color: hsl(var(--primary-color-02));
+			position: fixed;
+			top: 0;
+			right: -100%;
+			bottom: 0;
+			z-index: 10
+		}
+
+		@media (min-width:48.0625em) {
+			.nav {
+				height: auto;
+				overflow-y: visible;
+				overflow-x: hidden;
+				background-color: transparent;
+				padding-top: 0;
+				position: relative;
+				right: 0;
+				z-index: 20
+			}
+		}
+
+		.nav__list {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			text-align: center;
+			height: 100%
+		}
+
+		@media (min-width:48.0625em) {
+			.nav__list {
+				-webkit-box-pack: start;
+				-ms-flex-pack: start;
+				justify-content: flex-start;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: row;
+				flex-direction: row;
+				margin: 0 -5px
+			}
+		}
+
+		@media (min-width:62.0625em) {
+			.nav__list {
+				margin: 0 -15px
+			}
+		}
+
+		@media (min-width:75.0625em) {
+			.nav__list {
+				margin: 0 -25px
+			}
+		}
+
+		.nav__item {
+			margin-bottom: 20px
+		}
+
+		@media (min-width:48.0625em) {
+			.nav__item {
+				margin-bottom: 0;
+				padding: 0 5px
+			}
+		}
+
+		@media (min-width:62.0625em) {
+			.nav__item {
+				padding: 0 15px
+			}
+		}
+
+		@media (min-width:75.0625em) {
+			.nav__item {
+				padding: 0 25px
+			}
+		}
+
+		.nav__link {
+			font-size: 26px
+		}
+
+		@media (min-width:48.0625em) {
+			.nav__link {
+				outline-offset: -2px;
+				display: inline-block;
+				padding: 4px;
+				font-size: 16px;
+				position: relative
+			}
+
+			.nav__link::after {
+				content: "";
+				width: 100%;
+				height: 3px;
+				background-color: #f8f5ff;
+				background-color: hsl(var(--secondary-color-02));
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: 5;
+				-webkit-transform: scaleX(0);
+				-ms-transform: scaleX(0);
+				transform: scaleX(0);
+				-webkit-transform-origin: right;
+				-ms-transform-origin: right;
+				transform-origin: right
+			}
+		}
+
+		.hero {
+			overflow-x: hidden;
+			padding-top: 4.25rem;
+			padding-bottom: .9375rem;
+			min-height: calc((var(--vh)*100) - 84px);
+			min-height: calc(100vh - 84px)
+		}
+
+		@media (min-width:36.0625em) {
+			.hero {
+				padding-top: 4.625rem;
+				padding-bottom: 1.40625rem;
+				min-height: calc((var(--vh)*100) - 90px);
+				min-height: calc(100vh - 90px)
+			}
+		}
+
+		@media (min-width:48.0625em) {
+			.hero {
+				padding-top: 6rem;
+				padding-bottom: 1.875rem;
+				min-height: calc((var(--vh)*100) - 120px);
+				min-height: calc(100vh - 120px)
+			}
+		}
+
+		@media (min-width:62.0625em) {
+			.hero {
+				padding-bottom: 2.34375rem
+			}
+		}
+
+		@media (min-width:75.0625em) {
+			.hero {
+				padding-bottom: 2.8125rem
+			}
+		}
+
+		.hero__wrapper {
+			display: -ms-grid;
+			display: grid;
+			-ms-flex-line-pack: center;
+			align-content: center;
+			max-width: 600px;
+			width: 100%;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+			-ms-grid-rows: -webkit-min-content 30px -webkit-min-content;
+			-ms-grid-rows: min-content 30px min-content;
+			grid-template-rows: -webkit-min-content -webkit-min-content;
+			grid-template-rows: min-content min-content;
+			gap: 30px;
+			min-height: calc((var(--vh)*100) - 84px);
+			min-height: calc(100vh - 84px)
+		}
+
+		.hero__wrapper>:nth-child(1) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 1
+		}
+
+		.hero__wrapper>:nth-child(2) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 1
+		}
+
+		@media (min-width:36.0625em) {
+			.hero__wrapper {
+				min-height: calc((var(--vh)*100) - 90px);
+				min-height: calc(100vh - 90px)
+			}
+		}
+
+		@media (min-width:48.0625em) {
+			.hero__wrapper {
+				max-width: 1670px;
+				-ms-grid-columns: (1fr)[2];
+				grid-template-columns: repeat(2, 1fr);
+				-ms-grid-rows: 1fr;
+				grid-template-rows: 1fr;
+				min-height: calc((var(--vh)*100) - 120px);
+				min-height: calc(100vh - 120px)
+			}
+
+			.hero__wrapper>:nth-child(1) {
+				-ms-grid-row: 1;
+				-ms-grid-column: 1
+			}
+
+			.hero__wrapper>:nth-child(2) {
+				-ms-grid-row: 1;
+				-ms-grid-column: 2
+			}
+		}
+
+		@media (min-width:62.0625em) {
+			.hero__wrapper {
+				gap: 40px
+			}
+		}
+
+		@media (min-width:75.0625em) {
+			.hero__wrapper {
+				-ms-grid-columns: -webkit-max-content 60px 1fr;
+				-ms-grid-columns: max-content 60px 1fr;
+				grid-template-columns: -webkit-max-content 1fr;
+				grid-template-columns: max-content 1fr;
+				gap: 60px
+			}
+		}
+
+		.hero__content {
+			max-width: 560px;
+			width: 100%;
+			-ms-grid-row: 2;
+			-ms-grid-row-span: 1;
+			grid-row: 2/3;
+			text-align: center
+		}
+
+		@media (min-width:48.0625em) {
+			.hero__content {
+				text-align: left;
+				-ms-grid-row: 1;
+				-ms-grid-row-span: 1;
+				grid-row: 1/2
+			}
+		}
+
+		.hero__title {
+			margin-bottom: 15px
+		}
+
+		@media (min-width:48.0625em) {
+			.hero__title {
+				text-align: left;
+				margin-bottom: 30px
+			}
+		}
+
+		@media (min-width:75.0625em) {
+			.hero__title {
+				margin-bottom: 40px
+			}
+		}
+
+		.hero__title span {
+			line-height: 1.4;
+			display: block
+		}
+
+		.hero__title span:first-child {
+			font-size: 22px
+		}
+
+		@media (min-width:36.0625em) {
+			.hero__title span:first-child {
+				font-size: 30px
+			}
+		}
+
+		@media (min-width:62.0625em) {
+			.hero__title span:first-child {
+				font-size: 40px
+			}
+		}
+
+		@media (min-width:75.0625em) {
+			.hero__title span:first-child {
+				font-size: 50px
+			}
+		}
+
+		@supports (width:min(100px, 30vw)) and (width:max(30vw, 100px)) {
+			.hero__title span:first-child {
+				font-size: max(1.375rem, min(1.77vw + 1rem, 3.125rem))
+			}
+		}
+
+		.hero__title span:nth-child(2) {
+			font-size: 35px
+		}
+
+		@media (min-width:36.0625em) {
+			.hero__title span:nth-child(2) {
+				font-size: 50px
+			}
+		}
+
+		@media (min-width:62.0625em) {
+			.hero__title span:nth-child(2) {
+				font-size: 65px
+			}
+		}
+
+		@media (min-width:75.0625em) {
+			.hero__title span:nth-child(2) {
+				font-size: 80px
+			}
+		}
+
+		@supports (width:min(100px, 30vw)) and (width:max(30vw, 100px)) {
+			.hero__title span:nth-child(2) {
+				font-size: max(2.188rem, min(2.87vw + 1.56rem, 5rem))
+			}
+		}
+
+		.hero__title span:last-child {
+			font-size: 30px
+		}
+
+		@media (min-width:36.0625em) {
+			.hero__title span:last-child {
+				font-size: 40px
+			}
+		}
+
+		@media (min-width:62.0625em) {
+			.hero__title span:last-child {
+				font-size: 50px
+			}
+		}
+
+		@media (min-width:75.0625em) {
+			.hero__title span:last-child {
+				font-size: 60px
+			}
+		}
+
+		@supports (width:min(100px, 30vw)) and (width:max(30vw, 100px)) {
+			.hero__title span:last-child {
+				font-size: max(1.875rem, min(1.9vw + 1.5rem, 3.75rem))
+			}
+		}
+
+		.hero__text {
+			margin-bottom: 15px
+		}
+
+		@media (min-width:48.0625em) {
+			.hero__text {
+				margin-bottom: 30px
+			}
+		}
+
+		@media (min-width:75.0625em) {
+			.hero__text {
+				margin-bottom: 40px
+			}
+		}
+
+		.hero__btn {
+			min-width: 200px;
+			text-align: center
+		}
+
+		@media (min-width:48.0625em) {
+			.hero__btn {
+				min-width: 220px
+			}
+		}
+
+		@media (min-width:62.0625em) {
+			.hero__btn {
+				min-width: 300px
+			}
+		}
+
+		.hero__img {
+			-ms-grid-row: 1;
+			-ms-grid-row-span: 1;
+			grid-row: 1/2;
+			position: relative;
+			max-width: 100%;
+			width: 100%;
+			margin: 0 auto;
+			padding-bottom: 72%
+		}
+
+		@media (min-width:48.0625em) {
+			.hero__img {
+				max-width: 100%;
+				padding-bottom: 72%
+			}
+		}
+
+		.hero__img img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			-o-object-fit: cover;
+			object-fit: cover
+		}
+
+		.subscribe-form__icon {
+			fill: #966be1;
+			fill: hsl(var(--primary-color-01));
+			width: 35px;
+			height: 20px
+		}
+
+		@media (min-width:36.0625em) {
+			.subscribe-form__icon {
+				display: none
+			}
+		}
+
+		.footer__about,
+		.footer__nav {
+			-ms-grid-row: 1;
+			-ms-grid-column: 1;
+			grid-area: about
+		}
+
+		.footer__nav {
+			-ms-grid-row: 3;
+			grid-area: nav
+		}
+
+		.footer__bottom,
+		.footer__contact {
+			-ms-grid-row: 5;
+			-ms-grid-column: 1;
+			grid-area: contact
+		}
+
+		.footer__bottom {
+			-ms-grid-row: 7;
+			grid-area: bottom
+		}
+
+		.footer-nav__title {
+			-ms-grid-row: 1;
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 3;
+			text-align: left;
+			grid-area: title;
+			font-size: 1.125rem
+		}
+
+		.footer-nav__list:first-child {
+			-ms-grid-row: 3;
+			-ms-grid-column: 1;
+			grid-area: first
+		}
+
+		.footer-nav__list:last-child {
+			-ms-grid-row: 3;
+			-ms-grid-column: 3;
+			grid-area: last
+		}
+
+		:root {
+			--swiper-theme-color: #007aff
+		}
+	</style>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" media="print"
+		onload="this.media='all'">
+	<link rel="stylesheet" href="css/swiper.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/style.min.css" media="print" onload="this.media='all'">
+	<title>Document</title>
+	<script>
+		// fix vh problem in chrome mobile
+		const vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	</script>
+</head>
+
+<body>
+	<header class="header scale-animation scale-animation--primary scale-animation--bottom">
+		<a href="#main" class="skip-link">skip navigation</a>
+		<div class="wrapper header__wrapper">
+			<a href="#" class="logo header__logo">
+				<img loading="lazy"
+					src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1643698446/business%20agency/logo_zksxum.svg"
+					width="50" height="50" alt="logo">
+			</a>
+			<nav class="nav header__nav" aria-label="header navigation">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#" class="nav__link">Home</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">About</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">Episode</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">Blog</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">Pages</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<button href="#" class="header__btn btn btn--primary">Contact Us</button>
+			<button class="burger-menu" aria-label="navigation menu button" aria-expanded="false">
+				<span class="burger-menu__item"></span>
+			</button>
+		</div>
+	</header>
+
+	<main id="main" class="main">
+		<h1 class="main__title visually-hidden">Business Agency</h1>
+		<section class="hero">
+			<div class="hero__wrapper wrapper">
+				<div class="hero__content scale-animation scale-animation--primary scale-animation--left">
+					<h2 class="hero__title title title--primary">
+						<span>We help to</span>
+						<span>Solve Clients</span>
+						<span>Problems</span>
+					</h2>
+					<div class="hero__text">
+						<p>Our Activate suite of business apps gives your Lorem ipsum dolor sit amet, consectetur.</p>
+					</div>
+					<a href="#" class="hero__btn btn btn--secondary">Our Portofolio</a>
+				</div>
+				<div class="hero__img scale-animation scale-animation--primary scale-animation--right">
+					<img
+						sizes="(min-width: 1201px) calc(62.5vw - 45px), (min-width: 993px) calc(50vw - 35px),(min-width: 769px) ,calc(50vw - 30px),(min-width: 577px) 570px, calc(100vw - 30px)"
+						srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_990/v1643286262/business%20agency/hero_lthhdk.webp 990w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1980/v1643286262/business%20agency/hero_lthhdk.webp 1980w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_2970/v1643286262/business%20agency/hero_lthhdk.webp 2970w"
+						src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1980/v1643286262/business%20agency/hero_lthhdk.webp 1980w"
+						alt="smartphone, balloons, rings" class="">
+				</div>
+			</div>
+		</section>
+		<section class="partners">
+			<div class="partners__wrapper wrapper">
+				<p
+					class="partners__suptitle suptitle suptitle--primary suptitle--section scale-animation scale-animation--primary scale-animation--left">
+					These Companies Trust
+					Us</p>
+				<h2
+					class="partners__title title title--primary title--section scale-animation scale-animation--primary scale-animation--right">
+					With Their Marketing</h2>
+				<div
+					class="partners__slider partners-slider slider scale-animation scale-animation--primary scale-animation--top">
+					<div class="partners-slider__inner swiper">
+						<div class="partners-slider__wrapper swiper-wrapper">
+							<div class="partners-slider__slide swiper-slide">
+								<img loading="lazy" sizes="152px"
+									srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_160/v1643286261/business%20agency/partners01_svbl4h.webp 160w,https://res.cloudinary.com/dfm2xzqp5/image/upload/w_320/v1643286261/business%20agency/partners01_svbl4h.webp 320w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_480/v1643286261/business%20agency/partners01_svbl4h.webp 480w"
+									src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_320/v1643286261/business%20agency/partners01_svbl4h.webp"
+									alt="NameSilo logotype" class="partners-slider__img swiper-lazy">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="partners-slider__slide swiper-slide">
+								<img loading="lazy" sizes="152px"
+									srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_160/v1643286261/business%20agency/partners02_blse3l.webp 160w,https://res.cloudinary.com/dfm2xzqp5/image/upload/w_320/v1643286261/business%20agency/partners02_blse3l.webp 320w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_480/v1643286261/business%20agency/partners02_blse3l.webp 480w"
+									src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_320/v1643286261/business%20agency/partners02_blse3l.webp"
+									alt="Relote logotype" class="partners-slider__img swiper-lazy">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="partners-slider__slide swiper-slide">
+								<img loading="lazy" sizes="152px"
+									srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_160/v1643286261/business%20agency/partners03_rj2q1z.webp 160w,https://res.cloudinary.com/dfm2xzqp5/image/upload/w_320/v1643286261/business%20agency/partners03_rj2q1z.webp 320w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_480/v1643286261/business%20agency/partners03_rj2q1z.webp 480w"
+									src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_320/v1643286261/business%20agency/partners03_rj2q1z.webp"
+									alt="3ERP logotype" class="partners-slider__img swiper-lazy">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="partners-slider__slide swiper-slide">
+								<img loading="lazy" sizes="152px"
+									srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_160/v1643286261/business%20agency/partners04_dt2xuh.webp 160w,https://res.cloudinary.com/dfm2xzqp5/image/upload/w_320/v1643286261/business%20agency/partners04_dt2xuh.webp 320w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_480/v1643286261/business%20agency/partners04_dt2xuh.webp 480w"
+									src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_320/v1643286261/business%20agency/partners04_dt2xuh.webp"
+									alt="Sisters of the valley logotype" class="partners-slider__img swiper-lazy">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="partners-slider__slide swiper-slide">
+								<img loading="lazy" sizes="152px"
+									srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_160/v1643286261/business%20agency/partners05_pv96wc.webp 160w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_320/v1643286261/business%20agency/partners05_pv96wc.webp 320w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_480/v1643286261/business%20agency/partners05_pv96wc.webp 480w"
+									src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_320/v1643286261/business%20agency/partners05_pv96wc.webp"
+									alt="VBit technologies logotype" class="partners-slider__img swiper-lazy">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+					</div>
+					<div class="partners-slider__prev swiper-button-prev slider__prev"></div>
+					<div class="partners-slider__next swiper-button-next slider__next"></div>
+				</div>
+
+			</div>
+		</section>
+		<section class="about">
+			<div class="about__wrapper wrapper">
+				<div class="about__img scale-animation scale-animation--primary scale-animation--left loading">
+					<img loading="lazy"
+						sizes="(min-width:993px) calc(50vw - 47.5px), (min-width:769px) calc(50vw - 37.5px), (min-width:577px) 570px, calc(100vw - 30px)"
+						data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_780/v1643286261/business%20agency/about_ooimsx.webp 780w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1560/v1643286261/business%20agency/about_ooimsx.webp 1560w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_2340/v1643286261/business%20agency/about_ooimsx.webp 2340w"
+						data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1560/v1643286261/business%20agency/about_ooimsx.webp"
+						srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png"
+						src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1623467660/1x1_wsyq4w.png" alt="balloons, laptop">
+				</div>
+				<div class="about__content about-content scale-animation scale-animation--primary scale-animation--right">
+					<h2 class="about-content__title title title--primary">About Us</h2>
+					<div class="about-content__text">
+						<p class="about-content__suptitle suptitle suptite--primary">
+							Simple! Our mission is to become the best design
+							agency in the world! </p>
+						<p>
+							What's an outsourced marketing un-agency, you say? Well, we're the antithesis to your run-of-the-mill
+							agency that oversells and underdelivers.
+						</p>
+						<p>
+							Lately, it's been about closing the biggest contracts. But what about making the biggest impact for
+							clients? Our goal is to get RESULTS that will make clients HAPPY without overpricing.</p>
+						<p>
+							Feeling skeptical? Work with us, and see the difference between getting marketing partners invested in
+							your
+							growth, versus salesmen invested in milking you dry!</p>
+					</div>
+					<a href="#" class="about-content__btn btn btn--secondary">let's talk!</a>
+				</div>
+			</div>
+
+		</section>
+		<section class="stats">
+			<div class="stats__wrapper wrapper">
+				<p
+					class="stats__suptitle suptitle suptitle--primary suptitle--section scale-animation scale-animation--primary scale-animation--left">
+					Digital Marketing Agency
+					& Software
+					Development</p>
+				<h2
+					class="stats__title title title--primary title--section scale-animation scale-animation--primary scale-animation--right">
+					Company Website Design Full
+					Services.</h2>
+				<div class="stats__row stats-row scale-animation scale-animation--primary scale-animation--top">
+					<div class="stats-row__inner">
+						<div class="stats-row__item">
+							<span class="stats-row__counter">16K</span>
+							<p class="stats-row__descr">Clients</p>
+						</div>
+						<div class="stats-row__item">
+							<span class="stats-row__counter">189+</span>
+							<p class="stats-row__descr">Team Members</p>
+						</div>
+						<div class="stats-row__item">
+							<span class="stats-row__counter">13K</span>
+							<p class="stats-row__descr">Active Work</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="services">
+			<div class="services__wrapper wrapper">
+				<p
+					class="services__suptitle suptitle suptitle--secondary suptitle--section scale-animation scale-animation--secondary scale-animation--left">
+					We Are A
+					Digital Agency</p>
+				<h2
+					class="services__title title title--secondary title--section scale-animation scale-animation--secondary scale-animation--right">
+					Experts Services To
+					Change Business</h2>
+				<div class="services__row services-row">
+					<article
+						class="services-row__item services-item article scale-animation scale-animation--secondary scale-animation--left">
+						<img loading="lazy"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1643698279/business%20agency/services01_fyqkyf.svg"
+							alt="chain icon" class="services-item__img">
+						<h3 class="services-item__title title title--secondary">
+							<a href="#" class="services-item__link article__link">Link Building</a>
+						</h3>
+						<div class="services-item__text">We'll earn white hat backlinks and send qualified traffic to your business
+							through guest posting.</div>
+						<a href="#" class="services-item__more more" aria-label="more link">
+							<svg class="services-item__icon more__icon">
+								<use xlink:href="images/icons/sprite.svg#plus"></use>
+							</svg>
+						</a>
+					</article>
+					<article
+						class="services-row__item services-item article scale-animation scale-animation--secondary scale-animation--right">
+						<img loading="lazy"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1643698279/business%20agency/services02_t17qff.svg"
+							alt="loupe icon" class="services-item__img">
+						<h3 class="services-item__title title title--secondary">
+							<a href="#" class="services-item__link article__link">SEO Services</a>
+						</h3>
+						<div class="services-item__text">From content creation to consulting and keyword research, we can help you
+							outrank your competition.</div>
+						<a href="#" class="services-item__more more" aria-label="more link">
+							<svg class="services-item__icon more__icon">
+								<use xlink:href="images/icons/sprite.svg#plus"></use>
+							</svg>
+						</a>
+					</article>
+					<article
+						class="services-row__item services-item article scale-animation scale-animation--secondary scale-animation--left">
+						<img loading="lazy"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1643698281/business%20agency/services03_pdbjuq.svg"
+							alt="design icon" class="services-item__img">
+						<h3 class="services-item__title title title--secondary">
+							<a href="#" class="services-item__link article__link">Web Design & Development</a>
+						</h3>
+						<div class="services-item__text">We make websites that don't just look great, but are also optimized for UX,
+							conversions, and search engine visibility.
+						</div>
+						<a href="#" class="services-item__more more" aria-label="more link">
+							<svg class="services-item__icon more__icon">
+								<use xlink:href="images/icons/sprite.svg#plus"></use>
+							</svg>
+						</a>
+					</article>
+					<article
+						class="services-row__item services-item article scale-animation scale-animation--secondary scale-animation--right">
+						<img loading="lazy"
+							src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1643698281/business%20agency/services04_ay5nox.svg"
+							alt="speaker icon" class="services-item__img">
+						<h3 class="services-item__title title title--secondary">
+							<a href="#" class="services-item__link article__link">Done-For-You Marketing</a>
+						</h3>
+						<div class="services-item__text">Outsource all your marketing needs to a dedicated marketing team handpicked
+							just for your business.</div>
+						<a href="#" class="services-item__more more" aria-label="more link">
+							<svg class="services-item__icon more__icon">
+								<use xlink:href="images/icons/sprite.svg#plus"></use>
+							</svg>
+						</a>
+					</article>
+				</div>
+			</div>
+		</section>
+		<section class="portfolio">
+			<div class="portfolio__wrapper wrapper">
+				<p
+					class="portfolio__suptitle suptitle suptitle--secondary suptitle--section scale-animation scale-animation--secondary scale-animation--left">
+					Awesome Portfolio
+				</p>
+				<h2
+					class="portfolio__title title title--secondary title--section scale-animation scale-animation--secondary scale-animation--right">
+					We Have A Great Portfolio To
+					Check</h2>
+				<div
+					class="portfolio__slider portfolio-slider slider scale-animation scale-animation--secondary scale-animation--top">
+					<div class="portfolio-slider__inner swiper">
+						<div class="portfolio-slider__wrapper swiper-wrapper">
+							<article class="portfolio-slider__slide portfolio-slide swiper-slide article">
+								<div class="portfolio-slide__img">
+									<img loading="lazy" class="swiper-lazy"
+										src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1643698279/business%20agency/portfolio01_bm8zb6.svg"
+										alt="people read books">
+									<div class="portfolio-slide__preloader swiper-lazy-preloader"></div>
+								</div>
+								<div class="portfolio-slide__content">
+									<h3 class="portfolio-slide__title title title--secondary">
+										<a href="#" class="portfolio-slide__link article__link">Web Design Project</a>
+									</h3>
+									<p class="portfolio-slide__descr">UX/UI Design</p>
+								</div>
+							</article>
+							<article class="portfolio-slider__slide portfolio-slide swiper-slide article">
+								<div class="portfolio-slide__img">
+									<img loading="lazy" class="swiper-lazy"
+										src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1643698279/business%20agency/portfolio02_jid4ej.svg"
+										alt="people read books">
+									<div class="portfolio-slide__preloader swiper-lazy-preloader"></div>
+								</div>
+								<div class="portfolio-slide__content">
+									<h3 class="portfolio-slide__title title title--secondary">
+										<a href="#" class="portfolio-slide__link article__link">Web Design Project</a>
+									</h3>
+									<p class="portfolio-slide__descr">UX/UI Design</p>
+								</div>
+							</article>
+							<article class="portfolio-slider__slide portfolio-slide swiper-slide article">
+								<div class="portfolio-slide__img">
+									<img loading="lazy" class="swiper-lazy"
+										src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1643698279/business%20agency/portfolio03_jt17el.svg"
+										alt="children listen to songs on the guitar">
+									<div class="portfolio-slide__preloader swiper-lazy-preloader"></div>
+								</div>
+								<div class="portfolio-slide__content">
+									<h3 class="portfolio-slide__title title title--secondary">
+										<a href="#" class="portfolio-slide__link article__link">Web Design Project</a>
+									</h3>
+									<p class="portfolio-slide__descr">UX/UI Design</p>
+								</div>
+							</article>
+							<article class="portfolio-slider__slide portfolio-slide swiper-slide article">
+								<div class="portfolio-slide__img">
+									<img loading="lazy" class="swiper-lazy"
+										src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1643698279/business%20agency/portfolio04_dvwft9.svg"
+										alt="people draw">
+									<div class="portfolio-slide__preloader swiper-lazy-preloader"></div>
+								</div>
+								<div class="portfolio-slide__content">
+									<h3 class="portfolio-slide__title title title--secondary">
+										<a href="#" class="portfolio-slide__link article__link">Web Design Project</a>
+									</h3>
+									<p class="portfolio-slide__descr">UX/UI Design</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					<div class="portfolio-slider__prev swiper-button-prev slider__prev slider__prev--bottom"></div>
+					<div class="portfolio-slider__next swiper-button-next slider__next slider__next--bottom"></div>
+				</div>
+
+			</div>
+		</section>
+		<section class="news">
+			<div class="news__wrapper wrapper">
+				<p
+					class="news__suptitle suptitle suptitle--secondary suptitle--section scale-animation scale-animation--secondary scale-animation--left">
+					Our Blogs</p>
+				<h2
+					class="news__title title title--secondary title--section scale-animation scale-animation--secondary scale-animation--right">
+					Our Blog & Article</h2>
+				<div class="news__slider news-slider slider scale-animation scale-animation--secondary scale-animation--top">
+					<div class="news-slider__inner swiper">
+						<div class="news-slider__wrapper swiper-wrapper">
+							<article class="news-slider__slide news-slide swiper-slide article">
+								<div class="news-slide__img">
+									<img loading="lazy" class="swiper-lazy"
+										sizes="(min-width:1201px) calc(25vw - 35px), (min-width:993px) calc(33.333vw - 25px), (min-width:577px) calc(50vw - 20px), (min-width:426px) 400px, calc(100vw - 30px)"
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1643286262/business%20agency/news01_rdl62w.webp 470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1643286262/business%20agency/news01_rdl62w.webp 940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1643286262/business%20agency/news01_rdl62w.webp 1410w,"
+										data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1643286262/business%20agency/news01_rdl62w.webp"
+										alt="a man reads a newspaper">
+									<div class="news-slide__preloader swiper-lazy-preloader"></div>
+								</div>
+								<div class="news-slide__content">
+									<time class="news-slide__date" datetime="2020-08-27">August 27, 2020</time>
+									<h3 class="news-slide__title title title--secondary">
+										<a href="#" class="news-slide__link article__link">Why We Decided To Create Build Your DXP</a>
+									</h3>
+								</div>
+								<a href="#" class="news-slide__more more" aria-label="more link">
+									<svg class="news-slide__icon more__icon">
+										<use xlink:href="images/icons/sprite.svg#plus"></use>
+									</svg>
+								</a>
+							</article>
+							<article class="news-slider__slide news-slide swiper-slide article">
+								<div class="news-slide__img ">
+									<img loading="lazy" class="swiper-lazy"
+										sizes="(min-width:1201px) calc(25vw - 35px), (min-width:993px) calc(33.333vw - 30px), (min-width:577px) calc(50vw - 25px), (min-width:426px) 400px, calc(100vw - 30px)"
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1643286262/business%20agency/news02_tymv8j.webp  470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1643286262/business%20agency/news02_tymv8j.webp  940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1643286262/business%20agency/news02_tymv8j.webp  1410w,"
+										data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1643286262/business%20agency/news02_tymv8j.webp"
+										alt="people are happy about the success of the project">
+									<div class="news-slide__preloader swiper-lazy-preloader"></div>
+								</div>
+								<div class="news-slide__content">
+									<time class="news-slide__date" datetime="2020-08-27">August 27, 2020</time>
+									<h3 class="news-slide__title title title--secondary">
+										<a href="#" class="news-slide__link article__link">Why We Decided To Create Build Your DXP</a>
+									</h3>
+								</div>
+								<a href="#" class="news-slide__more more" aria-label="more link">
+									<svg class="news-slide__icon more__icon">
+										<use xlink:href="images/icons/sprite.svg#plus"></use>
+									</svg>
+								</a>
+							</article>
+							<article class="news-slider__slide news-slide swiper-slide article">
+								<div class="news-slide__img">
+									<img loading="lazy" class="swiper-lazy"
+										sizes="(min-width:1201px) calc(25vw - 35px), (min-width:993px) calc(33.333vw - 30px), (min-width:577px) calc(50vw - 25px), (min-width:426px) 400px, calc(100vw - 30px)"
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1643286262/business%20agency/news03_lt1ekb.webp  470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1643286262/business%20agency/news03_lt1ekb.webp  940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1643286262/business%20agency/news03_lt1ekb.webp  1410w,"
+										data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1643286262/business%20agency/news03_lt1ekb.webp"
+										alt="workplace in the office">
+									<div class="news-slide__preloader swiper-lazy-preloader"></div>
+								</div>
+								<div class="news-slide__content">
+									<time class="news-slide__date" datetime="2020-08-27">August 27, 2020</time>
+									<h3 class="news-slide__title title title--secondary">
+										<a href="#" class="news-slide__link article__link">Why We Decided To Create Build Your DXP</a>
+									</h3>
+								</div>
+								<a href="#" class="news-slide__more more" aria-label="more link">
+									<svg class="news-slide__icon more__icon">
+										<use xlink:href="images/icons/sprite.svg#plus"></use>
+									</svg>
+								</a>
+							</article>
+							<article class="news-slider__slide news-slide swiper-slide article">
+								<div class="news-slide__img">
+									<img loading="lazy" class="swiper-lazy"
+										sizes="(min-width:1201px) calc(25vw - 35px), (min-width:993px) calc(33.333vw - 30px), (min-width:577px) calc(50vw - 25px), (min-width:426px) 400px, calc(100vw - 30px)"
+										data-srcset="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_470/v1643286262/business%20agency/news04_srtnxg.webp 470w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1643286262/business%20agency/news04_srtnxg.webp 940w, https://res.cloudinary.com/dfm2xzqp5/image/upload/w_1410/v1643286262/business%20agency/news04_srtnxg.webp 1410w,"
+										data-src="https://res.cloudinary.com/dfm2xzqp5/image/upload/w_940/v1643286262/business%20agency/news04_srtnxg.webp"
+										alt="workplace in the office">
+									<div class="news-slide__preloader swiper-lazy-preloader"></div>
+								</div>
+								<div class="news-slide__content">
+									<time class="news-slide__date" datetime="2020-08-27">August 27, 2020</time>
+									<h3 class="news-slide__title title title--secondary">
+										<a href="#" class="news-slide__link article__link">Why We Decided To Create Build Your DXP</a>
+									</h3>
+								</div>
+								<a href="#" class="news-slide__more more" aria-label="more link">
+									<svg class="news-slide__icon more__icon">
+										<use xlink:href="images/icons/sprite.svg#plus"></use>
+									</svg>
+								</a>
+							</article>
+						</div>
+					</div>
+					<div class="news-slider__prev swiper-button-prev slider__prev slider__prev--bottom"></div>
+					<div class="news-slider__next swiper-button-next slider__next slider__next--bottom"></div>
+				</div>
+
+			</div>
+		</section>
+		<section class="subscribe">
+			<div class="subscribe__wrapper wrapper scale-animation scale-animation--primary scale-animation--bottom">
+				<h2 class="subscribe__title title title--primary">Like Our Service? Subscribe Us</h2>
+				<div class="subscribe__text">As a app web crawler expert, I help organizations adjust to the expanding
+					significance of internet promoting.</div>
+				<form name="subscribeForm" action="#" class="subscribe__form subscribe-form">
+					<fieldset class="subscribe-form__inner">
+						<legend class="subscribe-form__descr visually-hidden">Subscribe form</legend>
+						<input name="userEmail" type="email" class="subscribe-form__input input" placeholder="Enter your email"
+							autocomplete="email"
+							pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
+							title="Шаблон: example@email.com" required>
+						<button class="subscribe-form__btn btn btn--secondary" type="submit">
+							<span>Subscribe</span>
+							<svg class="subscribe-form__icon">
+								<use xlink:href="images/icons/sprite.svg#plane"></use>
+							</svg>
+						</button>
+					</fieldset>
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="footer__wrapper wrapper scale-animation scale-animation--primary scale-animation--top">
+			<div class="footer__column footer__about footer-about">
+				<a href="#" class="footer-about__logo logo">
+					<img loading="lazy"
+						src="https://res.cloudinary.com/dfm2xzqp5/image/upload/v1643698446/business%20agency/logo_zksxum.svg"
+						width="50" height="50" alt="business agency logo">
+				</a>
+				<div class="footer-about__text">
+					Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at placerat tincidunt. Nam sem lacus, ornare non
+					ante sed, ultricies fringilla massa.
+				</div>
+			</div>
+			<nav class="footer__column footer__nav footer-nav" aria-label="footer navigation">
+				<h3 class="footer-nav__title title title--primary">COMPANY</h3>
+				<ul class="footer-nav__list footer-nav-list">
+					<li class="footer-nav-list__item">
+						<a href="#" class="footer-nav-list__link">About Us</a>
+					</li>
+					<li class="footer-nav-list__item">
+						<a href="#" class="footer-nav-list__link">Contact us</a>
+					</li>
+					<li class="footer-nav-list__item">
+						<a href="#" class="footer-nav-list__link">Careers</a>
+					</li>
+					<li class="footer-nav-list__item">
+						<a href="#" class="footer-nav-list__link">Support</a>
+					</li>
+				</ul>
+
+				<ul class="footer-nav__list footer-nav-list">
+					<li class="footer-nav-list__item">
+						<a href="#" class="footer-nav-list__link">FAQ</a>
+					</li>
+					<li class="footer-nav-list__item">
+						<a href="#" class="footer-nav-list__link">Terms</a>
+					</li>
+					<li class="footer-nav-list__item">
+						<a href="#" class="footer-nav-list__link">Privacy</a>
+					</li>
+					<li class="footer-nav-list__item">
+						<a href="#" class="footer-nav-list__link">Blog</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="footer__column footer__contact footer-contact">
+				<h3 class="footer-contact__title title title--primary">Contact</h3>
+				<ul class="footer-contact__list footer-contact-list">
+					<li class="footer-contact-list__item" data-type="Phone:">
+						<a href="#" class="footer-contact-list__link">+1 605 722 2032
+						</a>
+					</li>
+					<li class="footer-contact-list__item" data-type="Email:">
+						<a href="#" class="footer-contact-list__link">example@mail.com</a>
+					</li>
+					<li class="footer-contact-list__item" data-type="Adress:">
+						<adress class="footer-contact-list__adress">Charlotte, North Carolina, United States</adress>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__column footer__bottom footer-bottom">
+				<ul class="footer-bottom__social footer-social">
+					<li class="footer-social__item">
+						<a href="#" class="footer-social__link" aria-label="facebook link">
+							<svg class="footer-social__icon">
+								<use xlink:href="images/icons/sprite.svg#social01"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="footer-social__item">
+						<a href="#" class="footer-social__link" aria-label="instagram link">
+							<svg class="footer-social__icon">
+								<use xlink:href="images/icons/sprite.svg#social02"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="footer-social__item">
+						<a href="#" class="footer-social__link" aria-label="twitter link">
+							<svg class="footer-social__icon">
+								<use xlink:href="images/icons/sprite.svg#social03"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="footer-social__item">
+						<a href="#" class="footer-social__link" aria-label="youtube link">
+							<svg class="footer-social__icon">
+								<use xlink:href="images/icons/sprite.svg#social04"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+				<p class="footer-bottom__copyright">
+					© 2020 — All Rights Reserved
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/gsap.min.js"></script>
+	<script src="js/ScrollTrigger.min.js"></script>
+	<script src="js/CustomEase.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+	<link rel="preload" href="fonts/Roboto-400.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/Roboto-400.woff" as="font" type="font/woff" crossorigin>
+	<link href="fonts/Roboto-500.woff2" as="font" type="font/woff2" crossorigin>
+	<link href="fonts/Roboto-500.woff" as="font" type="font/woff" crossorigin>
+	<link href="fonts/Roboto-700.woff2" as="font" type="font/woff2" crossorigin>
+	<link href="fonts/Roboto-700.woff" as="font" type="font/woff" crossorigin>
+	<link href="fonts/Poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+	<link href="fonts/Poppins-400.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/Poppins-500.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/Poppins-500.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/Poppins-700.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/Poppins-700.woff" as="font" type="font/woff" crossorigin>
+
+	<noscript>
+		<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+	</noscript>
+
+
+	<noscript>
+		<link rel="stylesheet" href="css/swiper.min.css">
+	</noscript>
+
+
+	<noscript>
+		<link rel="stylesheet" href="css/style.min.css">
+	</noscript>
+
+</body>
+
+</html>

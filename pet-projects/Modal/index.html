@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <button class="btn" data-modalId="0" aria-expanded="false">
+    open modal
+  </button>
+  <div class="modal" role="dialog" data-modalId="0" aria-hidden="true" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__container" data-modal-window>
+      <button class="modal__close" data-modal-close aria-label="close modal window">
+        <img class="modal__close-icon" src="images/icons/close.svg" aria-hidden="true" alt="close icon">
+      </button>
+      <h2 id="modal-title" class="modal__title">Modal window</h2>
+      <div class="modal__text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ex eum, dolor consequatur debitis, eaque omnis
+          beatae earum adipisci voluptatem nisi aliquid? Quibusdam, culpa id a minus debitis suscipit alias.
+          Ipsam illo vel similique nisi numquam explicabo quam ex nobis consectetur ab iste quis architecto praesentium
+          natus dolore a maiores, libero laudantium? Praesentium maxime omnis et provident dignissimos ea itaque?
+          Ad, cumque voluptas excepturi, quia necessitatibus placeat, minus debitis adipisci unde voluptatum in
+          molestias
+          maxime ipsam labore velit earum iste quasi eaque. Harum, culpa dolorem? Ratione quas voluptatibus rem non!
+          Vero fuga ullam asperiores totam voluptate ex, natus, vel a nam dignissimos labore veniam quod! Magni cum in
+          non
+          adipisci explicabo. Deserunt nesciunt, incidunt vero modi libero est pariatur alias!
+        </p>
+
+      </div>
+      <button class="modal__btn btn">button</button>
+    </div>
+  </div>
+  <script src="js/modal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

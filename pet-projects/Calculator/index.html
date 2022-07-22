@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/calculator.css">
+</head>
+<style>
+</style>
+
+<body>
+  <div id="calculator" class="calculator">
+    <input class="calculator__input" type="text">
+    <div class="calculator__panel calculator-panel">
+      <button class="calculator-panel__key calculator-panel__key--operation" data-operation="clear" data-key="operation"
+        aria-label="clear input">
+        C
+      </button>
+      <button class="calculator-panel__key calculator-panel__key--operation" data-operation="negation"
+        data-key="operation" aria-label="add/remove minus">
+        +/-
+      </button>
+      <button class="calculator-panel__key calculator-panel__key--operation" data-operation="%" data-key="operation"
+        aria-label="find the percentage">
+        %
+      </button>
+      <button class="calculator-panel__key calculator-panel__key--operation" data-operation="/" data-key="operation"
+        aria-label="division">
+        /
+      </button>
+      <button class="calculator-panel__key calculator-panel__key--operation" data-operation="*" data-key="operation"
+        aria-label="multiplication">
+        *
+      </button>
+      <button class="calculator-panel__key calculator-panel__key--operation" data-operation="-" data-key="operation"
+        aria-label="subtraction">
+        -
+      </button>
+      <button class="calculator-panel__key calculator-panel__key--operation" data-operation="+" data-key="operation"
+        aria-label="addition">
+        +
+      </button>
+      <button class="calculator-panel__key calculator-panel__key--operation" data-operation="sqrt" data-key="operation"
+        aria-label="finding the square root">
+        √
+      </button>
+      <button class="calculator-panel__key calculator-panel__key--operation" data-operation="=" data-key="operation"
+        aria-label="calculate the result">
+        =
+      </button>
+      <button class="calculator-panel__key calculator-panel__key--number" data-key="number">7</button>
+      <button class="calculator-panel__key calculator-panel__key--number" data-key="number">8</button>
+      <button class="calculator-panel__key calculator-panel__key--number" data-key="number">9</button>
+      <button class="calculator-panel__key calculator-panel__key--number" data-key="number">4</button>
+      <button class="calculator-panel__key calculator-panel__key--number" data-key="number">5</button>
+      <button class="calculator-panel__key calculator-panel__key--number" data-key="number">6</button>
+      <button class="calculator-panel__key calculator-panel__key--number" data-key="number">1</button>
+      <button class="calculator-panel__key calculator-panel__key--number" data-key="number">2</button>
+      <button class="calculator-panel__key calculator-panel__key--number" data-key="number">3</button>
+      <button class="calculator-panel__key calculator-panel__key--number" data-key="number">0</button>
+      <button class="calculator-panel__key calculator-panel__key--number" data-key="number">.</button>
+    </div>
+  </div>
+
+  <script src="js/calculator.js"></script>
+</body>
+
+</html>
