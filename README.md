@@ -9,7 +9,8 @@
 - [Coffee House(тестовый проект)](https://eduardvorsin.github.io/my-portfolio/sites/CoffeeHouse/index.html)
 - [Product Factory(тестовый проект)](https://eduardvorsin.github.io/my-portfolio/sites/ProductFactory/index.html)
 - [Business Agency(тестовый проект)](https://eduardvorsin.github.io/my-portfolio/sites/BusinessAgency/index.html)
-- [SuperDrone(тестовый проект)](https://eduardvorsin.github.io/my-portfolio/sites/SuperDrone/index.html)
+- [Sello(тестовый проект)](https://eduardvorsin.github.io/my-portfolio/sites/BusinessAgency/index.html)
+- [SuperDrone(тестовый проект)](https://eduardvorsin.github.io/my-portfolio/sites/Sello/index.html)
 - [1-Space(тестовый проект)](https://eduardvorsin.github.io/my-portfolio/sites/1-Space/index.html)
 
 ## `Pet-проекты`
