@@ -1,5 +1,5 @@
 # Плагин степпера на чистом JavaScript
-[Cсылка на демо]()
+[Cсылка на демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Stepper/index.html)
 
 ![степпер](./images/stepper.jpg)
 

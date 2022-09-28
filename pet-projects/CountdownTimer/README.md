@@ -1,7 +1,7 @@
 # Плагин таймера обратного отсчета на чистом JavaScript
-[Cсылка на демо]()
+[Cсылка на демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/CountdownTimer/index.html)
 
-![степпер](./images/countdown-timer.jpg)
+![таймер обратного отсчета](./images/countdown-timer.jpg)
 
 
 Простой скрипт таймера обратного отсчета
