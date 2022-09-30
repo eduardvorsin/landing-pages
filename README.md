@@ -20,3 +20,4 @@
 - [Плагин степпера](pet-projects/Stepper) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Stepper/index.html)
 - [Плагин селекта](pet-projects/Select) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Select/index.html)
 - [Калькулятор](pet-projects/Calculator) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Calculator/index.html)
+- [Валидация формы](pet-projects/Form-Validation) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Form-Validation/index.html)
