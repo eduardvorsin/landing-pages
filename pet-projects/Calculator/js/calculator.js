@@ -1,13 +1,10 @@
 'use strict';
+import { convertToPrecision } from "./helpers/helpers";
 
 const calculator = document.querySelector('#calculator');
 const calculatorInput = calculator.querySelector('.calculator__input');
 
 let operations = [];
-
-function convertToPrecision(num, precision) {
-  return Math.round(num * 10 ** precision) / 10 ** precision;
-}
 
 function isNotNumber(value) {
   return Number.isNaN(+value);
