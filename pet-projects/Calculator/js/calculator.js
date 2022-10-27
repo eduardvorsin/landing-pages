@@ -39,17 +39,19 @@ function evaluate() {
   operations.length = 0;
 }
 
-function updateInput(value) {
-  if (value === '.' && calculatorInput.value.includes('.')) {
+export function updateInput(value, input) {
+  if (!input || input.tagName !== 'INPUT') return;
+
+  if (value === '.' && input.value.includes('.')) {
     return;
   }
 
-  if (calculatorInput.value === '0') {
-    calculatorInput.value = value;
+  if (input.value === '0') {
+    input.value = value;
     return;
   }
 
-  calculatorInput.value += value;
+  input.value += value;
 }
 
 function makeOperation(value) {
