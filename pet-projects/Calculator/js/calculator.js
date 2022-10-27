@@ -1,4 +1,5 @@
 'use strict';
+import { keydownHandler, pointerdownHandler } from "./handlers/handlers";
 import { convertToPrecision, isValidKey } from "./helpers/helpers";
 
 const calculator = document.querySelector('#calculator');
@@ -47,23 +48,9 @@ function evaluate() {
 }
 
 
-calculatorInput.addEventListener('keydown', (e) => {
-  if (!isValidKey(e.key)) {
-    e.preventDefault();
-    return false;
-  }
-
-})
-
+calculatorInput.addEventListener('keydown', keydownHandler);
 calculator.addEventListener('pointerdown', (e) => {
-  if (e.target.dataset.key === 'number') {
-    updateInput(e.target.textContent);
-  }
-
-  if (e.target.dataset.key === 'operation') {
-    makeOperation(e.target.dataset.operation);
-  }
-
+  pointerdownHandler(e, calculatorInput);
 });
 
 
