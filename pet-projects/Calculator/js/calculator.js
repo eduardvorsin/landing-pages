@@ -1,5 +1,5 @@
 'use strict';
-import { convertToPrecision } from "./helpers/helpers";
+import { convertToPrecision, isValidKey } from "./helpers/helpers";
 
 const calculator = document.querySelector('#calculator');
 const calculatorInput = calculator.querySelector('.calculator__input');
