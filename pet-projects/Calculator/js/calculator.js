@@ -54,44 +54,44 @@ export function updateInput(value, input) {
   input.value += value;
 }
 
-function makeOperation(value) {
-  if (Number.isNaN(+calculatorInput.value) && value !== 'clear') {
+export function makeOperation(value, input) {
+  if (Number.isNaN(+input.value) && value !== 'clear') {
     return;
   }
 
   switch (value) {
     case 'clear':
-      calculatorInput.value = 0;
+      input.value = 0;
       operations.length = 0;
       break;
     case 'negation':
-      calculatorInput.value *= -1;
+      input.value *= -1;
       break;
     case '+':
-      operations.push(`${calculatorInput.value}`, '+');
-      calculatorInput.value = '';
+      operations.push(`${input.value}`, '+');
+      input.value = '';
       break;
     case '-':
-      operations.push(`${calculatorInput.value}`, '-');
-      calculatorInput.value = '';
+      operations.push(`${input.value}`, '-');
+      input.value = '';
       break;
     case '/':
-      operations.push(`${calculatorInput.value}`, '/');
-      calculatorInput.value = '';
+      operations.push(`${input.value}`, '/');
+      input.value = '';
       break;
     case '*':
-      operations.push(`${calculatorInput.value}`, '*');
-      calculatorInput.value = '';
+      operations.push(`${input.value}`, '*');
+      input.value = '';
       break;
     case '%':
-      calculatorInput.value /= 100;
+      input.value /= 100;
       break;
     case 'sqrt':
-      calculatorInput.value = Math.sqrt(calculatorInput.value);
+      input.value = Math.sqrt(input.value);
       break;
     case '=':
-      operations.push(`${calculatorInput.value}`);
-      evaluate();
+      operations.push(`${input.value}`);
+      evaluate(input);
       break;
   }
 }
