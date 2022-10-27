@@ -1,9 +1,5 @@
 'use strict';
-import { keydownHandler, pointerdownHandler } from "./handlers/handlers";
 import { convertToPrecision, isValidKey } from "./helpers/helpers";
-
-const calculator = document.querySelector('#calculator');
-const calculatorInput = calculator.querySelector('.calculator__input');
 
 let operations = [];
 
@@ -46,13 +42,6 @@ function evaluate() {
 
   operations.length = 0;
 }
-
-
-calculatorInput.addEventListener('keydown', keydownHandler);
-calculator.addEventListener('pointerdown', (e) => {
-  pointerdownHandler(e, calculatorInput);
-});
-
 
 function updateInput(value) {
   if (value === '.' && calculatorInput.value.includes('.')) {
