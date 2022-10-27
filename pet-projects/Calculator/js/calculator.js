@@ -3,10 +3,6 @@ import { convertToPrecision, isValidKey } from "./helpers/helpers";
 
 let operations = [];
 
-function isNotNumber(value) {
-  return Number.isNaN(+value);
-}
-
 function evaluate() {
   while (operations.length > 2) {
     let firstOperand = operations.shift();
@@ -57,7 +53,7 @@ function updateInput(value) {
 }
 
 function makeOperation(value) {
-  if (isNotNumber(calculatorInput.value) && value !== 'clear') {
+  if (Number.isNaN(+calculatorInput.value) && value !== 'clear') {
     return;
   }
 
