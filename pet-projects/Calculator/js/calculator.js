@@ -3,7 +3,9 @@ import { convertToPrecision, isValidKey } from "./helpers/helpers";
 
 let operations = [];
 
-function evaluate() {
+export function evaluate(input) {
+  if (!input || input.tagName !== 'INPUT') return;
+
   while (operations.length > 2) {
     let firstOperand = operations.shift();
     let currentOperation = operations.shift();
@@ -24,7 +26,7 @@ function evaluate() {
         break;
       case '/':
         if (secondOperand === '0') {
-          calculatorInput.value = 'division by 0 error';
+          input.value = 'division by 0 error';
           return;
         }
 
@@ -32,7 +34,7 @@ function evaluate() {
         break;
     }
 
-    calculatorInput.value = convertToPrecision(result, precision);
+    input.value = convertToPrecision(result, precision);
     operations.unshift(result);
   }
 
