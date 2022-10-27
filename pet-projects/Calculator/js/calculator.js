@@ -1,5 +1,5 @@
 'use strict';
-import { convertToPrecision } from "./helpers/helpers";
+import { convertToPrecision } from "./helpers/helpers.js";
 
 let operations = [];
 

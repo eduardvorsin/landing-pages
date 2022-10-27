@@ -1,5 +1,5 @@
 'use strict';
-import { makeOperation, updateInput } from "../calculator/calculator.js";
+import { makeOperation, updateInput } from "../calculator.js";
 import { isValidKey } from "../helpers/helpers.js";
 
 export function keydownHandler(e) {
