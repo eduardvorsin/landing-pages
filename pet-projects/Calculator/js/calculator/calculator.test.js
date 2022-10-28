@@ -94,3 +94,9 @@ describe('makeOperation tests', () => {
     expect(input).toHaveDisplayValue('5');
   });
 });
+
+describe('evaluate tests', () => {
+  it('invalid input passed', () => {
+    expect(evaluate(undefined)).toBeUndefined();
+  });
+});
