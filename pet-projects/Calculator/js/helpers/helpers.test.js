@@ -26,3 +26,21 @@ describe(('convertToPrecision tests'), () => {
     expect(convertToPrecision(1, 'bca')).toBeNaN();
   });
 });
+
+describe(('isValidKey tests'), () => {
+  const validKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp', 'Delete', 'Backspace', 'Home', 'End', 'Tab', '.'];
+  const invalidKeys = ['a', '#', 'B', ',', '\\', '!', ' '];
+
+  test.each(validKeys)('the valid key %s was passed', (value) => {
+    expect(isValidKey(value)).toBeTruthy();
+  });
+
+  test.each(invalidKeys)('invalid key %s was passed', (value) => {
+    expect(isValidKey(value)).toBeFalsy();
+  });
+
+  test('null or undefined value passed', () => {
+    expect(isValidKey(null)).toBeFalsy();
+    expect(isValidKey(undefined)).toBeFalsy();
+  });
+});
