@@ -55,39 +55,39 @@ describe('makeOperation tests', () => {
     screen.getByRole('textbox').value = '';
   });
 
-  test('the input value is not a number and the passed value is not a cleanup operation', () => {
+  test('the input value is not a number and the passed operation is not a cleanup operation', () => {
     const input = screen.getByRole('textbox');
     expect(makeOperation('abc', input)).toBeUndefined();
   });
 
-  test('the passed value is cleanup operation', () => {
+  test('the passed operation is cleanup', () => {
     const input = screen.getByRole('textbox');
     makeOperation('clear', input);
     expect(input).toHaveDisplayValue('0');
   });
 
-  test('the passed value is negation operation', () => {
+  test('the passed operation is negation', () => {
     const input = screen.getByRole('textbox');
     updateInput('5', input);
     makeOperation('negation', input);
     expect(input).toHaveDisplayValue('-5');
   });
 
-  test.each(arithmeticOperations)('the passed value is a %s operation', (value) => {
+  test.each(arithmeticOperations)('the passed operation is a %s', (value) => {
     const input = screen.getByRole('textbox');
     updateInput('-1', input);
     makeOperation(value, input);
     expect(input).toHaveDisplayValue('');
   });
 
-  test('the passed value is a % operation', () => {
+  test('the passed operation is a %', () => {
     const input = screen.getByRole('textbox');
     updateInput('100', input);
     makeOperation('%', input);
     expect(input).toHaveDisplayValue('1');
   });
 
-  test('the passed value is a square root operation', () => {
+  test('the passed operation is a square root', () => {
     const input = screen.getByRole('textbox');
     updateInput('25', input);
     makeOperation('sqrt', input);
