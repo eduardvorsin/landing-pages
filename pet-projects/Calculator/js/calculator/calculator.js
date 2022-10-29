@@ -48,7 +48,7 @@ export function updateInput(value, input) {
     return;
   }
 
-  if (input.value === '0') {
+  if (input.value === '0' || input.value === 'division by 0 error') {
     input.value = value;
     return;
   }
@@ -57,7 +57,9 @@ export function updateInput(value, input) {
 }
 
 export function makeOperation(value, input) {
-  if (Number.isNaN(+input.value) && value !== 'clear') {
+  if (Number.isNaN(+input.value)) {
+    input.value = 0;
+    operations.length = 0;
     return;
   }
 
