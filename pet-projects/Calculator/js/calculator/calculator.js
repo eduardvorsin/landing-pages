@@ -56,14 +56,14 @@ export function updateInput(value, input) {
   input.value += value;
 }
 
-export function makeOperation(value, input) {
+export function makeOperation(operation, input) {
   if (Number.isNaN(+input.value)) {
     input.value = 0;
     operations.length = 0;
     return;
   }
 
-  switch (value) {
+  switch (operation) {
     case 'clear':
       input.value = 0;
       operations.length = 0;
