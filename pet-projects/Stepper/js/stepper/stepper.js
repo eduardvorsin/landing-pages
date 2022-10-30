@@ -1,8 +1,6 @@
 'use strict';
 
-
-
-class Stepper {
+export class Stepper {
   constructor(selector) {
     this._stepperContainer = document.querySelector(selector);
 
