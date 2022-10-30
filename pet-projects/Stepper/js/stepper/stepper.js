@@ -1,6 +1,6 @@
 'use strict';
 
-import { isValidKey, isValueEmptyString } from "../helpers/helpers";
+import { isValidKey, isValueEmptyString } from "../helpers/helpers.js";
 
 export class Stepper {
   constructor(selector) {
