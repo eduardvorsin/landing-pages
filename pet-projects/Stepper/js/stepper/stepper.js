@@ -1,6 +1,6 @@
 'use strict';
 
-import { isValueEmptyString } from "../helpers/helpers";
+import { isValidKey, isValueEmptyString } from "../helpers/helpers";
 
 export class Stepper {
   constructor(selector) {
@@ -132,7 +132,7 @@ export class Stepper {
     document.addEventListener('keydown', (e) => {
       if (!(e.target === this._stepperInput)) return;
 
-      if (!this.#isValidKey(e.key)) {
+      if (!isValidKey(e.key)) {
         e.preventDefault();
         return false;
       }
@@ -254,11 +254,5 @@ export class Stepper {
 
   #isValidNumber(value) {
     return !Number.isNaN(+value);
-  }
-
-  #isValidKey(value) {
-    let validKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp', 'Delete', 'Backspace', 'Home', 'End', 'Tab'];
-
-    return validKeys.includes(value);
   }
 }
