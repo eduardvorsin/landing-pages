@@ -11,5 +11,5 @@ calculator.addEventListener('pointerdown', (e) => {
   pointerdownHandler(e, calculatorInput);
 });
 
-const beepSound = new Audio('../../audio/beep-sound.mp3');
+const beepSound = new Audio('../../pet-projects/Calculator/audio/beep-sound.mp3');
 export const playSound = () => beepSound.play();
