@@ -1,5 +1,7 @@
 'use strict';
 
+import { isValueEmptyString } from "../helpers/helpers";
+
 export class Stepper {
   constructor(selector) {
     this._stepperContainer = document.querySelector(selector);
@@ -179,7 +181,7 @@ export class Stepper {
       throw new Error('invalid minimum value for the stepper');
     }
 
-    if (this.#isValueEmptyString()) {
+    if (isValueEmptyString(value)) {
       this._stepperInput.removeAttribute('data-stepper-min');
       this._stepperInput.removeAttribute('aria-valuemin');
       delete this._min;
@@ -202,7 +204,7 @@ export class Stepper {
       throw new Error('invalid maximum value for the stepper');
     }
 
-    if (this.#isValueEmptyString()) {
+    if (isValueEmptyString(value)) {
       this._stepperInput.removeAttribute('data-stepper-max');
       this._stepperInput.removeAttribute('aria-valuemax');
       delete this._max;
@@ -225,19 +227,11 @@ export class Stepper {
       throw new Error('invalid value for the step');
     }
 
-    let nextValue = this.#isValueEmptyString() ? 1 : value;
+    let nextValue = isValueEmptyString(value) ? 1 : value;
 
     this._step = nextValue;
     this._stepperInput.dataset.stepperStep = nextValue;
     this._stepperInput.ariaValueNow = nextValue;
-  }
-
-  #convertToPrecision(num, precision) {
-    return Math.round(num * 10 ** precision) / 10 ** precision;
-  }
-
-  #isValidNumber(value) {
-    return !Number.isNaN(+value);
   }
 
   #isNextValueLessMaximum(value) {
@@ -254,14 +248,17 @@ export class Stepper {
     return nextValue >= this.min;
   }
 
+  #convertToPrecision(num, precision) {
+    return Math.round(num * 10 ** precision) / 10 ** precision;
+  }
+
+  #isValidNumber(value) {
+    return !Number.isNaN(+value);
+  }
+
   #isValidKey(value) {
     let validKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp', 'Delete', 'Backspace', 'Home', 'End', 'Tab'];
 
     return validKeys.includes(value);
   }
-
-  #isValueEmptyString(value) {
-    return typeof value === 'string' && value.trim() === '';
-  }
 }
-
