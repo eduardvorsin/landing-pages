@@ -11,3 +11,7 @@ export function isValidKey(value) {
 export function isValidNumber(value) {
   return !Number.isNaN(+value);
 }
+
+export function convertToPrecision(num, precision) {
+  return Math.round(num * 10 ** precision) / 10 ** precision;
+}

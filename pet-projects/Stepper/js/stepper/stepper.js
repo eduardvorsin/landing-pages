@@ -1,6 +1,6 @@
 'use strict';
 
-import { isValidKey, isValidNumber, isValueEmptyString } from "../helpers/helpers.js";
+import { convertToPrecision, isValidKey, isValidNumber, isValueEmptyString } from "../helpers/helpers.js";
 
 export class Stepper {
   constructor(selector) {
@@ -82,7 +82,7 @@ export class Stepper {
       if (Number.isInteger(this.step)) {
         nextValue = inputValue + this.step;
       } else {
-        nextValue = this.#convertToPrecision(inputValue + this.step, this._numberPrecision);
+        nextValue = convertToPrecision(inputValue + this.step, this._numberPrecision);
       }
     }
 
@@ -106,7 +106,7 @@ export class Stepper {
       if (Number.isInteger(this.step)) {
         nextValue = inputValue - this.step;
       } else {
-        nextValue = this.#convertToPrecision(inputValue - this.step, this._numberPrecision);
+        nextValue = convertToPrecision(inputValue - this.step, this._numberPrecision);
       }
     }
 
@@ -246,9 +246,5 @@ export class Stepper {
 
     let nextValue = Number(value) - this.step;
     return nextValue >= this.min;
-  }
-
-  #convertToPrecision(num, precision) {
-    return Math.round(num * 10 ** precision) / 10 ** precision;
   }
 }
