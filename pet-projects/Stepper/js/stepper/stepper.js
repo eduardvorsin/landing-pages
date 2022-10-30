@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 class Stepper {
   constructor(selector) {
     this._stepperContainer = document.querySelector(selector);
