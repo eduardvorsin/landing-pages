@@ -1,6 +1,6 @@
 'use strict';
 
-import { isValidKey, isValueEmptyString } from "../helpers/helpers.js";
+import { isValidKey, isValidNumber, isValueEmptyString } from "../helpers/helpers.js";
 
 export class Stepper {
   constructor(selector) {
@@ -35,7 +35,7 @@ export class Stepper {
       this._stepperInput.ariaValueMin = this._min;
     }
 
-    if (!this.#isValidNumber(this._min)) {
+    if (!isValidNumber(this._min)) {
       throw new Error('invalid minimum value for the stepper');
     }
 
@@ -44,7 +44,7 @@ export class Stepper {
       this._stepperInput.ariaValueMax = this._max;
     }
 
-    if (!this.#isValidNumber(this._max)) {
+    if (!isValidNumber(this._max)) {
       throw new Error('invalid maximum value for the stepper');
     }
 
@@ -116,7 +116,7 @@ export class Stepper {
 
   setValue(value) {
 
-    if (!this.#isValidNumber(value)) {
+    if (!isValidNumber(value)) {
       throw new Error('The value must be a numeric type');
     }
 
@@ -177,7 +177,7 @@ export class Stepper {
   }
 
   set min(value) {
-    if (!this.#isValidNumber(value)) {
+    if (!isValidNumber(value)) {
       throw new Error('invalid minimum value for the stepper');
     }
 
@@ -200,7 +200,7 @@ export class Stepper {
   }
 
   set max(value) {
-    if (!this.#isValidNumber(value)) {
+    if (!isValidNumber(value)) {
       throw new Error('invalid maximum value for the stepper');
     }
 
@@ -223,7 +223,7 @@ export class Stepper {
   }
 
   set step(value) {
-    if (!this.#isValidNumber(value)) {
+    if (!isValidNumber(value)) {
       throw new Error('invalid value for the step');
     }
 
@@ -250,9 +250,5 @@ export class Stepper {
 
   #convertToPrecision(num, precision) {
     return Math.round(num * 10 ** precision) / 10 ** precision;
-  }
-
-  #isValidNumber(value) {
-    return !Number.isNaN(+value);
   }
 }

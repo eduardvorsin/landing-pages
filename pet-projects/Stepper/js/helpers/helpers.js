@@ -7,3 +7,7 @@ export function isValidKey(value) {
 
   return validKeys.includes(value);
 }
+
+export function isValidNumber(value) {
+  return !Number.isNaN(+value);
+}
