@@ -30,21 +30,25 @@ export class Stepper {
     const hasSpecifiedStep = 'stepperStep' in this._input.dataset;
     this._step = hasSpecifiedStep ? +this._input.dataset.stepperStep.trim() : 1;
 
-    if ('stepperMin' in this._input.dataset) {
+    const hasSpecifiedMinimum = 'stepperMin' in this._input.dataset;
+
+    if (hasSpecifiedMinimum) {
       this._min = +this._input.dataset.stepperMin;
       this._input.ariaValueMin = this._min;
     }
 
-    if (!isValidNumber(this._min)) {
+    if (hasSpecifiedMinimum && !isValidNumber(this._min)) {
       throw new Error('invalid minimum value for the stepper');
     }
 
-    if ('stepperMax' in this._input.dataset) {
+    const hasSpecifiedMaximum = 'stepperMax' in this._input.dataset;
+
+    if (hasSpecifiedMaximum) {
       this._max = +this._input.dataset.stepperMax;
       this._input.ariaValueMax = this._max;
     }
 
-    if (!isValidNumber(this._max)) {
+    if (hasSpecifiedMaximum && !isValidNumber(this._max)) {
       throw new Error('invalid maximum value for the stepper');
     }
 
