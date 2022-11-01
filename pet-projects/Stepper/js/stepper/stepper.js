@@ -1,5 +1,4 @@
 'use strict';
-
 import { convertToPrecision, isValidKey, isValidNumber, isValueEmptyString } from "../helpers/helpers.js";
 
 export class Stepper {
@@ -28,7 +27,8 @@ export class Stepper {
       throw new Error('button with date attribute [data-stepper-decrease] not found');
     }
 
-    this._step = +this._stepperInput.dataset.stepperStep.trim() || 1;
+    const hasSpecifiedStep = 'stepperStep' in this._stepperInput.dataset;
+    this._step = hasSpecifiedStep ? +this._stepperInput.dataset.stepperStep.trim() : 1;
 
     if ('stepperMin' in this._stepperInput.dataset) {
       this._min = +this._stepperInput.dataset.stepperMin;
@@ -52,10 +52,12 @@ export class Stepper {
       throw new Error('The minimum cannot be greater than the maximum');
     }
 
+    //! проверить работает ли
     if (!Number.isInteger(this.step)) {
       this._numberPrecision = this.step.toString().split('.')[1].length;
     }
 
+    //! проверить работает ли
     if (this._stepperInput.readOnly) {
       this._stepperIncreaseBtn.disabled = true;
       this._stepperDecreaseBtn.disabled = true;
@@ -66,6 +68,7 @@ export class Stepper {
     this.#addEvents();
   }
 
+  //! попробовать как то отрефакторить этот метод
   increase() {
     let inputValue = +this._stepperInput.value;
     let nextValue = null;
@@ -90,6 +93,7 @@ export class Stepper {
     this._stepperInput.ariaValueNow = nextValue;
   }
 
+  //! попробовать как то отрефакторить этот метод
   decrease() {
     let inputValue = +this._stepperInput.value;
     let nextValue = null;
