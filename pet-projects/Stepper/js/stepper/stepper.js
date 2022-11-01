@@ -68,7 +68,7 @@ export class Stepper {
       return;
     }
 
-    this.setValue(this._min);
+    this.setValue(hasSpecifiedMinimum ? this._min : 0);
     this.#addEvents();
   }
 
