@@ -113,11 +113,6 @@ body {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.stepper__input[read-only],
-.stepper__btn {
-  opacity: 0.7;
-}
-
 .stepper__btn::before {
   content: '';
   position: absolute;
@@ -150,7 +145,18 @@ body {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+.stepper__btn:disabled {
+  background-color: hsl(203deg 16% 80%);
+  border-color: hsl(203deg 16% 80%);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
 .stepper__input:hover {
   border-color: hsl(204, 16%, 70%);
+  transition: border-color 0.3s ease;
+}
+
+.stepper__input:read-only {
+  border-color: hsl(203 16% 80%);
   transition: border-color 0.3s ease;
 }
