@@ -3,45 +3,45 @@ import { convertToPrecision, isValidKey, isValidNumber, isValueEmptyString } fro
 
 export class Stepper {
   constructor(selector) {
-    this._stepperContainer = document.querySelector(selector);
+    this._container = document.querySelector(selector);
 
-    if (this._stepperContainer === null) {
+    if (this._container === null) {
       throw new Error(`An element with such a selector(${selector}) was not found`);
     }
 
-    this._stepperInput = this._stepperContainer.querySelector('input');
+    this._input = this._container.querySelector('input');
 
-    if (this._stepperInput === null) {
+    if (this._input === null) {
       throw new Error('The input field for the stepper was not found');
     }
 
-    this._stepperIncreaseBtn = this._stepperContainer.querySelector('[data-stepper-increase]');
+    this._increaseBtn = this._container.querySelector('[data-stepper-increase]');
 
-    if (this._stepperIncreaseBtn === null) {
+    if (this._increaseBtn === null) {
       throw new Error('button with date attribute [data-stepper-increase] not found');
     }
 
-    this._stepperDecreaseBtn = this._stepperContainer.querySelector('[data-stepper-decrease]');
+    this._decreaseBtn = this._container.querySelector('[data-stepper-decrease]');
 
-    if (this._stepperDecreaseBtn === null) {
+    if (this._decreaseBtn === null) {
       throw new Error('button with date attribute [data-stepper-decrease] not found');
     }
 
-    const hasSpecifiedStep = 'stepperStep' in this._stepperInput.dataset;
-    this._step = hasSpecifiedStep ? +this._stepperInput.dataset.stepperStep.trim() : 1;
+    const hasSpecifiedStep = 'stepperStep' in this._input.dataset;
+    this._step = hasSpecifiedStep ? +this._input.dataset.stepperStep.trim() : 1;
 
-    if ('stepperMin' in this._stepperInput.dataset) {
-      this._min = +this._stepperInput.dataset.stepperMin;
-      this._stepperInput.ariaValueMin = this._min;
+    if ('stepperMin' in this._input.dataset) {
+      this._min = +this._input.dataset.stepperMin;
+      this._input.ariaValueMin = this._min;
     }
 
     if (!isValidNumber(this._min)) {
       throw new Error('invalid minimum value for the stepper');
     }
 
-    if ('stepperMax' in this._stepperInput.dataset) {
-      this._max = +this._stepperInput.dataset.stepperMax;
-      this._stepperInput.ariaValueMax = this._max;
+    if ('stepperMax' in this._input.dataset) {
+      this._max = +this._input.dataset.stepperMax;
+      this._input.ariaValueMax = this._max;
     }
 
     if (!isValidNumber(this._max)) {
@@ -58,9 +58,9 @@ export class Stepper {
     }
 
     //! проверить работает ли
-    if (this._stepperInput.readOnly) {
-      this._stepperIncreaseBtn.disabled = true;
-      this._stepperDecreaseBtn.disabled = true;
+    if (this._input.readOnly) {
+      this._increaseBtn.disabled = true;
+      this._decreaseBtn.disabled = true;
       return;
     }
 
@@ -70,7 +70,7 @@ export class Stepper {
 
   //! попробовать как то отрефакторить этот метод
   increase() {
-    let inputValue = +this._stepperInput.value;
+    let inputValue = +this._input.value;
     let nextValue = null;
 
     if (this.max !== undefined && inputValue >= this.max) {
@@ -89,13 +89,13 @@ export class Stepper {
       }
     }
 
-    this._stepperInput.value = nextValue;
-    this._stepperInput.ariaValueNow = nextValue;
+    this._input.value = nextValue;
+    this._input.ariaValueNow = nextValue;
   }
 
   //! попробовать как то отрефакторить этот метод
   decrease() {
-    let inputValue = +this._stepperInput.value;
+    let inputValue = +this._input.value;
     let nextValue = null;
 
     if (this.min !== undefined && inputValue <= this.min) {
@@ -114,8 +114,8 @@ export class Stepper {
       }
     }
 
-    this._stepperInput.value = nextValue;
-    this._stepperInput.ariaValueNow = nextValue;
+    this._input.value = nextValue;
+    this._input.ariaValueNow = nextValue;
   }
 
   setValue(value) {
@@ -128,13 +128,13 @@ export class Stepper {
       throw new Error('The passed value cannot be less then the minimum or greater than the maximum');
     }
 
-    this._stepperInput.value = value;
-    this._stepperInput.ariaValueNow = value;
+    this._input.value = value;
+    this._input.ariaValueNow = value;
   }
 
   #addEvents() {
     document.addEventListener('keydown', (e) => {
-      if (!(e.target === this._stepperInput)) return;
+      if (!(e.target === this._input)) return;
 
       if (!isValidKey(e.key)) {
         e.preventDefault();
@@ -162,14 +162,14 @@ export class Stepper {
     });
 
     document.addEventListener('click', (e) => {
-      if (e.target === this._stepperIncreaseBtn) {
-        if (this.#isNextValueLessMaximum(this._stepperInput.value)) {
+      if (e.target === this._increaseBtn) {
+        if (this.#isNextValueLessMaximum(this._input.value)) {
           this.increase();
         }
       }
 
-      if (e.target === this._stepperDecreaseBtn) {
-        if (this.#isNextValueMoreMinimum(this._stepperInput.value)) {
+      if (e.target === this._decreaseBtn) {
+        if (this.#isNextValueMoreMinimum(this._input.value)) {
           this.decrease();
         }
       }
@@ -186,17 +186,17 @@ export class Stepper {
     }
 
     if (isValueEmptyString(value)) {
-      this._stepperInput.removeAttribute('data-stepper-min');
-      this._stepperInput.removeAttribute('aria-valuemin');
+      this._input.removeAttribute('data-stepper-min');
+      this._input.removeAttribute('aria-valuemin');
       delete this._min;
       return;
     }
 
     this._min = value;
-    this._stepperInput.dataset.stepperMin = value;
-    this._stepperInput.ariaValueMin = value;
-    this._stepperInput.value = Math.max(this._stepperInput.value, value);
-    this._stepperInput.ariaValueNow = Math.max(this._stepperInput.value, value);
+    this._input.dataset.stepperMin = value;
+    this._input.ariaValueMin = value;
+    this._input.value = Math.max(this._input.value, value);
+    this._input.ariaValueNow = Math.max(this._input.value, value);
   }
 
   get max() {
@@ -209,17 +209,17 @@ export class Stepper {
     }
 
     if (isValueEmptyString(value)) {
-      this._stepperInput.removeAttribute('data-stepper-max');
-      this._stepperInput.removeAttribute('aria-valuemax');
+      this._input.removeAttribute('data-stepper-max');
+      this._input.removeAttribute('aria-valuemax');
       delete this._max;
       return;
     }
 
     this._max = value;
-    this._stepperInput.dataset.stepperMax = value;
-    this._stepperInput.ariaValueMax = value;
-    this._stepperInput.value = Math.min(this._stepperInput.value, value);
-    this._stepperInput.ariaValueNow = Math.min(this._stepperInput.value, value);
+    this._input.dataset.stepperMax = value;
+    this._input.ariaValueMax = value;
+    this._input.value = Math.min(this._input.value, value);
+    this._input.ariaValueNow = Math.min(this._input.value, value);
   }
 
   get step() {
@@ -234,8 +234,8 @@ export class Stepper {
     let nextValue = isValueEmptyString(value) ? 1 : value;
 
     this._step = nextValue;
-    this._stepperInput.dataset.stepperStep = nextValue;
-    this._stepperInput.ariaValueNow = nextValue;
+    this._input.dataset.stepperStep = nextValue;
+    this._input.ariaValueNow = nextValue;
   }
 
   #isNextValueLessMaximum(value) {
