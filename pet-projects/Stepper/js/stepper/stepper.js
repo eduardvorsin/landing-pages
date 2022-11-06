@@ -145,10 +145,10 @@ export class Stepper {
           }
           break;
         case 'Home':
-          if (this.min !== undefined) this.setValue(this.min);
+          if (this.min) this.setValue(this.min);
           break;
         case 'End':
-          if (this.max !== undefined) this.setValue(this.max);
+          if (this.max) this.setValue(this.max);
           break;
       }
     });
@@ -231,14 +231,14 @@ export class Stepper {
   }
 
   #isNextValueLessMaximum(value) {
-    if (this.max === undefined) return true;
+    if (!this.max) return true;
 
     let nextValue = Number(value) + this.step;
     return nextValue <= this.max;
   }
 
   #isNextValueMoreMinimum(value) {
-    if (this.min === undefined) return true;
+    if (!this.min) return true;
 
     let nextValue = Number(value) - this.step;
     return nextValue >= this.min;
