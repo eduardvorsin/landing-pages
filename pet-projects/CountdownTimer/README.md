@@ -7,7 +7,7 @@
 Простой скрипт таймера обратного отсчета
 
 ## Разметка
-```
+```html
 <div class="timer timer1">
   <time class="timer__time" data-timer-counter>00:00:00:00</time>
 </div>
@@ -18,7 +18,7 @@
 - `data-timer-counter` - атрибут который нужно поставить счетчику, для нахождения этого элемента внутри контейнера
 
 ## Стили
-```
+```css
 .timer {
   display: block;
   max-width: 400px;
@@ -93,7 +93,7 @@
 
 ## Cкрипты
 ### CountdownTimer.js
-```
+```javascript
 'use strict';
 
 class CountdownTimer {
@@ -210,7 +210,7 @@ class CountdownTimer {
 - `this._futureDate` - свойство принимающее строку даты до которой нужно вести отсчет
 
 ### Инициализация экземпляра таймера обратного отсчета
-```
+```javascript
 'use strict';
 
 const timer1 = new CountdownTimer('.timer1', {

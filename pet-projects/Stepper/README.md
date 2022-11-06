@@ -7,7 +7,7 @@
 Простой скрипт степпера
 
 ## Разметка
-```
+```html
   <div class="stepper">
     <label class="visually-hidden stepper__label" for="stepper">Stepper</label>
     <input class="stepper__input" id="stepper" type="text" inputmode="numeric" data-stepper-step="0.33"
@@ -32,7 +32,7 @@
 - `data-stepper-decrease` - кнопка для уменьшения значения степпера
 
 ## Стили
-```
+```css
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -123,7 +123,7 @@
 
 ## Cкрипты
 ### Stepper.js
-```
+```javascript
 'use strict';
 
 class Stepper {
@@ -422,7 +422,7 @@ class Stepper {
 - `this._numberPrecision` - количество чисел после запятой, если шаг дробное число
 
 ### Инициализация экземпляра степпера
-```
+```javascript
 'use strict';
 
 const stepper = new Stepper('.stepper');

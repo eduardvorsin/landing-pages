@@ -7,7 +7,7 @@
 Простой скрипт модального окна
 
 ## Разметка
-```
+```html
 <button class="btn" data-modalId="0" aria-expanded="false">
     open modal
   </button>
@@ -31,7 +31,7 @@
 -  `data-modal-close` - дата атрибут по которому находиться кнопка по которой можно закрыть модальное окно
 
 ## Стили
-```
+```css
 ._scroll-lock {
   overflow: hidden;
 }
@@ -148,7 +148,7 @@
 
 ## Cкрипты
 ### modal.js
-```
+```javascript
 'use strict';
 
 class Modal {
@@ -305,7 +305,7 @@ class Modal {
 - `#toggleScroll()` - удаляет/добавляет вертикальный скроллбар
 - `#changeFocus()` - меняет фокус внутри модального окна
 ### Инициализация экземпляра модального окна
-```
+```javascript
 'use strict';
 
 let modal0 = new Modal('0', {

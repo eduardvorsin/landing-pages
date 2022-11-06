@@ -6,7 +6,7 @@
 Простой скрипт селекта
 
 ## Разметка
-```
+```html
   <div id="select-1" class="select-wrapper">
     <select class="select-wrapper__native-select native-select" name="select" data-select-native>
       <option class="native-select__option" value="value1">Значение 1</option>
@@ -71,7 +71,7 @@
 - `data-selected` - применяется для выбора опций по умолчанию в кастомном селекте
 
 ## Стили
-```
+```css
 .select-wrapper {
   position: relative;
   align-self: start;
@@ -284,7 +284,7 @@
 ### HybridSelect.js
 #### class HybridSelect
 
-```
+```javascript
 'use strict';
 
 class HybridSelect {
@@ -409,7 +409,7 @@ class HybridSelect {
 }
 ```
 #### class SingleSelect
-```
+```javascript
 class SingleSelect extends HybridSelect {
   isOpen;
 
@@ -556,7 +556,7 @@ class SingleSelect extends HybridSelect {
 }
 ```
 #### class MultipleSelect
-```
+```javascript
 class MultipleSelect extends HybridSelect {
   constructor(selector, settings = {
     onSelect: function (customSelectOption) { },
@@ -725,7 +725,7 @@ class MultipleSelect extends HybridSelect {
 - `this.isOpen, this._customSelectTrigger` - отсутсвуют у MultipleSelect
 
 ### Инициализация экземпляра селекта
-```
+```javascript
 'use strict';
 
 const select = new SingleSelect('#select-1', {
