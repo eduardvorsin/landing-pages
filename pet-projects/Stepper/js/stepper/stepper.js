@@ -154,16 +154,12 @@ export class Stepper {
     });
 
     document.addEventListener('click', (e) => {
-      if (e.target === this._increaseBtn) {
-        if (this.#isNextValueLessMaximum(this._input.value)) {
-          this.increase();
-        }
+      if (e.target === this._increaseBtn && this.#isNextValueLessMaximum(this._input.value)) {
+        this.increase();
       }
 
-      if (e.target === this._decreaseBtn) {
-        if (this.#isNextValueMoreMinimum(this._input.value)) {
-          this.decrease();
-        }
+      if (e.target === this._decreaseBtn && this.#isNextValueMoreMinimum(this._input.value)) {
+        this.decrease();
       }
     });
   }
