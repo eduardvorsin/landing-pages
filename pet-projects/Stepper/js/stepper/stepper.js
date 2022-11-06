@@ -94,9 +94,9 @@ export class Stepper {
   //! попробовать как то отрефакторить этот метод
   decrease() {
     let inputValue = +this._input.value;
-    let nextValue = null;
+    let nextValue = inputValue - this.step;
 
-    if (this.min !== undefined && inputValue <= this.min) {
+    if (this.min && inputValue <= this.min) {
       nextValue = this.min;
     }
 
@@ -104,16 +104,10 @@ export class Stepper {
       nextValue = this.max;
     }
 
-    if (nextValue === null) {
-      if (Number.isInteger(this.step)) {
-        nextValue = inputValue - this.step;
-      } else {
-        nextValue = convertToPrecision(inputValue - this.step, this._numberPrecision);
-      }
-    }
+    const finalValue = Number.isInteger(nextValue) ? nextValue : convertToPrecision(nextValue, this._numberPrecision);
 
-    this._input.value = nextValue;
-    this._input.ariaValueNow = nextValue;
+    this._input.value = finalValue;
+    this._input.ariaValueNow = finalValue;
   }
 
   setValue(value) {
