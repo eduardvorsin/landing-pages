@@ -229,14 +229,14 @@ export class Stepper {
   #isNextValueLessMaximum(value) {
     if (!this.max) return true;
 
-    let nextValue = Number(value) + this.step;
+    let nextValue = +value + this.step;
     return nextValue <= this.max;
   }
 
   #isNextValueMoreMinimum(value) {
     if (!this.min) return true;
 
-    let nextValue = Number(value) - this.step;
+    let nextValue = +value - this.step;
     return nextValue >= this.min;
   }
 }
