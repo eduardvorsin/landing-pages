@@ -18,3 +18,16 @@ describe('isValueEmptyString tests', () => {
     expect(isValueEmptyString(' ')).toBeTruthy();
   });
 });
+
+describe('isValidKey tests', () => {
+  const validKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp', 'Delete', 'Backspace', 'Home', 'End', 'Tab'];
+  const invalidKeys = ['a', ' ', '#', 'C', '`', '/', '\\'];
+
+  test.each(validKeys)('the valid key %s was passed', (value) => {
+    expect(isValidKey(value)).toBeTruthy();
+  });
+
+  test.each(invalidKeys)('the invalid key %s was passed', (value) => {
+    expect(isValidKey(value)).toBeFalsy();
+  });
+});
