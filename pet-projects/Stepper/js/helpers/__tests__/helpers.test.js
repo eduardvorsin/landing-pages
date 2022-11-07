@@ -31,3 +31,14 @@ describe('isValidKey tests', () => {
     expect(isValidKey(value)).toBeFalsy();
   });
 });
+
+
+describe('isValidNumber tests', () => {
+  test('invalid value passed', () => {
+    expect(isValidNumber('abc')).toBeFalsy();
+  });
+
+  test('valid value passed', () => {
+    expect(isValidNumber('1')).toBeTruthy();
+  });
+});
