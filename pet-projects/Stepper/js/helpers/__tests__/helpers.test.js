@@ -42,3 +42,31 @@ describe('isValidNumber tests', () => {
     expect(isValidNumber('1')).toBeTruthy();
   });
 });
+
+describe(('convertToPrecision tests'), () => {
+  test('a non-integer number was passed as the first argument', () => {
+    expect(convertToPrecision(-3.2245, 1)).toBe(-3.2);
+    expect(convertToPrecision(3.2245, 2)).toBe(3.22);
+  });
+
+  test('an integer was passed as the first argument', () => {
+    expect(convertToPrecision(67, 1)).toBe(67);
+  });
+
+  test('passed a non-number as the first argument', () => {
+    expect(convertToPrecision('cbaf', 1)).toBeNaN();
+  });
+
+  test('negative infinity is passed as the first argument', () => {
+    expect(convertToPrecision(- 1 / 0, 1)).toBe(-Infinity);
+  });
+
+  test('negative precision is passed by the second argument', () => {
+    expect(convertToPrecision(5, -1)).toBe(10);
+  });
+
+  test('non-numeric precision passed by the second argument', () => {
+    expect(convertToPrecision(1, 'cca')).toBeNaN();
+  });
+});
+
