@@ -67,6 +67,23 @@ describe('Stepper constructor tests', () => {
     expect(stepperInit).toThrowError('The minimum cannot be greater than the maximum');
   });
 });
+describe('Stepper increase method tests', () => {
+  test('the current value has increased by 1', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    stepper.increase();
+    expect(stepper._input).toHaveDisplayValue(2);
+  });
+
+  test('when the current value is equal to the maximum, the increase has no effect', () => {
+    stepperUISetup({ min: 3, max: 3, step: 1, });
+
+    const stepper = new Stepper('.stepper');
+    stepper.increase();
+    expect(stepper._input).toHaveDisplayValue(3);
+  });
+});
 function stepperUISetup(options = {
   step: 1,
   min: 1,
