@@ -84,6 +84,25 @@ describe('Stepper increase method tests', () => {
     expect(stepper._input).toHaveDisplayValue(3);
   });
 });
+
+describe('Stepper decrease method tests', () => {
+  test('the current value has decreased by 1', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    stepper.decrease();
+    expect(stepper._input).toHaveDisplayValue(1);
+  });
+
+  test('when the current value is equal to the minimum, the decrease has no effect', () => {
+    stepperUISetup({ min: -1, value: -1 });
+
+    const stepper = new Stepper('.stepper');
+    stepper.decrease();
+    expect(stepper._input).toHaveDisplayValue(-1);
+  });
+});
+
 function stepperUISetup(options = {
   step: 1,
   min: 1,
