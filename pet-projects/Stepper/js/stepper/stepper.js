@@ -138,7 +138,7 @@ export class Stepper {
     document.addEventListener('keydown', (e) => {
       if (!(e.target === this._input)) return;
 
-      if (!isValidKey(e.key)) {
+      if (!isValidKey(e.key) || (e.key === '-' && this._input.value.includes('-'))) {
         e.preventDefault();
         return false;
       }
