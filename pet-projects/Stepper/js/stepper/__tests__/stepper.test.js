@@ -73,11 +73,11 @@ describe('Stepper increase method tests', () => {
 
     const stepper = new Stepper('.stepper');
     stepper.increase();
-    expect(stepper._input).toHaveDisplayValue(2);
+    expect(stepper._input).toHaveDisplayValue(3);
   });
 
   test('when the current value is equal to the maximum, the increase has no effect', () => {
-    stepperUISetup({ min: 3, max: 3, step: 1, });
+    stepperUISetup({ max: 3, value: 3 });
 
     const stepper = new Stepper('.stepper');
     stepper.increase();
