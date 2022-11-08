@@ -88,8 +88,9 @@ function stepperUISetup(options = {
   step: 1,
   min: 1,
   max: 10,
+  value: 2,
 }) {
-  const { step, min, max } = options;
+  const { step = 1, min = 1, max = 10, value = 2 } = options;
 
   document.body.innerHTML =
     `<div class="stepper">
@@ -98,7 +99,7 @@ function stepperUISetup(options = {
       decrease
     </button>
     <input class="stepper__input" role="spinbutton" id="stepper" type="text" inputmode="numeric"
-    data-stepper-step="${step}" data-stepper-min="${min}" data-stepper-max="${max}" placeholder="number" pattern="\d"
+    data-stepper-step="${step}" data-stepper-min="${min}" data-stepper-max="${max}" value="${value}" placeholder="number" pattern="\d"
     autocomplete="off">
     <button class="stepper__btn stepper__increase" data-stepper-increase>
       increase
