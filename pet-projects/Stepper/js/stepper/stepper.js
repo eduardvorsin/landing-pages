@@ -68,7 +68,17 @@ export class Stepper {
       return;
     }
 
-    this.setValue(hasSpecifiedMinimum ? this._min : 0);
+    let initialValue = null;
+
+    if (this._input.value === '' && hasSpecifiedMinimum) {
+      initialValue = this._min;
+    } else if (this._input.value !== '') {
+      initialValue = this._input.value;
+    } else {
+      initialValue = 0;
+    }
+
+    this.setValue(initialValue);
     this.#addEvents();
   }
 
