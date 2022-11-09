@@ -1,3 +1,5 @@
+import { screen } from '@testing-library/dom';
+import userEvent from '@testing-library/user-event';
 import { Stepper } from "../Stepper";
 
 describe('Stepper constructor tests', () => {
