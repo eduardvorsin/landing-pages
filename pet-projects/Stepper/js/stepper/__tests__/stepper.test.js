@@ -266,6 +266,146 @@ describe('Stepper the step setter tests', () => {
   });
 });
 
+describe('Stepper UI tests', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  test('clicking on the increase button calls the increase method', async () => {
+    stepperUISetup();
+    const increaseSpy = jest.spyOn(new Stepper('.stepper'), 'increase');
+
+    await userEvent.click(screen.getByRole('button', { name: 'increase' }));
+    expect(increaseSpy).toHaveBeenCalledTimes(1);
+  });
+
+  test('clicking on the decrease button calls the decrease method', async () => {
+    stepperUISetup();
+    const decreaseSpy = jest.spyOn(new Stepper('.stepper'), 'decrease');
+
+    await userEvent.click(screen.getByRole('button', { name: 'decrease' }));
+    expect(decreaseSpy).toHaveBeenCalledTimes(1);
+  });
+
+  test('pressing on the ArrowUp calls the increase method', async () => {
+    stepperUISetup();
+    const increaseSpy = jest.spyOn(new Stepper('.stepper'), 'increase');
+
+    await userEvent.click(screen.getByRole('button', { name: 'increase' }));
+    expect(increaseSpy).toHaveBeenCalledTimes(1);
+  });
+
+  test('pressing on the ArrowDown calls the decrease method', async () => {
+    stepperUISetup();
+    const decreaseSpy = jest.spyOn(new Stepper('.stepper'), 'decrease');
+
+    await userEvent.click(screen.getByRole('button', { name: 'decrease' }));
+    expect(decreaseSpy).toHaveBeenCalledTimes(1);
+  });
+
+  test('clicking on the increase button increases the input value', async () => {
+    stepperUISetup();
+    new Stepper('.stepper');
+
+    await userEvent.click(screen.getByRole('button', { name: 'increase' }));
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('3');
+  });
+
+  test('when the next value is greater than the maximum when clicking on the increase button, nothing happens', async () => {
+    stepperUISetup({ value: 8, max: 8 });
+    new Stepper('.stepper');
+
+    await userEvent.click(screen.getByRole('button', { name: 'increase' }));
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('8');
+  });
+
+  test('clicking on the decrease button increases the input value', async () => {
+    stepperUISetup();
+    new Stepper('.stepper');
+
+    await userEvent.click(screen.getByRole('button', { name: 'decrease' }));
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('1');
+  });
+
+  test('when the next value is less than the minimum when clicking on the decrease button, nothing happens', async () => {
+    stepperUISetup({ value: -7, min: -7 });
+    new Stepper('.stepper');
+
+    await userEvent.click(screen.getByRole('button', { name: 'decrease' }));
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('-7');
+  });
+
+  test('pressing on Arrow Up key increases the value', async () => {
+    stepperUISetup({ value: 5, max: 15 });
+    new Stepper('.stepper');
+
+    await userEvent.type(screen.getByRole('textbox'), '{arrowup}');
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('6');
+  });
+
+  test('when the next value is greater than the maximum when pressing on the Arrow Up key, nothing happens', async () => {
+    stepperUISetup({ value: 5, max: 5 });
+    new Stepper('.stepper');
+
+    await userEvent.type(screen.getByRole('textbox'), '{arrowup}');
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('5');
+  });
+
+  test('pressing on Arrow Down key decreases the value', async () => {
+    stepperUISetup({ value: 5, max: 15 });
+    new Stepper('.stepper');
+
+    await userEvent.type(screen.getByRole('textbox'), '{arrowdown}');
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('4');
+  });
+
+  test('when the next value is less than the minimum when pressing on the Arrow Down key, nothing happens', async () => {
+    stepperUISetup({ value: -1, min: -1 });
+    new Stepper('.stepper');
+
+    await userEvent.type(screen.getByRole('textbox'), '{arrowdown}');
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('-1');
+  });
+
+  test('pressing on the End key changes the input value to the maximum', async () => {
+    stepperUISetup({ value: 3, max: 50 });
+    new Stepper('.stepper');
+
+    await userEvent.type(screen.getByRole('textbox'), '{end}');
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('50');
+  });
+
+  test('when the maximum is not set, pressing the End key has no effect', async () => {
+    stepperUISetup({ value: 32, max: 100 });
+    const stepper = new Stepper('.stepper');
+    stepper.max = '';
+
+    await userEvent.type(screen.getByRole('textbox'), '{end}');
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('32');
+  });
+
+  test('pressing on the Home key changes the input value to the maximum', async () => {
+    stepperUISetup({ value: 4, min: -20 });
+    new Stepper('.stepper');
+
+    await userEvent.type(screen.getByRole('textbox'), '{home}');
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('-20');
+  });
+
+  test('when the minimum is not set, pressing the Home key has no effect', async () => {
+    stepperUISetup({ value: 7, min: 0 });
+    const stepper = new Stepper('.stepper');
+    stepper.min = '';
+
+    await userEvent.type(screen.getByRole('textbox'), '{home}');
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('7');
+  });
+});
+
 function stepperUISetup(options = {
   step: 1,
   min: 1,
