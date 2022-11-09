@@ -160,6 +160,87 @@ describe('Stepper setValue method tests', () => {
 
 });
 
+describe('Stepper the min setter tests', () => {
+  test('invalid value passed', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    expect(() => {
+      stepper.min = 'cba';
+    }).toThrowError('invalid minimum value for the stepper');
+  });
+
+  test('the passed value is an empty string', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    stepper.min = '';
+    expect(stepper.min).toBeUndefined();
+  });
+
+  test('valid value passed', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    stepper.min = '-15';
+    expect(stepper.min).toBe('-15');
+  });
+});
+
+describe('Stepper the max setter tests', () => {
+  test('invalid value passed', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    expect(() => {
+      stepper.min = 'aab';
+    }).toThrowError('invalid minimum value for the stepper');
+  });
+
+  test('the passed value is an empty string', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    stepper.max = '';
+    expect(stepper.max).toBeUndefined();
+  });
+
+  test('valid value passed', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    stepper.max = '15';
+    expect(stepper.max).toBe('15');
+  });
+});
+
+describe('Stepper the step setter tests', () => {
+  test('invalid value passed', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    expect(() => {
+      stepper.step = 'cbba';
+    }).toThrowError('invalid value for the step');
+  });
+
+  test('the passed value is an empty string', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    stepper.step = '';
+    expect(stepper.step).toBe(1);
+  });
+
+  test('valid value passed', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    stepper.step = '50';
+    expect(stepper.step).toBe('50');
+  });
+});
+
 function stepperUISetup(options = {
   step: 1,
   min: 1,
