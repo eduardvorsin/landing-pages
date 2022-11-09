@@ -71,6 +71,10 @@ describe('Stepper constructor tests', () => {
 });
 
 describe('Stepper increase method tests', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+  });
+
   test('the current value has increased by 1', () => {
     stepperUISetup();
 
@@ -100,6 +104,10 @@ describe('Stepper increase method tests', () => {
 });
 
 describe('Stepper decrease method tests', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+  });
+
   test('the current value has decreased by 1', () => {
     stepperUISetup();
 
@@ -129,6 +137,11 @@ describe('Stepper decrease method tests', () => {
 });
 
 describe('Stepper setValue method tests', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+  });
+
+
   test('invalid value passed', () => {
     stepperUISetup();
 
@@ -161,6 +174,10 @@ describe('Stepper setValue method tests', () => {
 });
 
 describe('Stepper the min setter tests', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+  });
+
   test('invalid value passed', () => {
     stepperUISetup();
 
@@ -188,6 +205,10 @@ describe('Stepper the min setter tests', () => {
 });
 
 describe('Stepper the max setter tests', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+  });
+
   test('invalid value passed', () => {
     stepperUISetup();
 
@@ -215,6 +236,10 @@ describe('Stepper the max setter tests', () => {
 });
 
 describe('Stepper the step setter tests', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+  });
+
   test('invalid value passed', () => {
     stepperUISetup();
 
