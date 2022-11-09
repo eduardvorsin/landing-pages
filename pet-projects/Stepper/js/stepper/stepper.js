@@ -56,12 +56,10 @@ export class Stepper {
       throw new Error('The minimum cannot be greater than the maximum');
     }
 
-    //! проверить работает ли
     if (!Number.isInteger(this.step)) {
       this._numberPrecision = this.step.toString().split('.')[1].length;
     }
 
-    //! проверить работает ли
     if (this._input.readOnly) {
       this._increaseBtn.disabled = true;
       this._decreaseBtn.disabled = true;
@@ -82,7 +80,6 @@ export class Stepper {
     this.#addEvents();
   }
 
-  //! попробовать как то отрефакторить этот метод
   increase() {
     let inputValue = +this._input.value;
     let nextValue = inputValue + this.step;
@@ -101,7 +98,6 @@ export class Stepper {
     this._input.ariaValueNow = finalValue;
   }
 
-  //! попробовать как то отрефакторить этот метод
   decrease() {
     let inputValue = +this._input.value;
     let nextValue = inputValue - this.step;
