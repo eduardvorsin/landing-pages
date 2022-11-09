@@ -10,20 +10,18 @@
 </head>
 
 <body>
-  <div class="stepper">
+  <div class="stepper" role="spinbutton">
     <label class="visually-hidden stepper__label" for="stepper">Spinbuttton</label>
     <button class="stepper__btn stepper__decrease" data-stepper-decrease>
       decrease
     </button>
-    <input class="stepper__input" role="spinbutton" id="stepper" type="text" inputmode="numeric"
-      data-stepper-step="0.33" data-stepper-min="10" data-stepper-max="100" placeholder="number" pattern="\d"
-      autocomplete="off">
+    <input class="stepper__input" id="stepper" type="text" inputmode="numeric" data-stepper-step="0.33"
+      data-stepper-min="10" data-stepper-max="100" placeholder="number" pattern="\d" autocomplete="off">
     <button class="stepper__btn stepper__increase" data-stepper-increase>
       increase
     </button>
   </div>
-  <script src="js/Stepper.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js" type="module"></script>
 </body>
 
 </html>
