@@ -69,6 +69,7 @@ describe('Stepper constructor tests', () => {
     expect(stepperInit).toThrowError('The minimum cannot be greater than the maximum');
   });
 });
+
 describe('Stepper increase method tests', () => {
   test('the current value has increased by 1', () => {
     stepperUISetup();
@@ -126,6 +127,37 @@ describe('Stepper decrease method tests', () => {
     expect(stepper._input).toHaveDisplayValue(10);
   });
 });
+
+describe('Stepper setValue method tests', () => {
+  test('invalid value passed', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    expect(() => stepper.setValue('abc')).toThrowError('The value must be a numeric type');
+  });
+
+  test('the passed value is less than the minimum', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    expect(() => stepper.setValue('-5')).toThrowError('The passed value cannot be less then the minimum or greater than the maximum');
+  });
+
+  test('the passed value is greater than the maximum', () => {
+    stepperUISetup({ max: 10 });
+
+    const stepper = new Stepper('.stepper');
+    expect(() => stepper.setValue('20')).toThrowError('The passed value cannot be less then the minimum or greater than the maximum');
+  });
+
+  test('valid value passed', () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    stepper.setValue('5');
+    expect(screen.getByRole('textbox')).toHaveDisplayValue('5');
+  });
+
 });
 
 function stepperUISetup(options = {
