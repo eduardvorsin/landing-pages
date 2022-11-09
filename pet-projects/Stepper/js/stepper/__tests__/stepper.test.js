@@ -85,6 +85,17 @@ describe('Stepper increase method tests', () => {
     stepper.increase();
     expect(stepper._input).toHaveDisplayValue(3);
   });
+
+  test('when the input value is less than the minimum', async () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    await userEvent.click(screen.getByRole('textbox'));
+    await userEvent.keyboard('{BackSpace}-5');
+
+    stepper.increase();
+    expect(screen.getByRole('textbox')).toHaveDisplayValue(1);
+  });
 });
 
 describe('Stepper decrease method tests', () => {
