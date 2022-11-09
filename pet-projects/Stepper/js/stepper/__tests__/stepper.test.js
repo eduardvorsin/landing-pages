@@ -114,6 +114,18 @@ describe('Stepper decrease method tests', () => {
     stepper.decrease();
     expect(stepper._input).toHaveDisplayValue(-1);
   });
+
+  test('when the input value is greater than the maximum', async () => {
+    stepperUISetup();
+
+    const stepper = new Stepper('.stepper');
+    await userEvent.click(screen.getByRole('textbox'));
+    await userEvent.keyboard('{BackSpace}150');
+
+    stepper.decrease();
+    expect(stepper._input).toHaveDisplayValue(10);
+  });
+});
 });
 
 function stepperUISetup(options = {
