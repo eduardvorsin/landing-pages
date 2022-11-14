@@ -1,28 +1,30 @@
-# Плагин степпера на чистом JavaScript
+# 🧮 Плагин степпера
 [Cсылка на демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Stepper/index.html)
 
 ![степпер](./images/stepper.jpg)
 
+## Технологии которые использовались
+![html](https://img.shields.io/badge/HTML-%23F06529.svg?style=for-the-badge&logo=html5&logoColor=white)
+![css](https://img.shields.io/badge/CSS-%232965F1.svg?style=for-the-badge&logo=css3&logoColor=white)
+![javascript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![javascript](https://img.shields.io/badge/jest-%2399425B.svg?style=for-the-badge&logo=jest&logoColor=%white)
+![javascript](https://img.shields.io/badge/testing_library-%23E33332.svg?style=for-the-badge&logo=testing-library&logoColor=white)
 
-Простой скрипт степпера
-
-## Разметка
+## 📰 Разметка
 ```html
-  <div class="stepper">
-    <label class="visually-hidden stepper__label" for="stepper">Stepper</label>
+  <div class="stepper" role="spinbutton">
+    <label class="visually-hidden stepper__label" for="stepper">Spinbuttton</label>
+    <button class="stepper__btn stepper__decrease" data-stepper-decrease>
+      decrease
+    </button>
     <input class="stepper__input" id="stepper" type="text" inputmode="numeric" data-stepper-step="0.33"
       data-stepper-min="10" data-stepper-max="100" placeholder="number" pattern="\d" autocomplete="off">
-    <div class="stepper__btns">
-      <button class="stepper__btn stepper__increase" data-stepper-increase>
-        increase
-      </button>
-      <button class="stepper__btn stepper__decrease" data-stepper-decrease>
-        decrease
-      </button>
-    </div>
+    <button class="stepper__btn stepper__increase" data-stepper-increase>
+      increase
+    </button>
   </div>
 ```
-Выше показана разметка минимально необходимая для правильности работы скрипта
+
 ### Необходимые `Data-атрибуты`
 
 - `data-stepper-step` -  хранит в себе значение шага для степпера
@@ -31,7 +33,7 @@
 - `data-stepper-increase` - кнопка для увеличения значения степпера
 - `data-stepper-decrease` - кнопка для уменьшения значения степпера
 
-## Стили
+## 🎀 Стили
 ```css
 .visually-hidden {
   position: absolute;
@@ -121,54 +123,62 @@
 ```
 Просто презентационные стили, ваши стили могут быть совершенно другими.
 
-## Cкрипты
+## ⚙️ Cкрипты
+
 ### Stepper.js
 ```javascript
 'use strict';
 
-class Stepper {
-  constructor(selector) {
-    this._stepperContainer = document.querySelector(selector);
+import { convertToPrecision, isValidKey, isValidNumber, isValueEmptyString } from "../helpers/helpers.js";
 
-    if (this._stepperContainer === null) {
+export class Stepper {
+  constructor(selector) {
+    this._container = document.querySelector(selector);
+
+    if (this._container === null) {
       throw new Error(`An element with such a selector(${selector}) was not found`);
     }
 
-    this._stepperInput = this._stepperContainer.querySelector('input');
+    this._input = this._container.querySelector('input');
 
-    if (this._stepperInput === null) {
+    if (this._input === null) {
       throw new Error('The input field for the stepper was not found');
     }
 
-    this._stepperIncreaseBtn = this._stepperContainer.querySelector('[data-stepper-increase]');
+    this._increaseBtn = this._container.querySelector('[data-stepper-increase]');
 
-    if (this._stepperIncreaseBtn === null) {
+    if (this._increaseBtn === null) {
       throw new Error('button with date attribute [data-stepper-increase] not found');
     }
 
-    this._stepperDecreaseBtn = this._stepperContainer.querySelector('[data-stepper-decrease]');
+    this._decreaseBtn = this._container.querySelector('[data-stepper-decrease]');
 
-    if (this._stepperDecreaseBtn === null) {
+    if (this._decreaseBtn === null) {
       throw new Error('button with date attribute [data-stepper-decrease] not found');
     }
 
-    this._step = +this._stepperInput.dataset.stepperStep.trim() || 1;
+    const hasSpecifiedStep = 'stepperStep' in this._input.dataset;
+    this._step = hasSpecifiedStep ? +this._input.dataset.stepperStep.trim() : 1;
 
-    if ('stepperMin' in this._stepperInput.dataset) {
-      this._min = +this._stepperInput.dataset.stepperMin;
-      this._stepperInput.ariaValueMin = this._min;
+    const hasSpecifiedMinimum = 'stepperMin' in this._input.dataset;
+
+    if (hasSpecifiedMinimum) {
+      this._min = +this._input.dataset.stepperMin;
+      this._input.ariaValueMin = this._min;
     }
 
-    if (!this.#isValidNumber(this._min)) {
+    if (hasSpecifiedMinimum && !isValidNumber(this._min)) {
       throw new Error('invalid minimum value for the stepper');
     }
 
-    if ('stepperMax' in this._stepperInput.dataset) {
-      this._max = +this._stepperInput.dataset.stepperMax;
-      this._stepperInput.ariaValueMax = this._max;
+    const hasSpecifiedMaximum = 'stepperMax' in this._input.dataset;
+
+    if (hasSpecifiedMaximum) {
+      this._max = +this._input.dataset.stepperMax;
+      this._input.ariaValueMax = this._max;
     }
 
-    if (!this.#isValidNumber(this._max)) {
+    if (hasSpecifiedMaximum && !isValidNumber(this._max)) {
       throw new Error('invalid maximum value for the stepper');
     }
 
@@ -180,21 +190,31 @@ class Stepper {
       this._numberPrecision = this.step.toString().split('.')[1].length;
     }
 
-    if (this._stepperInput.readOnly) {
-      this._stepperIncreaseBtn.disabled = true;
-      this._stepperDecreaseBtn.disabled = true;
+    if (this._input.readOnly) {
+      this._increaseBtn.disabled = true;
+      this._decreaseBtn.disabled = true;
       return;
     }
 
-    this.setValue(this._min);
+    let initialValue = null;
+
+    if (this._input.value === '' && hasSpecifiedMinimum) {
+      initialValue = this._min;
+    } else if (this._input.value !== '') {
+      initialValue = this._input.value;
+    } else {
+      initialValue = 0;
+    }
+
+    this.setValue(initialValue);
     this.#addEvents();
   }
 
   increase() {
-    let inputValue = +this._stepperInput.value;
-    let nextValue = null;
+    let inputValue = +this._input.value;
+    let nextValue = inputValue + this.step;
 
-    if (this.max !== undefined && inputValue >= this.max) {
+    if (this.max && inputValue >= this.max) {
       nextValue = this.max;
     }
 
@@ -202,23 +222,17 @@ class Stepper {
       nextValue = this.min;
     }
 
-    if (nextValue === null) {
-      if (Number.isInteger(this.step)) {
-        nextValue = inputValue + this.step;
-      } else {
-        nextValue = this.#convertToPrecision(inputValue + this.step, this._numberPrecision);
-      }
-    }
+    const finalValue = Number.isInteger(nextValue) ? nextValue : convertToPrecision(nextValue, this._numberPrecision);
 
-    this._stepperInput.value = nextValue;
-    this._stepperInput.ariaValueNow = nextValue;
+    this._input.value = finalValue;
+    this._input.ariaValueNow = finalValue;
   }
 
   decrease() {
-    let inputValue = +this._stepperInput.value;
-    let nextValue = null;
+    let inputValue = +this._input.value;
+    let nextValue = inputValue - this.step;
 
-    if (this.min !== undefined && inputValue <= this.min) {
+    if (this.min && inputValue <= this.min) {
       nextValue = this.min;
     }
 
@@ -226,21 +240,15 @@ class Stepper {
       nextValue = this.max;
     }
 
-    if (nextValue === null) {
-      if (Number.isInteger(this.step)) {
-        nextValue = inputValue - this.step;
-      } else {
-        nextValue = this.#convertToPrecision(inputValue - this.step, this._numberPrecision);
-      }
-    }
+    const finalValue = Number.isInteger(nextValue) ? nextValue : convertToPrecision(nextValue, this._numberPrecision);
 
-    this._stepperInput.value = nextValue;
-    this._stepperInput.ariaValueNow = nextValue;
+    this._input.value = finalValue;
+    this._input.ariaValueNow = finalValue;
   }
 
   setValue(value) {
 
-    if (!this.#isValidNumber(value)) {
+    if (!isValidNumber(value)) {
       throw new Error('The value must be a numeric type');
     }
 
@@ -248,15 +256,15 @@ class Stepper {
       throw new Error('The passed value cannot be less then the minimum or greater than the maximum');
     }
 
-    this._stepperInput.value = value;
-    this._stepperInput.ariaValueNow = value;
+    this._input.value = value;
+    this._input.ariaValueNow = value;
   }
 
   #addEvents() {
     document.addEventListener('keydown', (e) => {
-      if (!(e.target === this._stepperInput)) return;
+      if (!(e.target === this._input)) return;
 
-      if (!this.#isValidKey(e.key)) {
+      if (!isValidKey(e.key) || (e.key === '-' && this._input.value.includes('-'))) {
         e.preventDefault();
         return false;
       }
@@ -273,25 +281,21 @@ class Stepper {
           }
           break;
         case 'Home':
-          if (this.min !== undefined) this.setValue(this.min);
+          if (this.min) this.setValue(this.min);
           break;
         case 'End':
-          if (this.max !== undefined) this.setValue(this.max);
+          if (this.max) this.setValue(this.max);
           break;
       }
     });
 
     document.addEventListener('click', (e) => {
-      if (e.target === this._stepperIncreaseBtn) {
-        if (this.#isNextValueLessMaximum(this._stepperInput.value)) {
-          this.increase();
-        }
+      if (e.target === this._increaseBtn && this.#isNextValueLessMaximum(this._input.value)) {
+        this.increase();
       }
 
-      if (e.target === this._stepperDecreaseBtn) {
-        if (this.#isNextValueMoreMinimum(this._stepperInput.value)) {
-          this.decrease();
-        }
+      if (e.target === this._decreaseBtn && this.#isNextValueMoreMinimum(this._input.value)) {
+        this.decrease();
       }
     });
   }
@@ -301,22 +305,22 @@ class Stepper {
   }
 
   set min(value) {
-    if (!this.#isValidNumber(value)) {
+    if (!isValidNumber(value)) {
       throw new Error('invalid minimum value for the stepper');
     }
 
-    if (this.#isValueEmptyString()) {
-      this._stepperInput.removeAttribute('data-stepper-min');
-      this._stepperInput.removeAttribute('aria-valuemin');
+    if (isValueEmptyString(value)) {
+      this._input.removeAttribute('data-stepper-min');
+      this._input.removeAttribute('aria-valuemin');
       delete this._min;
       return;
     }
 
     this._min = value;
-    this._stepperInput.dataset.stepperMin = value;
-    this._stepperInput.ariaValueMin = value;
-    this._stepperInput.value = Math.max(this._stepperInput.value, value);
-    this._stepperInput.ariaValueNow = Math.max(this._stepperInput.value, value);
+    this._input.dataset.stepperMin = value;
+    this._input.ariaValueMin = value;
+    this._input.value = Math.max(this._input.value, value);
+    this._input.ariaValueNow = Math.max(this._input.value, value);
   }
 
   get max() {
@@ -324,22 +328,22 @@ class Stepper {
   }
 
   set max(value) {
-    if (!this.#isValidNumber(value)) {
+    if (!isValidNumber(value)) {
       throw new Error('invalid maximum value for the stepper');
     }
 
-    if (this.#isValueEmptyString()) {
-      this._stepperInput.removeAttribute('data-stepper-max');
-      this._stepperInput.removeAttribute('aria-valuemax');
+    if (isValueEmptyString(value)) {
+      this._input.removeAttribute('data-stepper-max');
+      this._input.removeAttribute('aria-valuemax');
       delete this._max;
       return;
     }
 
     this._max = value;
-    this._stepperInput.dataset.stepperMax = value;
-    this._stepperInput.ariaValueMax = value;
-    this._stepperInput.value = Math.min(this._stepperInput.value, value);
-    this._stepperInput.ariaValueNow = Math.min(this._stepperInput.value, value);
+    this._input.dataset.stepperMax = value;
+    this._input.ariaValueMax = value;
+    this._input.value = Math.min(this._input.value, value);
+    this._input.ariaValueNow = Math.min(this._input.value, value);
   }
 
   get step() {
@@ -347,47 +351,29 @@ class Stepper {
   }
 
   set step(value) {
-    if (!this.#isValidNumber(value)) {
+    if (!isValidNumber(value)) {
       throw new Error('invalid value for the step');
     }
 
-    let nextValue = this.#isValueEmptyString() ? 1 : value;
+    let nextValue = isValueEmptyString(value) ? 1 : value;
 
     this._step = nextValue;
-    this._stepperInput.dataset.stepperStep = nextValue;
-    this._stepperInput.ariaValueNow = nextValue;
-  }
-
-  #convertToPrecision(num, precision) {
-    return Math.round(num * 10 ** precision) / 10 ** precision;
-  }
-
-  #isValidNumber(value) {
-    return !Number.isNaN(+value);
+    this._input.dataset.stepperStep = nextValue;
+    this._input.ariaValueNow = nextValue;
   }
 
   #isNextValueLessMaximum(value) {
-    if (this.max === undefined) return true;
+    if (!this.max) return true;
 
-    let nextValue = Number(value) + this.step;
+    let nextValue = +value + this.step;
     return nextValue <= this.max;
   }
 
   #isNextValueMoreMinimum(value) {
-    if (this.min === undefined) return true;
+    if (!this.min) return true;
 
-    let nextValue = Number(value) - this.step;
+    let nextValue = +value - this.step;
     return nextValue >= this.min;
-  }
-
-  #isValidKey(value) {
-    let validKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp', 'Delete', 'Backspace', 'Home', 'End', 'Tab'];
-
-    return validKeys.includes(value);
-  }
-
-  #isValueEmptyString(value) {
-    return typeof value === 'string' && value.trim() === '';
   }
 }
 
@@ -404,12 +390,8 @@ class Stepper {
 - `set max()` - сеттер для установки нового максимального значения степпера
 - `get step()` - геттер для получения значения шага
 - `set step()` - сеттер для установки нового значения шага
-- `#convertToPrecision(num, precision)` - преобразует и округляет число(`num`) до заданной точности(`precision`)
-- `#isValidNumber()` - возвращает true если число не равно NaN
 - `#isNextValueLessMaximum(value)` - возвращает true, если число(`value + step`) меньше максимума
 - `#isNextValueMoreMinimum(value)` - возвращает true, если число(`value - step`) максимума
-- `#isValidKey(value)` - возвращает true, если была нажата валидная клавиша
-- `#isValueEmptyString(value)` - возвращает true, если значение является пустой строкой
 
 Кратко о свойствах класса:
 
@@ -419,14 +401,43 @@ class Stepper {
 - `this._stepperDecreaseBtn` - кнопка уменьшения значения
 - `this._min` - минимальное значение внутри степпера
 - `this._max` - максимальное значение внутри степпера
-- `this._numberPrecision` - количество чисел после запятой, если шаг дробное число
+- `this._numberPrecision` - количество чисел после запятой, если шаг является дробным числом
+
+### helpers.js
+```javascript
+
+export function isValueEmptyString(value) {
+  return typeof value === 'string' && value.trim() === '';
+}
+
+export function isValidKey(value) {
+  let validKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp', 'Delete', 'Backspace', 'Home', 'End', 'Tab', '-'];
+
+  return validKeys.includes(value);
+}
+
+export function isValidNumber(value) {
+  return !Number.isNaN(+value);
+}
+
+export function convertToPrecision(num, precision) {
+  return Math.round(num * 10 ** precision) / 10 ** precision;
+}
+```
+Кратко о хелпер функциях:
+
+- `isValueEmptyString(value)` - возвращает true если переданное значение пустая строка
+- `isValidKey(value)` - возвращает boolean значение при нажатии клавиш, если валидная клавиша - true, иначе false
+- `isValidNumber(value)` - проверяет принимаемое значение на то является ли оно валидным числом
+- `convertToPrecision(num, precision)` - преобразует вещественное число до необходимой точности
 
 ### Инициализация экземпляра степпера
 ```javascript
 'use strict';
+import { Stepper } from "./stepper/Stepper.js";
 
 const stepper = new Stepper('.stepper');
 ```
-Особенности плагина:
+## ✨Особенности плагина:
 - Функционал приближенный к нативному степперу, но с возможностью кастомной стилизации
-- При добавлении инпуту атрибута readonly, делает степпер только для чтения(как и в браузерном)
+- При добавлении к инпуту атрибута readonly, делает степпер только для чтения
