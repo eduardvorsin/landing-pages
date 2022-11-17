@@ -21,3 +21,4 @@
 - [Плагин селекта](pet-projects/Select) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Select/index.html)
 - [Калькулятор](pet-projects/Calculator) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Calculator/index.html)
 - [Валидация формы](pet-projects/Form-Validation) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Form-Validation/index.html)
+- [Аудио плеер](pet-projects/audio-player) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/audio-player/build/index.html)
