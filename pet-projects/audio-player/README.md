@@ -1,5 +1,5 @@
 # 🎵 Аудио плеер
-[Cсылка на демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/audio-player/public/index.html)
+[Cсылка на демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/audio-player/build/index.html)
 
 ![Аудио плеер](./images/audio-player.jpg)
 
