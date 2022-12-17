@@ -21,11 +21,11 @@ export const TimeBar = ({
 
 
 TimeBar.propTypes = {
-	currentTime: PropTypes.string,
-	duration: PropTypes.string,
+  currentTime: PropTypes.string,
+  duration: PropTypes.string,
 }
 
 TimeBar.defaultProps = {
-	currentTime: '00:00',
-	duration: '00:00',
+  currentTime: '00:00',
+  duration: '00:00',
 }
