@@ -206,6 +206,7 @@ export const AudioPlayer = ({
     <StyledAudioPlayer
       tabIndex={0}
       onKeyDown={onKeyDown}
+      title='audio-player'
     >
       <audio
         ref={audioRef}
