@@ -70,6 +70,13 @@ export const AudioPlayer = ({
     audioRef.current.volume = state.volume / 100;
   }, [state.volume]);
 
+  useEffect(() => {
+    audioRef.current.playbackRate = 1;
+    dispatch({
+      type: CHANGE_PLAYBACKRATE,
+      playbackRate: audioRef.current.playbackRate,
+    });
+  }, [src])
 
   const togglePlaying = useCallback(() => {
     if (state.isPlayed) {
