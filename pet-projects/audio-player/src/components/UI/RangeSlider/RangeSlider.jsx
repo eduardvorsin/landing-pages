@@ -23,6 +23,7 @@ export const RangeSlider = forwardRef(({
   return (
     <StyledRangeSlider
       className={className}
+      isVertical={isVertical}
     >
       <input
         style={{ '--progress-percent': `${currentPercent}%` }}
