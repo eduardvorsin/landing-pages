@@ -11,6 +11,7 @@ export const TimeBar = ({
   return (
     <StyledTimeBar
       className={className}
+      title='time'
       {...props}
     >
       {currentTime}/{duration}
