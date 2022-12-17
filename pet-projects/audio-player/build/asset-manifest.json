@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/static/js/main.c60cc801.js",
-    "static/media/Roboto-700.woff2": "/static/media/Roboto-700.227c93190fe7f82de3f8.woff2",
-    "static/media/Roboto-400.woff2": "/static/media/Roboto-400.b009a76ad6afe4ebd301.woff2",
-    "static/media/no-repeat.svg": "/static/media/no-repeat.67b2c7243916e367063a4ea2966aec0a.svg",
-    "static/media/repeat.svg": "/static/media/repeat.74a7ba677fec632b6a7486b06149e7e7.svg",
-    "static/media/volume.svg": "/static/media/volume.f38af0293ef7f74d82a45ed6028694f8.svg",
-    "static/media/mute.svg": "/static/media/mute.e3b443b3dd47851424029a2192fe0869.svg",
-    "static/media/download.svg": "/static/media/download.209fbab06a7d1e768f4b6bd730bdddb5.svg",
-    "index.html": "/index.html",
-    "static/media/next.svg": "/static/media/next.f336877b6d20eb7d2ea2c781747ca913.svg",
-    "static/media/prev.svg": "/static/media/prev.e4c1cf0efe2e99381dee38f4d23678b6.svg",
-    "static/media/pause.svg": "/static/media/pause.f013746ecb901c11c907a52fdc7604fd.svg",
-    "static/media/play.svg": "/static/media/play.ed2bcfaad3fd14933d5ad89c6b02956e.svg",
-    "main.c60cc801.js.map": "/static/js/main.c60cc801.js.map"
+    "main.js": "./static/js/main.c60cc801.js",
+    "static/media/Roboto-700.woff2": "./static/media/Roboto-700.227c93190fe7f82de3f8.woff2",
+    "static/media/Roboto-400.woff2": "./static/media/Roboto-400.b009a76ad6afe4ebd301.woff2",
+    "static/media/no-repeat.svg": "./static/media/no-repeat.67b2c7243916e367063a4ea2966aec0a.svg",
+    "static/media/repeat.svg": "./static/media/repeat.74a7ba677fec632b6a7486b06149e7e7.svg",
+    "static/media/volume.svg": "./static/media/volume.f38af0293ef7f74d82a45ed6028694f8.svg",
+    "static/media/mute.svg": "./static/media/mute.e3b443b3dd47851424029a2192fe0869.svg",
+    "static/media/download.svg": "./static/media/download.209fbab06a7d1e768f4b6bd730bdddb5.svg",
+    "index.html": "./index.html",
+    "static/media/next.svg": "./static/media/next.f336877b6d20eb7d2ea2c781747ca913.svg",
+    "static/media/prev.svg": "./static/media/prev.e4c1cf0efe2e99381dee38f4d23678b6.svg",
+    "static/media/pause.svg": "./static/media/pause.f013746ecb901c11c907a52fdc7604fd.svg",
+    "static/media/play.svg": "./static/media/play.ed2bcfaad3fd14933d5ad89c6b02956e.svg",
+    "main.c60cc801.js.map": "./static/js/main.c60cc801.js.map"
   },
   "entrypoints": [
-    "static/js/main.c60cc801.js"
+    "./static/js/main.c60cc801.js"
   ]
 }
