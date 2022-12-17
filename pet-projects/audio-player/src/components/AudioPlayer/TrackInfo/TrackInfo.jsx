@@ -3,26 +3,26 @@ import { memo } from 'react';
 import { StyledTrackArtist, StyledTrackInfo, StyledTrackName } from "./StyledTrackInfo";
 
 export const TrackInfo = memo(({
-	trackName,
-	trackArtist,
-	className,
+  trackName,
+  trackArtist,
+  className,
 }) => {
-	return (
-		<StyledTrackInfo className={className}>
-			<StyledTrackName>{trackName}</StyledTrackName>
-			<StyledTrackArtist>{trackArtist}</StyledTrackArtist>
-		</StyledTrackInfo>
-	);
+  return (
+    <StyledTrackInfo className={className}>
+      <StyledTrackName>{trackName}</StyledTrackName>
+      <StyledTrackArtist>{trackArtist}</StyledTrackArtist>
+    </StyledTrackInfo>
+  );
 });
 
 TrackInfo.propTypes = {
-	trackName: PropTypes.string,
-	trackArtist: PropTypes.string,
-	className: PropTypes.string,
+  trackName: PropTypes.string,
+  trackArtist: PropTypes.string,
+  className: PropTypes.string,
 }
 
 TrackInfo.defaultProps = {
-	trackName: '',
-	trackArtist: '',
-	className: '',
+  trackName: 'trackName',
+  trackArtist: 'trackArtist',
+  className: '',
 }
