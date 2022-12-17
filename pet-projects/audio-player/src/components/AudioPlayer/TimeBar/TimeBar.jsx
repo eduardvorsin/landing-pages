@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 import { StyledTimeBar } from "./StyledTimeBar";
 
 export const TimeBar = ({
-	currentTime,
-	duration,
-	className,
-	...props
+  currentTime,
+  duration,
+  className,
+  ...props
 }) => {
-	return (
-		<StyledTimeBar
-			className={className}
-			{...props}
-		>
-			{currentTime}/{duration}
-		</StyledTimeBar>
-	);
+  return (
+    <StyledTimeBar
+      className={className}
+      {...props}
+    >
+      {currentTime}/{duration}
+    </StyledTimeBar>
+  );
 };
 
 
