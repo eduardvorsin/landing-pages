@@ -3,8 +3,6 @@ import { createGlobalStyle } from "styled-components";
 import { AudioPlayer } from "./components/AudioPlayer/AudioPlayer";
 import { Image } from "./components/UI/Image/Image";
 import { StyledApp } from "./StyledApp";
-import Roboto400 from './assets/fonts/Roboto-400.woff2';
-import Roboto700 from './assets/fonts/Roboto-700.woff2';
 
 const GlobalStyles = createGlobalStyle`
 @font-face {
@@ -12,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(${Roboto400}) format('woff2');
+  src: url('./assets/fonts/Roboto-400.woff2') format('woff2');
   unicode-range: 'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD';
 }
 
@@ -21,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(${Roboto700}) format('woff2');
+  src: url('./assets/fonts/Roboto-700.woff2') format('woff2');
   unicode-range: 'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD';
 }
 
