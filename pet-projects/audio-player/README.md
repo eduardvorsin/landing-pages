@@ -7,7 +7,8 @@
 ![javascript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![react](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![styled-components](https://img.shields.io/badge/%F0%9F%92%85%20styled--components-orange.svg?style=for-the-badge&color=DB7093)
-
+![jest](https://img.shields.io/badge/jest-%2399425B.svg?style=for-the-badge&logo=jest&logoColor=%white)
+![testing library](https://img.shields.io/badge/testing_library-%23E33332.svg?style=for-the-badge&logo=testing-library&logoColor=white)
 
 ## ⚙️ Использование
 Пример как можно использовать компонент
