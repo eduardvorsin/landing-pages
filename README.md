@@ -14,8 +14,6 @@
 - [BodyFit(тестовый проект)](https://eduardvorsin.github.io/my-portfolio/sites/BodyFit/index.html)
 
 ## `Pet-проекты`
-- [Аудио плеер](pet-projects/audio-player) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/audio-player/build/index.html)
-- [Валидация формы](pet-projects/Form-Validation) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Form-Validation/index.html)
 - [Плагин селекта](pet-projects/Select) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Select/index.html)
 - [Плагин степпера](pet-projects/Stepper) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Stepper/index.html)
 - [Плагин таймера обратного отсчета](pet-projects/CountdownTimer) | [Демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/CountdownTimer/index.html)
