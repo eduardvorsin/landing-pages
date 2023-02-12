@@ -1,5 +1,5 @@
 # 🧮 Плагин степпера
-[Cсылка на демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Stepper/index.html)
+[Cсылка на демо](https://eduardvorsin.github.io/landing-pages/pet-projects/Stepper/index.html)
 
 ![степпер](./images/stepper.jpg)
 

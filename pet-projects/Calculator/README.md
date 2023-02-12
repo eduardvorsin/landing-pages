@@ -1,6 +1,6 @@
 # Калькулятор на чистом JavaScript
 
-[Cсылка на демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Calculator/index.html)
+[Cсылка на демо](https://eduardvorsin.github.io/landing-pages/pet-projects/Calculator/index.html)
 
 ![Калькулятор](./images/calculator.jpg)
 

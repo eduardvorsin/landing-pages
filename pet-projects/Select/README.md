@@ -1,5 +1,5 @@
 # Плагин селекта на чистом JavaScript
-[Cсылка на демо](https://eduardvorsin.github.io/my-portfolio/pet-projects/Select/index.html)
+[Cсылка на демо](https://eduardvorsin.github.io/landing-pages/pet-projects/Select/index.html)
 
 ![кастомный одиночный селект и селект с множественным выбором](./images/select.jpg)
 
