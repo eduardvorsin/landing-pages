@@ -16,6 +16,5 @@
 ## `Pet-проекты`
 - [Плагин селекта](pet-projects/Select) | [Демо](https://eduardvorsin.github.io/landing-pages/pet-projects/Select/index.html)
 - [Плагин степпера](pet-projects/Stepper) | [Демо](https://eduardvorsin.github.io/landing-pages/pet-projects/Stepper/index.html)
-- [Плагин таймера обратного отсчета](pet-projects/CountdownTimer) | [Демо](https://eduardvorsin.github.io/landing-pages/pet-projects/CountdownTimer/index.html)
 - [Калькулятор](pet-projects/Calculator) | [Демо](https://eduardvorsin.github.io/landing-pages/pet-projects/Calculator/index.html)
 - [Плагин модального окна](pet-projects/Modal) | [Демо](https://eduardvorsin.github.io/landing-pages/pet-projects/Modal/index.html)
